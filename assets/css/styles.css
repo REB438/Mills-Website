@@ -1,0 +1,1628 @@
+/* Mills Shirley LLP - Optimized Styles */
+
+/* Equity Font Declarations */
+/* Optimized Font Loading with Preloading and Fallbacks */
+@font-face {
+    font-family: 'Equity Text';
+    src: url('../fonts/equity/Equity Text A Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF; /* Latin characters */
+}
+
+@font-face {
+    font-family: 'Equity Text';
+    src: url('../fonts/equity/Equity Text A Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF;
+}
+
+@font-face {
+    font-family: 'Equity Caps';
+    src: url('../fonts/equity/Equity Caps A Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF;
+}
+
+@font-face {
+    font-family: 'Equity Caps';
+    src: url('../fonts/equity/Equity Caps A Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0020-007F, U+00A0-00FF;
+}
+
+/* Fallback font metrics to minimize layout shift */
+@font-face {
+    font-family: 'Equity Text Fallback';
+    src: local('Georgia');
+    size-adjust: 95%; /* Adjust to match Equity Text metrics */
+    ascent-override: 85%;
+    descent-override: 20%;
+    line-gap-override: 0%;
+}
+
+/* Global Typography */
+html, body {
+    font-family: 'Equity Text', Georgia, serif;
+    font-feature-settings: "liga" 1, "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.65; /* Improved line height for better readability */
+    letter-spacing: -0.008em; /* Optimized letter spacing */
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* Performance optimization for animated elements */
+.nav-link,
+.nav-link-mobile,
+.nav-mobile-toggle,
+.btn,
+.card-premium,
+.practice-area-card,
+.attorney-card,
+.attorney-photo,
+.practice-icon,
+header {
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Containment for layout optimization */
+.practice-area-card,
+.attorney-card,
+.card-premium {
+    contain: layout style;
+}
+
+/* Typography Scale - 8px Base System */
+/* Base: 16px (1rem) = 2 * 8px units */
+/* Optimized for readability and accessibility */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Equity Caps', 'Equity Text', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #0f172a; /* Navy-900 for headings */
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* 40px - 64px */
+    font-weight: 700;
+    letter-spacing: -0.025em; /* Improved letter spacing */
+    line-height: 1.15; /* Improved line height */
+    margin-bottom: 2rem; /* 32px */
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem); /* 32px - 48px */
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Optimized letter spacing */
+    line-height: 1.2; /* Improved line height */
+    margin-bottom: 1.5rem; /* 24px */
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem); /* 24px - 32px */
+    font-weight: 600;
+    letter-spacing: -0.015em; /* Optimized letter spacing */
+    line-height: 1.3; /* Improved line height */
+    margin-bottom: 1rem; /* 16px */
+}
+
+h4 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    letter-spacing: -0.012em; /* Optimized letter spacing */
+    line-height: 1.35; /* Improved line height */
+    margin-bottom: 1rem; /* 16px */
+}
+
+h5 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    letter-spacing: -0.008em; /* Optimized letter spacing */
+    line-height: 1.45; /* Improved line height */
+    margin-bottom: 0.75rem; /* 12px */
+}
+
+h6 {
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
+    letter-spacing: 0.08em; /* Optimized for uppercase */
+    line-height: 1.55; /* Improved line height */
+    margin-bottom: 0.75rem; /* 12px */
+    text-transform: uppercase;
+}
+
+/* Body Text - 8px Grid System */
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.65; /* Improved line height for readability */
+    color: #374151; /* Gray-700 for optimal readability */
+    margin-bottom: 1.5rem; /* 24px */
+    max-width: 65ch; /* Optimized for readability */
+    letter-spacing: -0.003em; /* Optimized letter spacing */
+    margin-top: 0;
+}
+
+.text-lead {
+    font-size: 1.25rem; /* 20px */
+    color: #27272a;
+    line-height: 1.65; /* Improved line height */
+    font-weight: 400;
+    margin-bottom: 2rem; /* 32px */
+    max-width: 60ch; /* Better readability */
+    letter-spacing: -0.008em; /* Optimized letter spacing */
+}
+
+.text-sophisticated {
+    color: #27272a;
+    line-height: 1.7; /* Improved line height for larger text */
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    margin-bottom: 1.5rem; /* 24px */
+    max-width: 62ch; /* Better readability */
+    letter-spacing: -0.006em; /* Optimized letter spacing */
+    text-align: left;
+}
+
+.text-muted {
+    color: #6b7280; /* Gray-500 for muted text */
+    line-height: 1.65; /* Consistent line height */
+    margin-bottom: 1.5rem; /* 24px */
+    max-width: 65ch; /* Better readability */
+    font-size: 1rem; /* 16px */
+    text-align: left;
+    letter-spacing: -0.003em; /* Added letter spacing for consistency */
+}
+
+.text-premium {
+    color: #1A2A40;
+    font-weight: 500;
+    letter-spacing: -0.008em; /* Optimized letter spacing */
+    line-height: 1.6; /* Improved line height */
+    font-size: 1rem;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+*:focus {
+    outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #1A2A40;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+    transition: outline-color 0.25s ease;
+}
+
+/* Links and Navigation */
+a {
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a {
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin: -0.5rem -0.75rem;
+}
+
+nav a:hover {
+    color: #1A2A40;
+    background-color: rgba(26, 42, 64, 0.04);
+}
+
+nav a:focus-visible {
+    outline: 2px solid #1A2A40;
+    outline-offset: 2px;
+    background-color: rgba(26, 42, 64, 0.04);
+}
+
+/* Refined Navigation System */
+.nav-link {
+    color: #64748b; /* Navy-500 for better readability */
+    font-weight: 500;
+    font-size: 0.9375rem; /* 15px */
+    padding: 0.625rem 1.25rem; /* 10px 20px - better proportions */
+    border-radius: 0.5rem; /* 8px */
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: -0.008em; /* Refined letter spacing */
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.25rem; /* 4px - better spacing */
+    outline: none;
+    min-height: 2.5rem; /* 40px - better touch target */
+    will-change: transform; /* Optimize for animations */
+}
+
+.nav-link:hover {
+    color: #0f172a; /* Navy-900 */
+    background-color: rgba(15, 23, 42, 0.05); /* Subtle background */
+    transform: translate3d(0, -0.5px, 0); /* Hardware accelerated gentle lift */
+}
+
+.nav-link:focus {
+    color: #0f172a; /* Navy-900 */
+    background-color: rgba(15, 23, 42, 0.08); /* Stronger background for focus */
+    outline: none;
+}
+
+.nav-link:active {
+    transform: translate3d(0, 0, 0); /* Hardware accelerated reset */
+    background-color: rgba(15, 23, 42, 0.10); /* Active state */
+}
+
+.nav-link-mobile {
+    display: flex;
+    align-items: center;
+    color: #374151;
+    font-weight: 500;
+    font-size: 1rem; /* 16px */
+    padding: 1rem 1.5rem; /* 16px 24px - better proportions */
+    border-radius: 0.75rem; /* 12px */
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    letter-spacing: -0.005em;
+    min-height: 48px; /* Better touch target */
+    margin-bottom: 0.25rem; /* 4px */
+    outline: none;
+    will-change: transform; /* Optimize for animations */
+}
+
+.nav-link-mobile:hover {
+    color: #0f172a; /* Navy-900 */
+    background-color: rgba(15, 23, 42, 0.05); /* Subtle background */
+    transform: translate3d(3px, 0, 0); /* Hardware accelerated gentle slide */
+}
+
+.nav-link-mobile:focus {
+    color: #0f172a; /* Navy-900 */
+    background-color: rgba(15, 23, 42, 0.08); /* Stronger background for focus */
+    outline: none;
+}
+
+.nav-link-mobile:active {
+    transform: translate3d(1px, 0, 0); /* Hardware accelerated */
+    background-color: rgba(15, 23, 42, 0.10); /* Active state */
+}
+
+.nav-mobile-toggle {
+    color: #64748b; /* Navy-500 for consistency */
+    padding: 0.75rem; /* 12px */
+    border-radius: 0.5rem; /* 8px */
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    min-width: 44px; /* 44px minimum touch target */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    will-change: transform; /* Optimize for animations */
+}
+
+.nav-mobile-toggle:hover {
+    color: #0f172a; /* Navy-900 */
+    background-color: rgba(15, 23, 42, 0.05); /* Subtle background */
+    transform: scale(1.02); /* Gentle scale */
+}
+
+.nav-mobile-toggle:focus {
+    color: #0f172a; /* Navy-900 */
+    background-color: rgba(15, 23, 42, 0.08); /* Stronger background for focus */
+    outline: none;
+}
+
+.nav-mobile-toggle:active {
+    transform: scale(0.98); /* Subtle press effect */
+    background-color: rgba(15, 23, 42, 0.10); /* Active state */
+}
+
+.content-link {
+    color: #0f172a; /* Navy-900 */
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0.25rem;
+}
+
+.content-link:hover {
+    color: #1e293b; /* Navy-800 */
+    text-decoration-color: #475569; /* Navy-600 */
+    background-color: rgba(15, 23, 42, 0.02);
+}
+
+.content-link:focus-visible {
+    outline: 2px solid #1A2A40;
+    outline-offset: 2px;
+}
+
+.contact-link {
+    color: #1A2A40;
+    font-weight: 500;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    margin: -0.25rem -0.5rem;
+}
+
+.contact-link:hover {
+    color: #2a3a56;
+    transform: translateX(4px);
+    background-color: rgba(26, 42, 64, 0.04);
+}
+
+.contact-link:focus-visible {
+    outline: 2px solid #1A2A40;
+    outline-offset: 2px;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.85); /* Slightly better contrast */
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    padding: 0.375rem 0.75rem; /* Better padding for touch targets */
+    border-radius: 0.5rem; /* More consistent with site design */
+    margin: -0.375rem -0.75rem; /* Match padding adjustments */
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: white;
+    transform: translate3d(0, -1px, 0); /* Subtle upward movement */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly stronger background */
+}
+
+.footer-link:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8); /* Better contrast for focus */
+    outline-offset: 2px;
+    background-color: rgba(255, 255, 255, 0.08); /* Subtle background for focus */
+}
+
+.breadcrumb-link {
+    color: #6b7280;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin: -0.25rem -0.5rem;
+}
+
+.breadcrumb-link:hover {
+    color: #1A2A40;
+    background-color: rgba(26, 42, 64, 0.04);
+}
+
+.breadcrumb-link:focus-visible {
+    outline: 2px solid #1A2A40;
+    outline-offset: 2px;
+}
+
+/* Buttons - Standardized 8px Grid System */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem; /* 12px 24px - 8px grid compliant */
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25; /* Improved line height */
+    border-radius: 0.5rem; /* 8px - grid compliant */
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    min-height: 48px; /* 6 * 8px - accessibility compliant */
+    white-space: nowrap;
+    outline: none;
+    font-family: 'Equity Text', Georgia, serif;
+    letter-spacing: -0.005em; /* Optimized */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    will-change: transform; /* Optimize for animations */
+}
+
+.btn-primary {
+    background: #0f172a; /* Navy-900 */
+    color: white;
+    border-color: #0f172a;
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.12), 0 1px 2px 0 rgba(15, 23, 42, 0.08);
+}
+
+.btn-primary:hover {
+    background: #1e293b; /* Navy-800 */
+    border-color: #1e293b;
+    box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.18), 0 2px 6px 0 rgba(15, 23, 42, 0.12);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #3f3f46;
+    border-color: #d4d4d8;
+    box-shadow: 0 1px 3px 0 rgba(26, 42, 64, 0.08), 0 1px 2px 0 rgba(26, 42, 64, 0.04);
+}
+
+.btn-secondary:hover {
+    background-color: #f8fafc;
+    border-color: #a1a1aa;
+    color: #1A2A40;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px 0 rgba(26, 42, 64, 0.12), 0 2px 6px 0 rgba(26, 42, 64, 0.08);
+}
+
+.btn-consultation {
+    background: #1A2A40;
+    color: white;
+    border-color: #1A2A40;
+    font-weight: 500;
+    padding: 1rem 2rem; /* 16px 32px */
+    font-size: 1rem; /* 16px */
+    box-shadow: 0 1px 3px 0 rgba(26, 42, 64, 0.12), 0 1px 2px 0 rgba(26, 42, 64, 0.08);
+    min-height: 48px;
+}
+
+.btn-consultation:hover {
+    background: #2a3a56;
+    border-color: #2a3a56;
+    box-shadow: 0 4px 12px 0 rgba(26, 42, 64, 0.18), 0 2px 6px 0 rgba(26, 42, 64, 0.12);
+    transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A2A40;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0f1419;
+}
+
+/* Forms - Enhanced Design */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border-radius: 0.5rem;
+    border: 1px solid #d4d4d8;
+    padding: 0.75rem 1rem;
+    font-family: 'Equity Text', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(26, 42, 64, 0.08);
+    border-color: #1A2A40;
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+textarea:hover {
+    border-color: #a1a1aa;
+}
+
+.border-red-500 {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08) !important;
+}
+
+.border-red-500:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12) !important;
+}
+
+/* Mobile menu */
+#mobile-menu {
+    transition: opacity 0.2s ease, max-height 0.2s ease, transform 0.2s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .text-sophisticated {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .btn {
+        min-height: 48px;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+/* Media Queries */
+@media print {
+    header, footer { display: none !important; }
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+        background: white;
+    }
+    a { text-decoration: underline; color: black; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Font Override Utilities */
+.font-serif, .font-sans {
+    font-family: 'Equity Text', Georgia, serif !important;
+}
+
+p, span, div, li, td, th, button, input, textarea, select, nav a {
+    font-family: 'Equity Text', Georgia, serif;
+}
+
+.attorney-name, .practice-title {
+    font-family: 'Equity Caps', 'Equity Text', Georgia, serif;
+}
+
+/* Layout Utilities - Enhanced 8px Grid System */
+.section-padding {
+    padding: 6rem 0; /* 96px top/bottom - 12 * 8px */
+}
+
+.section-padding-lg {
+    padding: 8rem 0; /* 128px top/bottom - 16 * 8px */
+}
+
+.section-padding-sm {
+    padding: 4rem 0; /* 64px top/bottom - 8 * 8px */
+}
+
+.content-spacing-xl {
+    margin-bottom: 5rem; /* 80px - 10 * 8px */
+}
+
+.content-spacing-lg {
+    margin-bottom: 4rem; /* 64px - 8 * 8px */
+}
+
+.content-spacing-md {
+    margin-bottom: 3rem; /* 48px - 6 * 8px */
+}
+
+.content-spacing-sm {
+    margin-bottom: 2rem; /* 32px - 4 * 8px */
+}
+
+.content-spacing-xs {
+    margin-bottom: 1.5rem; /* 24px - 3 * 8px */
+}
+
+/* Container System - Responsive and Consistent */
+.container-standard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* 24px - 3 * 8px */
+}
+
+.container-narrow {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* 24px - 3 * 8px */
+}
+
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem; /* 32px - 4 * 8px */
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 1.5rem; /* 24px - 3 * 8px */
+}
+
+/* Button System - 8px Grid */
+.btn-lg {
+    padding: 1rem 2rem; /* 16px 32px - 8px grid */
+    font-size: 1rem;
+    min-height: 56px; /* 7 * 8px */
+    border-radius: 0.5rem; /* 8px */
+    letter-spacing: -0.005em;
+}
+
+.btn-md {
+    padding: 0.75rem 1.5rem; /* 12px 24px - 8px grid */
+    font-size: 0.875rem;
+    min-height: 48px; /* 6 * 8px - improved accessibility */
+    border-radius: 0.5rem; /* 8px */
+    letter-spacing: -0.005em;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem; /* 8px 16px - 8px grid */
+    font-size: 0.875rem;
+    min-height: 40px; /* 5 * 8px */
+    border-radius: 0.5rem; /* 8px */
+    font-weight: 500;
+    letter-spacing: -0.005em;
+}
+
+/* Card System - 8px Grid Consistent Design */
+.card-premium {
+    background: white;
+    border-radius: 0.75rem; /* 12px - 8px grid compliant */
+    padding: 2rem; /* 32px - 4 * 8px */
+    box-shadow: 0 2px 8px 0 rgba(26, 42, 64, 0.08), 0 1px 3px 0 rgba(26, 42, 64, 0.06);
+    border: 1px solid #e4e4e7;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    margin-bottom: 1.5rem; /* 24px - 3 * 8px */
+    will-change: transform; /* Optimize for animations */
+}
+
+.card-premium:hover {
+    box-shadow: 0 8px 24px 0 rgba(26, 42, 64, 0.12), 0 4px 8px 0 rgba(26, 42, 64, 0.08);
+    transform: translate3d(0, -4px, 0); /* Hardware accelerated 8px grid increment */
+    border-color: #d4d4d8;
+}
+
+/* Practice Areas Grid */
+.practice-areas-grid {
+    position: relative;
+}
+
+/* Enhanced Practice Area Cards */
+.practice-area-card {
+    background: white;
+    border-radius: 1rem; /* 16px - enhanced radius */
+    padding: 2.5rem; /* 40px - enhanced padding */
+    box-shadow: 0 2px 8px 0 rgba(26, 42, 64, 0.06), 0 1px 3px 0 rgba(26, 42, 64, 0.04);
+    border: 1px solid #f1f5f9;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    will-change: transform; /* Optimize for animations */
+}
+
+.practice-area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0f172a, #1e293b); /* Navy gradient */
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    transform-origin: left;
+    will-change: transform; /* Optimize for animations */
+}
+
+.practice-area-card:hover {
+    box-shadow: 0 12px 32px 0 rgba(26, 42, 64, 0.12), 0 6px 12px 0 rgba(26, 42, 64, 0.08);
+    transform: translate3d(0, -4px, 0); /* Hardware accelerated reduced hover lift */
+    border-color: #e2e8f0;
+}
+
+.practice-area-card:hover::before {
+    transform: scaleX(1);
+}
+
+.practice-area-card:hover .practice-icon {
+    transform: scale(1.05); /* Reduced scale for better performance */
+    background: linear-gradient(135deg, #0f172a, #1e293b); /* Navy gradient */
+}
+
+.practice-icon {
+    width: 4.5rem; /* 72px - enhanced size */
+    height: 4.5rem;
+    background: #0f172a; /* Navy-900 */
+    border-radius: 1.25rem; /* 20px - enhanced radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem; /* 32px = 4 * 8px */
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform; /* Optimize for animations */
+}
+
+.practice-icon svg {
+    width: 1.75rem; /* 28px - enhanced icon size */
+    height: 1.75rem;
+    transition: transform 0.2s ease; /* Only animate transform for performance */
+}
+
+.practice-title {
+    font-family: 'Equity Caps', 'Equity Text', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a; /* Navy-900 */
+    margin-bottom: 1rem;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.practice-description {
+    color: #6b7280; /* Gray-500 */
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: -0.003em;
+}
+
+.practice-specialties {
+    margin-top: 1.5rem; /* 24px */
+}
+
+.practice-specialty-item {
+    padding: 1.5rem 0; /* 24px top/bottom */
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.practice-specialty-item:first-child {
+    padding-top: 0;
+}
+
+.practice-specialty-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.practice-specialty-item:hover {
+    padding-left: 1rem;
+    background-color: rgba(26, 42, 64, 0.02);
+    margin: 0 -1rem;
+    border-radius: 0.5rem;
+    border-bottom-color: rgba(26, 42, 64, 0.1);
+}
+
+.practice-specialty-title {
+    font-family: 'Equity Caps', 'Equity Text', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a; /* Navy-900 */
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.practice-specialty-desc {
+    color: #9ca3af; /* Gray-400 for smaller text */
+    line-height: 1.65;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    text-align: left;
+    letter-spacing: -0.002em;
+}
+
+/* Attorney Cards - 8px Grid System */
+.attorney-card {
+    background: white;
+    border-radius: 1rem; /* 16px - enhanced radius for premium feel */
+    padding: 2.5rem; /* 40px - increased padding for better spacing */
+    box-shadow: 0 4px 12px 0 rgba(26, 42, 64, 0.06), 0 2px 4px 0 rgba(26, 42, 64, 0.04);
+    border: 1px solid #f1f5f9; /* Lighter border for cleaner look */
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* 32px - 4 * 8px */
+    will-change: transform; /* Optimize for animations */
+    position: relative;
+    overflow: hidden;
+}
+
+.attorney-card:hover {
+    box-shadow: 0 16px 40px 0 rgba(26, 42, 64, 0.08), 0 8px 16px 0 rgba(26, 42, 64, 0.06);
+    transform: translate3d(0, -4px, 0); /* Hardware accelerated 8px grid increment */
+    border-color: #e2e8f0; /* Slightly darker border on hover */
+}
+
+.attorney-card:focus-within {
+    box-shadow: 0 16px 40px 0 rgba(26, 42, 64, 0.08), 0 8px 16px 0 rgba(26, 42, 64, 0.06);
+    transform: translate3d(0, -2px, 0); /* Subtle focus lift */
+    border-color: #e2e8f0;
+    outline: none;
+}
+
+.attorney-photo {
+    width: 11rem; /* 176px = 22 * 8px - slightly larger for better presence */
+    height: 13.5rem; /* 216px = 27 * 8px - maintaining 3:4 aspect ratio */
+    border-radius: 1rem; /* 16px - enhanced radius to match card */
+    overflow: hidden;
+    margin-bottom: 2.5rem; /* 40px - increased spacing */
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px 0 rgba(26, 42, 64, 0.06), 0 4px 8px 0 rgba(26, 42, 64, 0.04);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    will-change: transform; /* Optimize for animations */
+    border: 1px solid rgba(26, 42, 64, 0.08); /* Subtle border for definition */
+}
+
+.attorney-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.2s ease; /* Only animate transform for performance */
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+}
+
+.attorney-card:hover .attorney-photo {
+    box-shadow: 0 16px 32px 0 rgba(26, 42, 64, 0.08), 0 8px 16px 0 rgba(26, 42, 64, 0.06);
+    transform: translate3d(0, -2px, 0) scale(1.005); /* Subtle scale for elegance */
+    border-color: rgba(26, 42, 64, 0.12); /* Enhance border on hover */
+}
+
+.attorney-credentials {
+    font-size: 1rem; /* Increased from 0.875rem for better readability */
+    color: #64748b; /* Navy-500 */
+    font-weight: 500;
+    margin-bottom: 0.75rem; /* Increased spacing */
+    text-transform: uppercase;
+    letter-spacing: 0.08em; /* Slightly reduced for better balance */
+    text-align: center;
+}
+
+.attorney-name {
+    font-family: 'Equity Caps', 'Equity Text', Georgia, serif;
+    font-size: 1.5rem; /* Increased size for better prominence */
+    font-weight: 700;
+    color: #0f172a; /* Navy-900 */
+    margin-bottom: 1.25rem; /* Increased spacing */
+    line-height: 1.2; /* Improved line height */
+    text-align: center;
+    letter-spacing: -0.015em; /* Better letter spacing for caps */
+}
+
+.attorney-specialty {
+    color: #6b7280; /* Gray-500 */
+    line-height: 1.6; /* Improved line height */
+    margin-bottom: 2rem; /* Increased spacing */
+    font-size: 1rem; /* Increased from 0.9375rem for better readability */
+    flex-grow: 1;
+    text-align: center;
+    max-width: 32ch; /* Increased character limit for better balance */
+    letter-spacing: -0.005em; /* Improved letter spacing */
+}
+
+.arrow-link {
+    color: #0f172a; /* Navy-900 for better contrast */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* 8px */
+    font-size: 0.9375rem; /* 15px - slightly larger */
+    padding: 0.75rem 1.5rem; /* 12px 24px - better button-like padding */
+    border-radius: 0.5rem; /* 8px - enhanced radius */
+    background-color: rgba(15, 23, 42, 0.04); /* Subtle background */
+    border: 1px solid rgba(15, 23, 42, 0.08); /* Subtle border */
+    margin-top: 0.5rem; /* 8px - spacing from specialty text */
+}
+
+.arrow-link:hover {
+    color: #0f172a; /* Consistent navy color */
+    transform: translate3d(0, -1px, 0); /* Subtle upward lift */
+    background-color: rgba(15, 23, 42, 0.08); /* Stronger background */
+    border-color: rgba(15, 23, 42, 0.12); /* Enhanced border */
+}
+
+.arrow-link:active {
+    transform: translate3d(0, 0, 0); /* Reset transform on click */
+    background-color: rgba(15, 23, 42, 0.12); /* Stronger background for active */
+}
+
+.arrow-link:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+}
+
+/* Clio Grow Form Container */
+.clio-grow-form-container {
+    background: white;
+    border-radius: 0.75rem; /* 12px */
+    padding: 2rem; /* 32px */
+    box-shadow: 0 1px 3px 0 rgba(26, 42, 64, 0.08), 0 1px 2px 0 rgba(26, 42, 64, 0.04);
+    border: 1px solid #e4e4e7;
+    text-align: center;
+}
+
+/* Text Alignment and Content Layout */
+.text-balance {
+    text-wrap: balance;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.text-left-force {
+    text-align: left !important;
+}
+
+.text-center-force {
+    text-align: center !important;
+}
+
+/* Content Width Controls - Optimized for Readability */
+.prose-narrow {
+    max-width: 45ch; /* Ideal for easy scanning */
+}
+
+.prose-standard {
+    max-width: 65ch; /* Optimal reading width */
+}
+
+.prose-wide {
+    max-width: 75ch; /* For longer content */
+}
+
+.prose-xl {
+    max-width: 85ch; /* For technical content */
+}
+
+/* Grid Alignment Utilities */
+.grid-center {
+    place-items: center;
+}
+
+.grid-start {
+    place-items: start;
+}
+
+/* List Improvements */
+ul, ol {
+    padding-left: 1.5rem; /* 24px */
+    margin-bottom: 1.5rem;
+}
+
+li {
+    line-height: 1.6;
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Improved Spacing for Sections */
+section {
+    position: relative;
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Better Text Spacing */
+.text-spacing-relaxed > * + * {
+    margin-top: 1.5rem; /* 24px */
+}
+
+.text-spacing-tight > * + * {
+    margin-top: 1rem; /* 16px */
+}
+
+/* Responsive Design - Mobile Optimization */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 4rem 0; /* 64px top/bottom */
+    }
+    
+    .content-spacing-lg {
+        margin-bottom: 3rem; /* 48px */
+    }
+    
+    .practice-area-card,
+    .attorney-card,
+    .card-premium {
+        padding: 1.5rem; /* 24px */
+    }
+    
+    .attorney-card {
+        padding: 2rem; /* 32px - better mobile padding for attorney cards */
+    }
+    
+    .practice-title {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .attorney-name {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .attorney-photo {
+        width: 8rem; /* 128px = 16 * 8px - better mobile size */
+        height: 10rem; /* 160px = 20 * 8px - maintaining aspect ratio */
+    }
+    
+    h1 {
+        font-size: clamp(2rem, 5vw, 2.5rem); /* Mobile-friendly scaling */
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    /* Mobile text alignment fixes */
+    .prose-narrow,
+    .prose-standard,
+    .prose-wide {
+        max-width: 100%;
+    }
+    
+    .text-spacing-relaxed > * + * {
+        margin-top: 1rem; /* 16px on mobile */
+    }
+    
+    /* Mobile navigation improvements */
+    nav a {
+        padding: 0.75rem 1rem;
+        margin: -0.75rem -1rem;
+    }
+    
+    /* Mobile button adjustments */
+    .btn {
+        min-height: 48px;
+        padding: 0.875rem 1.5rem;
+    }
+    
+    .btn-consultation {
+        min-height: 52px;
+        font-size: 1rem;
+    }
+    
+    /* Mobile form improvements */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 1rem;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+}
+
+/* Enhanced tablet breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-padding {
+        padding: 5rem 0;
+    }
+    
+    .practice-area-card,
+    .attorney-card,
+    .card-premium {
+        padding: 1.75rem;
+    }
+    
+    .attorney-card {
+        padding: 2.25rem; /* 36px - better tablet padding */
+    }
+    
+    .attorney-photo {
+        width: 9.5rem; /* 152px - intermediate size for tablet */
+        height: 11.5rem; /* 184px - maintaining aspect ratio */
+    }
+    
+    h1 {
+        font-size: clamp(2.25rem, 4vw, 3rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+    }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1200px) {
+    .container-standard {
+        max-width: 1400px;
+    }
+    
+    .section-padding {
+        padding: 8rem 0;
+    }
+    
+    .content-spacing-lg {
+        margin-bottom: 5rem;
+    }
+}
+
+/* Refined Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* 4px - tighter spacing */
+    padding: 0.5rem; /* 8px - better proportions */
+}
+
+/* Clean navbar styling */
+header nav {
+    position: relative;
+}
+
+/* Navbar container improvements */
+header .flex.justify-between.items-center {
+    padding: 1rem 0; /* 16px = 2 * 8px - better vertical spacing */
+    min-height: 4.5rem; /* 72px = 9 * 8px - consistent with header */
+}
+
+/* Enhanced Mobile Menu Animation */
+#mobile-menu {
+    transition: opacity 0.2s ease, visibility 0.2s ease, max-height 0.2s ease, transform 0.2s ease;
+    transform-origin: top;
+    will-change: transform, opacity; /* Optimize for animations */
+}
+
+#mobile-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transform: translateY(-4px); /* Simplified transform for better performance */
+}
+
+#mobile-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    max-height: 400px;
+    transform: translateY(0); /* Simplified transform for better performance */
+}
+
+/* Mobile Menu Backdrop */
+.mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.mobile-menu-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Improved Focus Management */
+.focus-trap {
+    position: relative;
+}
+
+.focus-visible {
+    outline: 2px solid #1A2A40 !important;
+    outline-offset: 2px !important;
+    border-radius: 0.25rem !important;
+}
+
+/* Skip Navigation Link */
+.skip-nav {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1A2A40;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 9999;
+    transition: top 0.3s ease;
+}
+
+.skip-nav:focus {
+    top: 1rem;
+}
+
+/* Enhanced Keyboard Navigation */
+[tabindex="-1"]:focus {
+    outline: none;
+}
+
+/* Global focus styles - excluding navigation */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #1A2A40;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 4px rgba(26, 42, 64, 0.1);
+}
+
+/* Refined focus styles - subtle but accessible */
+button:focus,
+a:focus {
+    outline: none;
+}
+
+/* Focus-visible for keyboard navigation */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+/* Content link focus - subtle background only */
+.content-link:focus {
+    background-color: rgba(26, 42, 64, 0.05);
+    outline: none;
+}
+
+/* Button focus - subtle background changes */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 42, 64, 0.1);
+}
+
+/* Enhanced navbar logo */
+header .flex-shrink-0 a {
+    font-size: 1.375rem; /* 22px - more refined size */
+    font-weight: 700;
+    color: #0f172a; /* Navy-900 for better contrast */
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    outline: none;
+    letter-spacing: -0.015em; /* Better letter spacing */
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem; /* 8px 12px - better touch target */
+    margin: -0.5rem -0.75rem; /* Negative margin for proper spacing */
+    border-radius: 0.5rem; /* 8px */
+    will-change: transform; /* Optimize for animations */
+}
+
+header .flex-shrink-0 a:hover {
+    color: #1e293b; /* Navy-800 */
+    transform: translateY(-0.5px); /* Subtle lift */
+    background-color: rgba(15, 23, 42, 0.04); /* Subtle background */
+}
+
+header .flex-shrink-0 a:focus {
+    color: #1e293b; /* Navy-800 */
+    background-color: rgba(15, 23, 42, 0.06); /* Slightly stronger background */
+    outline: none;
+}
+
+/* Mobile menu enhancements */
+#mobile-menu {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(26, 42, 64, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Navbar height consistency */
+header {
+    min-height: 4.5rem; /* 72px = 9 * 8px - better proportions */
+    border-bottom: 1px solid rgba(26, 42, 64, 0.06);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.2s ease, border-bottom-color 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); /* Initial shadow state */
+}
+
+/* Enhanced navbar shadow on scroll */
+header.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    border-bottom-color: rgba(26, 42, 64, 0.08);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* Enhanced focus states for navigation */
+.nav-link:focus-visible,
+.nav-link-mobile:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+.nav-mobile-toggle:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+header .flex-shrink-0 a:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .nav-link {
+        color: #000;
+        border: 1px solid transparent;
+    }
+    
+    .nav-link:hover,
+    .nav-link:focus {
+        border-color: #000;
+        background: #fff;
+    }
+    
+    .btn-primary {
+        border: 2px solid #000;
+    }
+    
+    /* Enhanced focus for high contrast */
+    .nav-link:focus-visible,
+    .nav-link-mobile:focus-visible,
+    .nav-mobile-toggle:focus-visible {
+        outline: 3px solid #000;
+        outline-offset: 2px;
+    }
+}
+
+/* Visual Hierarchy Enhancements */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem; /* 64px = 8 * 8px */
+}
+
+.section-header h2 {
+    margin-bottom: 1.5rem; /* 24px = 3 * 8px */
+}
+
+.section-header p {
+    max-width: 65ch;
+    margin: 0 auto 2rem auto;
+    color: #6b7280; /* Gray-500 */
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+    position: relative;
+}
+
+.hero-content {
+    padding: 8rem 0; /* 128px = 16 * 8px */
+}
+
+.hero-content h1 {
+    margin-bottom: 2rem; /* 32px = 4 * 8px */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content p {
+    margin-bottom: 3rem; /* 48px = 6 * 8px */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Button Styling */
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 2.5rem; /* 20px 40px */
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    color: #0f172a; /* Navy-900 */
+    background: white;
+    border: none;
+    border-radius: 0.75rem; /* 12px */
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.005em;
+    outline: none;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #f8fafc;
+}
+
+.btn-hero:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.btn-hero:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Improved List Styling */
+.styled-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.styled-list li {
+    position: relative;
+    padding-left: 2rem; /* 32px = 4 * 8px */
+    margin-bottom: 1rem; /* 16px = 2 * 8px */
+}
+
+.styled-list li::before {
+    content: "•";
+    color: #1A2A40;
+    font-weight: bold;
+    position: absolute;
+    left: 0.5rem; /* 8px = 1 * 8px */
+    top: 0;
+}
+
+/* Enhanced Text Alignment */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Footer styling enhancements */
+footer {
+    position: relative;
+}
+
+footer h3 {
+    margin-bottom: 1rem; /* Better spacing for footer headings */
+    color: white;
+    font-size: 1.125rem; /* 18px - more readable */
+    font-weight: 600;
+}
+
+footer .border-t {
+    border-color: rgba(255, 255, 255, 0.15) !important; /* Subtle border for better definition */
+    margin-top: 2rem; /* 32px - better spacing */
+    padding-top: 2rem; /* 32px - better spacing */
+}
+
+footer p {
+    margin-bottom: 0; /* Remove default margin for cleaner appearance */
+    font-size: 0.875rem; /* 14px - more appropriate size */
+    line-height: 1.5; /* Better line height */
+}
+
+.text-pretty {
+    text-wrap: pretty;
+}
+
+/* Micro-interactions */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px); /* 8px grid increment */
+}
+
+.hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Content Grouping */
+.content-group {
+    margin-bottom: 4rem; /* 64px = 8 * 8px */
+}
+
+.content-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Enhanced Spacing for Better Readability */
+.reading-flow > * + * {
+    margin-top: 1.5rem; /* 24px = 3 * 8px */
+}
+
+.reading-flow h2 + p,
+.reading-flow h3 + p,
+.reading-flow h4 + p {
+    margin-top: 1rem; /* 16px = 2 * 8px */
+}

@@ -1,0 +1,142 @@
+{
+  "practiceAreas": [
+    {
+      "id": "corporate-law",
+      "title": "Corporate Law",
+      "slug": "corporate-law",
+      "description": "Comprehensive business legal services including formation, governance, and transactions.",
+      "icon": "building",
+      "services": [
+        "Entity Formation & Structure",
+        "Mergers & Acquisitions", 
+        "Securities & Compliance",
+        "Commercial Transactions"
+      ],
+      "keyPoints": [
+        "Corporation and LLC formation",
+        "Partnership agreements",
+        "Operating agreements", 
+        "Corporate governance structures",
+        "Asset and stock purchases",
+        "Due diligence coordination",
+        "Purchase agreement negotiation",
+        "Post-closing integration"
+      ]
+    },
+    {
+      "id": "estate-planning",
+      "title": "Estate Planning",
+      "slug": "estate-planning",
+      "description": "Protecting your legacy through comprehensive estate planning and probate services.",
+      "icon": "users",
+      "services": [
+        "Wills & Trusts",
+        "Tax Planning",
+        "Probate Administration", 
+        "Advanced Planning"
+      ],
+      "keyPoints": [
+        "Last will and testament drafting",
+        "Revocable living trusts",
+        "Irrevocable trust structures",
+        "Trust administration",
+        "Estate tax minimization",
+        "Gift tax strategies",
+        "Generation-skipping transfer tax",
+        "Charitable giving plans"
+      ]
+    },
+    {
+      "id": "civil-litigation",
+      "title": "Civil Litigation", 
+      "slug": "civil-litigation",
+      "description": "Experienced representation in complex civil and commercial disputes.",
+      "icon": "scale",
+      "services": [
+        "Commercial Disputes",
+        "Construction Law",
+        "Insurance Coverage",
+        "Alternative Dispute Resolution"
+      ],
+      "keyPoints": [
+        "Contract disputes and breaches",
+        "Business partnership disputes", 
+        "Shareholder and corporate disputes",
+        "Trade secret and non-compete matters",
+        "Construction defect claims",
+        "Contractor and subcontractor disputes",
+        "Mechanics' lien enforcement",
+        "Delay and disruption claims"
+      ]
+    },
+    {
+      "id": "real-estate-law",
+      "title": "Real Estate Law",
+      "slug": "real-estate-law", 
+      "description": "Complete real estate legal services from transactions to development.",
+      "icon": "home",
+      "services": [
+        "Transactions & Closings",
+        "Development & Zoning",
+        "Leasing & Property Management",
+        "Construction & Development"
+      ],
+      "keyPoints": [
+        "Residential and commercial purchases",
+        "Sales and acquisitions",
+        "Contract review and negotiation",
+        "Title examination and insurance",
+        "Land development projects",
+        "Zoning and planning applications",
+        "Subdivision and platting", 
+        "Environmental compliance"
+      ]
+    },
+    {
+      "id": "employment-law",
+      "title": "Employment Law",
+      "slug": "employment-law",
+      "description": "Protecting employers and employees in workplace legal matters.",
+      "icon": "shield",
+      "services": [
+        "Employer Representation",
+        "Employee Rights", 
+        "Compliance & Training",
+        "Employment Litigation"
+      ],
+      "keyPoints": [
+        "Employment policy development",
+        "Wage and hour compliance",
+        "Discrimination and harassment prevention",
+        "Workplace investigations",
+        "Wrongful termination claims",
+        "Employment contract review",
+        "EEOC compliance",
+        "FLSA and DOL regulations"
+      ]
+    },
+    {
+      "id": "energy-law",
+      "title": "Energy Law",
+      "slug": "energy-law",
+      "description": "Specialized expertise in oil, gas, and renewable energy legal matters.",
+      "icon": "lightning",
+      "services": [
+        "Oil & Gas",
+        "Renewable Energy",
+        "Regulatory Compliance", 
+        "Energy Transactions"
+      ],
+      "keyPoints": [
+        "Lease negotiations and acquisitions",
+        "Title examination and curative",
+        "Joint operating agreements",
+        "Mineral rights and royalty matters",
+        "Wind and solar project development",
+        "Power purchase agreements",
+        "Transmission and interconnection",
+        "Energy storage projects"
+      ]
+    }
+  ]
+}

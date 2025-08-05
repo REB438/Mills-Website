@@ -1,0 +1,143 @@
+{
+  "attorneys": [
+    {
+      "id": "partner-name",
+      "name": "Partner Name",
+      "title": "Managing Partner",
+      "slug": "partner-name",
+      "office": "Galveston",
+      "phone": "(409) 555-1234",
+      "email": "partner@millsshirley.com",
+      "image": "/assets/img/attorneys/partner-name.jpg",
+      "practiceAreas": [
+        "Corporate Law",
+        "Mergers & Acquisitions", 
+        "Commercial Litigation",
+        "Securities Law"
+      ],
+      "education": [
+        {
+          "degree": "J.D.",
+          "school": "University of Texas School of Law",
+          "year": "1999"
+        },
+        {
+          "degree": "B.A., Economics", 
+          "school": "Rice University",
+          "year": "1996"
+        }
+      ],
+      "barAdmissions": [
+        "State of Texas, 1999",
+        "U.S. District Court, Southern District of Texas",
+        "U.S. Court of Appeals, Fifth Circuit"
+      ],
+      "affiliations": [
+        "State Bar of Texas",
+        "Houston Bar Association",
+        "American Bar Association, Section of Business Law",
+        "Texas Association of Business",
+        "Galveston County Bar Association"
+      ],
+      "recognition": [
+        "Best Lawyers in America, Corporate Law (2018-2024)",
+        "Texas Super Lawyers (2015-2024)",
+        "Martindale-Hubbell AV Preeminent Rating",
+        "Texas Business Law Institute, Outstanding Service Award (2020)"
+      ],
+      "bio": "Partner Name serves as Managing Partner of Mills Shirley LLP, bringing over 25 years of experience in corporate law and commercial litigation to the firm. Throughout their distinguished career, they have represented clients ranging from emerging businesses to Fortune 500 companies in complex legal matters."
+    },
+    {
+      "id": "attorney-name",
+      "name": "Attorney Name", 
+      "title": "Senior Associate",
+      "slug": "attorney-name",
+      "office": "Houston",
+      "phone": "(713) 555-1234",
+      "email": "attorney@millsshirley.com",
+      "image": "/assets/img/attorneys/attorney-name.jpg",
+      "practiceAreas": [
+        "Estate Planning",
+        "Probate Administration",
+        "Trust Administration",
+        "Tax Planning"
+      ],
+      "education": [
+        {
+          "degree": "J.D.",
+          "school": "Baylor Law School", 
+          "year": "2009"
+        },
+        {
+          "degree": "B.A., Political Science",
+          "school": "Texas A&M University",
+          "year": "2006"
+        }
+      ],
+      "barAdmissions": [
+        "State of Texas, 2009",
+        "U.S. District Court, Southern District of Texas"
+      ],
+      "affiliations": [
+        "State Bar of Texas",
+        "Texas State Bar, Real Estate, Probate and Trust Law Section",
+        "Houston Bar Association, Probate and Trust Section", 
+        "Society of Trust and Estate Practitioners (STEP)",
+        "Estate Planning Council of Houston"
+      ],
+      "recognition": [
+        "Texas Rising Stars, Estate Planning (2018-2024)",
+        "Houston Business Journal, 40 Under 40 (2020)",
+        "Pro Bono Service Award, Houston Bar Association (2019)",
+        "Martindale-Hubbell AV Preeminent Rating"
+      ],
+      "bio": "Attorney Name is a Senior Associate at Mills Shirley LLP, focusing primarily on estate planning and probate law. With over 15 years of experience helping Texas families protect their legacies, they have developed a reputation for providing compassionate and comprehensive estate planning services."
+    },
+    {
+      "id": "associate-name",
+      "name": "Associate Name",
+      "title": "Associate", 
+      "slug": "associate-name",
+      "office": "Galveston",
+      "phone": "(409) 555-1235",
+      "email": "associate@millsshirley.com",
+      "image": "/assets/img/attorneys/associate-name.jpg",
+      "practiceAreas": [
+        "Real Estate Transactions",
+        "Energy Law",
+        "Title & Survey",
+        "Commercial Leasing"
+      ],
+      "education": [
+        {
+          "degree": "J.D.",
+          "school": "South Texas College of Law",
+          "year": "2019"
+        },
+        {
+          "degree": "B.S., Petroleum Engineering",
+          "school": "University of Texas",
+          "year": "2016"
+        }
+      ],
+      "barAdmissions": [
+        "State of Texas, 2019",
+        "U.S. District Court, Southern District of Texas"
+      ],
+      "affiliations": [
+        "State Bar of Texas",
+        "Texas State Bar, Oil, Gas & Energy Resources Law Section",
+        "Galveston County Bar Association",
+        "Houston Association of Realtors, Legal Committee",
+        "American Association of Petroleum Landmen"
+      ],
+      "recognition": [
+        "Outstanding Young Lawyer Award, Galveston County Bar Association (2023)",
+        "South Texas College of Law, Dean's List (2017-2019)",
+        "Energy Law Journal, Staff Writer (2018-2019)",
+        "Pro Bono Service Recognition, Houston Volunteer Lawyers (2022)"
+      ],
+      "bio": "Associate Name is an Associate at Mills Shirley LLP, practicing primarily in real estate transactions and energy law. Since joining the firm in 2020, they have worked on numerous complex commercial real estate deals and energy projects throughout Texas."
+    }
+  ]
+}
