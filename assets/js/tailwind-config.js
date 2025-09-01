@@ -35,7 +35,7 @@ window.tailwindConfig = {
             },
             fontFamily: {
                 'serif': ['Equity Text', 'Georgia', 'serif'],
-                'sans': ['Equity Text', 'Georgia', 'serif'],
+                'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
                 'caps': ['Equity Caps', 'Equity Text', 'Georgia', 'serif']
             },
             spacing: {
