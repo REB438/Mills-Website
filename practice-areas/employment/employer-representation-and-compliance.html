@@ -65,247 +65,190 @@
     <!-- Skip to Content Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-md transition-shadow duration-300" id="header">
-        <nav class="container-standard py-4" id="main-navigation">
-            <div class="flex items-center justify-between">
+    <!-- Header Navigation (Sticky) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <a href="../../index.html" class="text-2xl font-caps font-bold text-navy-900 hover:text-navy-700 transition-colors">
-                    Mills Shirley LLP
-                </a>
+                <div class="flex-shrink-0">
+                    <a href="../../index.html" class="text-2xl font-caps font-bold text-navy-900">
+                        Mills Shirley LLP
+                    </a>
+                </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="../../index.html#practice-areas" class="nav-link">Practice Areas</a>
-                    <a href="../../index.html#attorneys" class="nav-link">Attorneys</a>
-                    <a href="../../index.html#contact" class="nav-link">Contact</a>
-                    <a href="tel:+14097632341" class="btn btn-primary">Call (409) 763-2341</a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="../../index.html#about" class="text-gray-600 hover:text-navy-900 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="../../index.html#practice-areas" class="text-gray-600 hover:text-navy-900 px-3 py-2 text-sm font-medium">Practice Areas</a>
+                        <a href="../../index.html#attorneys" class="text-gray-600 hover:text-navy-900 px-3 py-2 text-sm font-medium">Attorneys</a>
+                        <a href="../../index.html#contact" class="text-gray-600 hover:text-navy-900 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button class="lg:hidden p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-navy-900 p-2">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
             
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4 border-t border-gray-200">
-                <div class="flex flex-col space-y-4 pt-4">
-                    <a href="../../index.html#practice-areas" class="nav-link-mobile">Practice Areas</a>
-                    <a href="../../index.html#attorneys" class="nav-link-mobile">Attorneys</a>
-                    <a href="../../index.html#contact" class="nav-link-mobile">Contact</a>
-                    <a href="tel:+14097632341" class="btn btn-primary w-full text-center">Call (409) 763-2341</a>
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="../../index.html#about" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-navy-900 hover:bg-navy-50 rounded-lg">About</a>
+                    <a href="../../index.html#practice-areas" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-navy-900 hover:bg-navy-50 rounded-lg">Practice Areas</a>
+                    <a href="../../index.html#attorneys" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-navy-900 hover:bg-navy-50 rounded-lg">Attorneys</a>
+                    <a href="../../index.html#contact" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-navy-900 hover:bg-navy-50 rounded-lg">Contact</a>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- Breadcrumb -->
+    <div class="bg-light-gray py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-gray-600">
+                <a href="../../index.html" class="breadcrumb-link">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../../index.html#practice-areas" class="breadcrumb-link">Practice Areas</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-500">Employment Law</span>
+                <span class="mx-2">/</span>
+                <span class="text-navy-900">Employer Representation and Compliance</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-navy-200 mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-caps font-bold mb-6 text-white">
+                    Employer Representation and Compliance
+                </h1>
+                <p class="text-xl text-navy-100 max-w-3xl mx-auto">
+                    Protect your business with comprehensive employment law counsel. We help Texas employers navigate complex workplace regulations, develop effective policies, and prevent costly disputes.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-navy-900 to-navy-800 text-white py-20 lg:py-32">
-            <div class="container-standard">
-                <div class="max-w-4xl mx-auto text-center">
-                    <nav class="text-sm mb-6" aria-label="Breadcrumb">
-                        <ol class="flex items-center justify-center space-x-2">
-                            <li><a href="../../index.html" class="text-navy-200 hover:text-white transition-colors">Home</a></li>
-                            <li class="text-navy-400">/</li>
-                            <li><a href="../../index.html#practice-areas" class="text-navy-200 hover:text-white transition-colors">Practice Areas</a></li>
-                            <li class="text-navy-400">/</li>
-                            <li><a href="../employment.html" class="text-navy-200 hover:text-white transition-colors">Employment Law</a></li>
-                            <li class="text-navy-400">/</li>
-                            <li class="text-white">Employer Representation & Compliance</li>
-                        </ol>
-                    </nav>
-                    
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-caps font-bold mb-6 text-balance">
-                        Employer Representation & Compliance
-                    </h1>
-                    <p class="text-xl lg:text-2xl text-navy-100 leading-relaxed max-w-3xl mx-auto">
-                        Protect your business with comprehensive employment law counsel. We help Texas employers navigate complex workplace regulations, develop effective policies, and prevent costly disputes.
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Overview -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-caps font-bold text-navy-900 mb-6">Overview</h2>
+                <div class="prose prose-lg text-gray-600">
+                    <p class="mb-6">
+                        In today's complex employment law landscape, Texas employers face numerous challenges from federal and state regulations. Our employment law attorneys provide proactive counsel to help you navigate these complexities, develop compliant workplace policies, and minimize legal risks.
                     </p>
                 </div>
             </div>
-        </section>
 
-        <!-- Practice Area Content -->
-        <section class="py-16 lg:py-24 bg-white">
-            <div class="container-standard">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    <!-- Main Content -->
-                    <div class="lg:col-span-2">
-                        <div class="prose prose-lg max-w-none">
-                            <h2 class="text-3xl font-caps font-bold text-navy-900 mb-8">Comprehensive Employer Legal Services</h2>
-                            
-                            <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                                In today's complex employment law landscape, Texas employers face numerous challenges from federal and state regulations. Our employment law attorneys provide proactive counsel to help you navigate these complexities, develop compliant workplace policies, and minimize legal risks.
-                            </p>
-                            
-                            <h3 class="text-2xl font-caps font-bold text-navy-900 mb-6">Employment Policy Development & Review</h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                We help employers develop comprehensive employment policies that comply with federal and state laws while protecting your business interests. Our services include:
-                            </p>
-                            <ul class="attorney-bullet-list space-y-3 mb-8">
-                                <li>Employee handbooks and policy manuals</li>
-                                <li>Anti-discrimination and harassment policies</li>
-                                <li>Leave and accommodation policies (FMLA, ADA)</li>
-                                <li>Social media and technology use policies</li>
-                                <li>Drug testing and workplace safety policies</li>
-                                <li>Compensation and benefits policies</li>
-                                <li>Discipline and termination procedures</li>
-                            </ul>
-                            
-                            <h3 class="text-2xl font-caps font-bold text-navy-900 mb-6">Compliance Training & Education</h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                Regular training is essential for maintaining compliance and preventing workplace disputes. We provide:
-                            </p>
-                            <ul class="attorney-bullet-list space-y-3 mb-8">
-                                <li>Manager and supervisor training on employment laws</li>
-                                <li>Anti-harassment and discrimination prevention training</li>
-                                <li>Wage and hour compliance training</li>
-                                <li>Workplace safety and OSHA compliance training</li>
-                                <li>Documentation and record-keeping best practices</li>
-                                <li>Performance management and discipline training</li>
-                            </ul>
-                            
-                            <h3 class="text-2xl font-caps font-bold text-navy-900 mb-6">Workplace Investigations</h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                When workplace issues arise, prompt and thorough investigations are crucial. Our attorneys conduct:
-                            </p>
-                            <ul class="attorney-bullet-list space-y-3 mb-8">
-                                <li>Harassment and discrimination investigations</li>
-                                <li>Workplace misconduct investigations</li>
-                                <li>Whistleblower complaint investigations</li>
-                                <li>Employee misconduct and performance issues</li>
-                                <li>Workplace safety incident investigations</li>
-                                <li>Third-party investigations for sensitive matters</li>
-                            </ul>
-                            
-                            <h3 class="text-2xl font-caps font-bold text-navy-900 mb-6">Regulatory Compliance</h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                We help employers stay compliant with the complex web of employment regulations:
-                            </p>
-                            <ul class="attorney-bullet-list space-y-3 mb-8">
-                                <li>Fair Labor Standards Act (FLSA) compliance</li>
-                                <li>Family and Medical Leave Act (FMLA) compliance</li>
-                                <li>Americans with Disabilities Act (ADA) compliance</li>
-                                <li>Title VII and anti-discrimination laws</li>
-                                <li>Occupational Safety and Health Act (OSHA) compliance</li>
-                                <li>Texas employment law compliance</li>
-                                <li>Immigration law compliance (I-9, E-Verify)</li>
-                            </ul>
-                            
-                            <h3 class="text-2xl font-caps font-bold text-navy-900 mb-6">Employment Contract Review & Negotiation</h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                We draft and review employment agreements that protect your business:
-                            </p>
-                            <ul class="attorney-bullet-list space-y-3 mb-8">
-                                <li>Executive employment agreements</li>
-                                <li>Non-compete and non-solicitation agreements</li>
-                                <li>Confidentiality and trade secret agreements</li>
-                                <li>Severance agreements and releases</li>
-                                <li>Independent contractor agreements</li>
-                                <li>Consulting and service agreements</li>
-                            </ul>
-                        </div>
+            <!-- Services -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-caps font-bold text-navy-900 mb-8">Representative Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Employment Policy Development & Review</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Employee handbooks and policy manuals</li>
+                            <li>• Anti-discrimination and harassment policies</li>
+                            <li>• Leave and accommodation policies (FMLA, ADA)</li>
+                            <li>• Social media and technology use policies</li>
+                        </ul>
                     </div>
                     
-                    <!-- Sidebar -->
-                    <div class="lg:col-span-1">
-                        <!-- Contact Card -->
-                        <div class="bg-navy-50 p-8 rounded-lg mb-8">
-                            <h3 class="text-xl font-caps font-bold text-navy-900 mb-4">Get Expert Employment Law Counsel</h3>
-                            <p class="text-gray-700 mb-6">
-                                Protect your business with proactive employment law guidance. Contact us for a consultation.
-                            </p>
-                            <a href="tel:+14097632341" class="btn btn-primary w-full mb-4">
-                                Call (409) 763-2341
-                            </a>
-                            <a href="mailto:info@millsshirley.com" class="btn btn-secondary w-full">
-                                Email Us
-                            </a>
-                        </div>
-                        
-                        <!-- Related Services -->
-                        <div class="bg-white border border-gray-200 p-6 rounded-lg">
-                            <h4 class="text-lg font-caps font-bold text-navy-900 mb-4">Related Services</h4>
-                            <ul class="space-y-3">
-                                <li>
-                                    <a href="employment-litigation-and-disputes.html" class="text-navy-700 hover:text-navy-900 transition-colors">
-                                        Employment Litigation & Disputes
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="workplace-safety-and-eeoc-matters.html" class="text-navy-700 hover:text-navy-900 transition-colors">
-                                        Workplace Safety & EEOC Matters
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../../index.html#practice-areas" class="text-navy-700 hover:text-navy-900 transition-colors">
-                                        All Practice Areas
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Compliance Training & Education</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Manager and supervisor training on employment laws</li>
+                            <li>• Anti-harassment and discrimination prevention training</li>
+                            <li>• Wage and hour compliance training</li>
+                            <li>• Workplace safety and OSHA compliance training</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Workplace Investigations</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Harassment and discrimination investigations</li>
+                            <li>• Workplace misconduct investigations</li>
+                            <li>• Whistleblower complaint investigations</li>
+                            <li>• Third-party investigations for sensitive matters</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Regulatory Compliance</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Fair Labor Standards Act (FLSA) compliance</li>
+                            <li>• Family and Medical Leave Act (FMLA) compliance</li>
+                            <li>• Americans with Disabilities Act (ADA) compliance</li>
+                            <li>• Title VII and anti-discrimination laws</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="py-16 lg:py-24 bg-navy-50">
-            <div class="container-standard">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-caps font-bold text-navy-900 mb-6">
-                        Why Choose Mills Shirley for Employment Law?
-                    </h2>
-                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Our employment law attorneys combine deep legal expertise with practical business understanding to provide effective solutions for Texas employers.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Attorneys -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-caps font-bold text-navy-900 mb-8">Related Attorneys</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-navy-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Proactive Prevention</h3>
-                        <p class="text-gray-700">
-                            We help you prevent employment disputes through comprehensive policies, training, and compliance programs.
-                        </p>
+                        <a href="../../attorneys/robert-booth.html" class="card-link">
+                            <div class="w-24 h-24 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-500 mb-3">
+                                <img src="../../assets/img/attorneys/robert-booth.jpg" alt="Robert E. Booth" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <svg class="w-12 h-12 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-navy-900">Robert E. Booth</h4>
+                            <p class="text-sm text-gray-600">Managing Partner</p>
+                        </a>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-navy-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Business-Focused Approach</h3>
-                        <p class="text-gray-700">
-                            We understand your business needs and provide practical legal solutions that support your operational goals.
-                        </p>
+                        <a href="../../attorneys/maureen-mccutchen.html" class="card-link">
+                            <div class="w-24 h-24 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-500 mb-3">
+                                <img src="../../assets/img/attorneys/maureen-mccutchen.jpg" alt="Maureen K. McCutchen" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <svg class="w-12 h-12 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-navy-900">Maureen K. McCutchen</h4>
+                            <p class="text-sm text-gray-600">Partner</p>
+                        </a>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-navy-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-caps font-bold text-navy-900 mb-3">Timely Response</h3>
-                        <p class="text-gray-700">
-                            We provide prompt, responsive counsel when employment issues arise, helping you address problems quickly and effectively.
-                        </p>
+                        <a href="../../attorneys/jessica-conley.html" class="card-link">
+                            <div class="w-24 h-24 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-500 mb-3">
+                                <img src="../../assets/img/attorneys/jessica-conley.jpg" alt="Jessica Conley" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <svg class="w-12 h-12 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-navy-900">Jessica Conley</h4>
+                            <p class="text-sm text-gray-600">Associate</p>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+                            
 
     <!-- Footer -->
     <footer class="bg-navy-900 text-white py-12">
