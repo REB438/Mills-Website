@@ -376,5 +376,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Image Loading Enhancement
+    const images = document.querySelectorAll('img[src]');
+    images.forEach(img => {
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                const fallback = this.nextElementSibling;
+                if (fallback && fallback.tagName === 'svg') {
+                    fallback.style.display = 'flex';
+                }
+            });
+        }
+    });
+    
     console.log('Mills Shirley LLP website scripts loaded successfully');
 });
