@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all search engines to crawl the site
+Allow: /assets/
+Allow: /attorneys/
+Allow: /practice-areas/
+
+# Sitemap location
+Sitemap: https://millsshirley.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent overloading server)
+Crawl-delay: 1
