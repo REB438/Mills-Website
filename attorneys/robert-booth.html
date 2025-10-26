@@ -29,6 +29,18 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     
+    <!-- Mobile Viewport Fix -->
+    <style>
+        @media (max-width: 768px) {
+            section {
+                position: relative !important;
+                top: 0 !important;
+                left: 0 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+    
     
     
     <!-- Favicon -->
@@ -169,13 +181,12 @@
     </div>
 
     <!-- Attorney Profile Section -->
-    <section style="padding: 40px 0; background: white;">
+    <section style="padding: 20px 0; background: white; min-height: 100vh;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div style="background: yellow; padding: 10px; margin: 10px;">CONTENT TEST - Robert Booth Profile</div>
             <div style="display: block;">
                 
                 <!-- Attorney Photo and Contact Info -->
-                <div style="display: block; margin: 20px 0; padding: 20px; background: lightblue;">
+                <div style="display: block; margin: 20px 0; padding: 20px;">
                     <div class="text-center lg:text-left">
                         <div class="w-72 h-96 mx-auto lg:mx-0 bg-gradient-to-br from-slate-50 to-slate-200 rounded-xl flex items-center justify-center text-gray-500 mb-6 shadow-lg shadow-navy-900/5">
                             <img src="../assets/img/attorneys/robert-booth.jpg" alt="Robert Edward Booth" class="w-full h-full object-cover rounded-xl" style="object-position: center top;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -213,7 +224,7 @@
                 </div>
                 
                 <!-- Attorney Biography and Details -->
-                <div style="display: block; margin: 20px 0; padding: 20px; background: lightgreen;">
+                <div style="display: block; margin: 20px 0; padding: 20px;">
                     
                     <!-- Biography -->
                     <div class="mb-8">
