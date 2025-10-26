@@ -36,29 +36,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     
-    <!-- Debug CSS for Click Issues -->
+    <!-- Fix for Click Issues -->
     <style>
-        /* Force all elements to be clickable */
-        * {
-            pointer-events: auto !important;
-        }
-        
-        /* Ensure no invisible overlays */
+        /* Ensure mobile menu backdrop doesn't block clicks */
         .mobile-menu-backdrop {
             display: none !important;
         }
         
-        /* Make sure all links are visible and clickable */
+        /* Ensure all links and buttons are clickable */
         a, button {
-            opacity: 1 !important;
-            visibility: visible !important;
             pointer-events: auto !important;
-            z-index: 10 !important;
-        }
-        
-        /* Debug: Add red border to all clickable elements */
-        a, button {
-            border: 1px solid red !important;
         }
     </style>
     
