@@ -263,27 +263,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animation on Scroll (Optional Enhancement)
+    // Animation on Scroll (Optional Enhancement) - DISABLED
     // Simple fade-in animation for elements as they come into view
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // const observerOptions = {
+    //     threshold: 0.1,
+    //     rootMargin: '0px 0px -50px 0px'
+    // };
     
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    // const observer = new IntersectionObserver(function(entries) {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('animate-fade-in');
+    //             observer.unobserve(entry.target);
+    //         }
+    //     });
+    // }, observerOptions);
     
-    // Observe sections for animation
+    // Observe sections for animation - DISABLED
     const sectionsToAnimate = document.querySelectorAll('section > div');
     sectionsToAnimate.forEach(section => {
-        section.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
-        observer.observe(section);
+        // Don't set opacity to 0 since animations are disabled
+        // section.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+        // observer.observe(section);
     });
     
     // Add CSS for fade-in animation
