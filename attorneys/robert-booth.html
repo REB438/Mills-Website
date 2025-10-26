@@ -28,6 +28,17 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     
+    <!-- Mobile Content Fix -->
+    <style>
+        @media (max-width: 768px) {
+            .max-w-6xl, .grid, .lg\\:col-span-1, .lg\\:col-span-2 {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+        }
+    </style>
+    
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon/favicon.png">
@@ -169,6 +180,7 @@
     <!-- Attorney Profile Section -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div style="background: yellow; padding: 10px; margin: 10px;">CONTENT TEST - Robert Booth Profile</div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 
                 <!-- Attorney Photo and Contact Info -->
