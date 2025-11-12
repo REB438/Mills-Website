@@ -20,6 +20,11 @@
     --charcoal-light: #6b7280;
 }
 
+/* Normalize light gray backgrounds to match homepage white aesthetic */
+.bg-light-gray {
+    background-color: #ffffff !important;
+}
+
 /* Typography System
  * Headings: Inter (sans-serif) - Modern, professional, highly readable
  * Body Text: Inter (sans-serif) - Optimized for web reading, excellent legibility
@@ -1367,12 +1372,14 @@ header .flex.justify-between.items-center {
     z-index: 40;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition: all 0.25s ease;
 }
 
 .mobile-menu-backdrop.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 /* Improved Focus Management */
