@@ -51,7 +51,6 @@ Static website for Mills Shirley LLP, Texas's oldest continuously operating law 
 - `fred-raschke.txt` → `fred-raschke.html`
 - `gus-knebel.txt` → `gus-knebel.html`
 - `jack-brock.txt` → `jack-brock.html`
-- `jessica-conley.txt` → `jessica-conley.html`
 - `maureen-mccutchen.txt` → `maureen-mccutchen.html`
 - `rachel-delgado.txt` → `rachel-delgado.html`
 - `robert-booth.txt` → `robert-booth.html`

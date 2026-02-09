@@ -5,13 +5,13 @@ Address: 2200 Market St, Suite 300
 City: Galveston  
 State: Texas  
 ZIP: 77550  
-Hours: MondayÐFriday, 8:00 AM Ð 5:00 PM
+Hours: Mondayï¿½Friday, 8:00 AM ï¿½ 5:00 PM
 Main Phone: (409) 761-2341
 
 Payment Links:  
 Pay Invoice: https://app.clio.com/link/9ckmAXGeVnvD
 Pay Retainer: https://app.clio.com/link/7TZ7wnArCtYn
-W-9 Form: /assets/PDF/w-9.pdf
+W-9 Form: /assets/pdf/w-9-2026.pdf
 
 
 <div style="width: 100%; height: 0; padding-bottom: 56.25%; position: relative;">
