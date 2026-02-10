@@ -159,6 +159,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Make homepage practice area cards clickable tiles
+    const practiceCards = document.querySelectorAll('.practice-area-card[data-href]');
+    
+    practiceCards.forEach(card => {
+        const href = card.getAttribute('data-href');
+        if (!href) return;
+        
+        // Visual affordance
+        card.classList.add('cursor-pointer');
+        
+        // Click anywhere on the card (except inner links) to navigate
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('a')) {
+                // Let inner links (e.g., individual practice links) behave normally
+                return;
+            }
+            window.location.href = href;
+        });
+        
+        // Keyboard accessibility: Enter / Space activates the card
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (e.target.closest('a')) {
+                    return;
+                }
+                e.preventDefault();
+                window.location.href = href;
+            }
+        });
+    });
+    
     // Header Shadow on Scroll
     const header = document.querySelector('header');
     
