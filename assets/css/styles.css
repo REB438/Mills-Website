@@ -596,21 +596,6 @@ nav a:focus-visible {
     transform: translateY(0) !important;
 }
 
-/* Global Animation Disable */
-*, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    animation-delay: 0s !important;
-    transition-delay: 0s !important;
-}
-
-/* Ensure all content is immediately visible */
-body, html, section, div, p, h1, h2, h3, h4, h5, h6 {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -1073,6 +1058,15 @@ p, span, div, li, td, th, button, input, textarea, select, nav a {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+/* Practice area Related Attorneys: larger circles, position face toward top */
+.related-attorneys-section a > div.rounded-full {
+    width: 8rem !important;
+    height: 8rem !important;
+}
+.related-attorneys-section .rounded-full img {
+    object-position: center top;
 }
 
 .arrow-link {

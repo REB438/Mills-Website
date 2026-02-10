@@ -12,6 +12,3 @@ Allow: /practice-areas/
 
 # Sitemap location
 Sitemap: https://millsshirley.com/sitemap.xml
-
-# Crawl delay (optional - helps prevent overloading server)
-Crawl-delay: 1

@@ -3,6 +3,18 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Screen reader announcer (created early so menu toggle can use it)
+    const srAnnouncer = document.createElement('div');
+    srAnnouncer.setAttribute('aria-live', 'polite');
+    srAnnouncer.setAttribute('aria-atomic', 'true');
+    srAnnouncer.className = 'sr-only';
+    document.body.appendChild(srAnnouncer);
+    
+    function announceToScreenReader(message) {
+        srAnnouncer.textContent = message;
+        setTimeout(function() { srAnnouncer.textContent = ''; }, 1000);
+    }
+    
     // Enhanced Mobile Menu Toggle with Accessibility
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -49,11 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update button icon with animation
             const buttonSvg = mobileMenuButton.querySelector('svg path');
-            if (isMenuOpen) {
-                buttonSvg.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X icon
-            } else {
-                buttonSvg.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger icon
+            if (buttonSvg) {
+                if (isMenuOpen) {
+                    buttonSvg.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X icon
+                } else {
+                    buttonSvg.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger icon
+                }
             }
+            
+            announceToScreenReader(isMenuOpen ? 'Menu opened' : 'Menu closed');
         }
         
         mobileMenuButton.addEventListener('click', toggleMobileMenu);
@@ -339,29 +355,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('focus-visible');
         });
     });
-    
-    // Enhanced announcement for screen readers
-    const srAnnouncer = document.createElement('div');
-    srAnnouncer.setAttribute('aria-live', 'polite');
-    srAnnouncer.setAttribute('aria-atomic', 'true');
-    srAnnouncer.className = 'sr-only';
-    document.body.appendChild(srAnnouncer);
-    
-    function announceToScreenReader(message) {
-        srAnnouncer.textContent = message;
-        setTimeout(() => {
-            srAnnouncer.textContent = '';
-        }, 1000);
-    }
-    
-    // Announce menu state changes
-    if (mobileMenuButton) {
-        const originalToggle = toggleMobileMenu;
-        toggleMobileMenu = function() {
-            originalToggle();
-            announceToScreenReader(isMenuOpen ? 'Menu opened' : 'Menu closed');
-        };
-    }
     
     // Enhanced keyboard navigation
     document.addEventListener('keydown', function(e) {
