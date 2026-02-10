@@ -35,6 +35,7 @@
     <script>tailwind.config = window.tailwindConfig;</script>
 </head>
 <body class="text-gray-800">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header Navigation (Sticky) -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -59,7 +60,8 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-navy-900 p-2">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-navy-900 p-2" aria-label="Open main menu">
+                        <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -92,6 +94,7 @@
         </div>
     </div>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="bg-navy-900 text-white py-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -203,6 +206,8 @@
             <a href="../../index.html#contact" class="btn btn-primary">Schedule a Consultation</a>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-navy-900 text-white py-12">

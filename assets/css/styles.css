@@ -1387,8 +1387,9 @@ header .flex.justify-between.items-center {
     border-radius: 0.25rem !important;
 }
 
-/* Skip Navigation Link */
-.skip-nav {
+/* Skip Navigation Link (ADA / WCAG 2.1) */
+.skip-nav,
+.skip-link {
     position: absolute;
     top: -100px;
     left: 50%;
@@ -1403,7 +1404,8 @@ header .flex.justify-between.items-center {
     transition: top 0.3s ease;
 }
 
-.skip-nav:focus {
+.skip-nav:focus,
+.skip-link:focus {
     top: 1rem;
 }
 
