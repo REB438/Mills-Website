@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Duplicate attorney URLs - canonical versions are at /attorneys/name.html
+Disallow: /attorney/
+
 # Disallow admin or private areas (if any)
 # Disallow: /admin/
 # Disallow: /private/
