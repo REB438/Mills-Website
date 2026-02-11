@@ -345,23 +345,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
     
     // Enhanced Accessibility
-    // Skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-nav';
-    skipLink.setAttribute('tabindex', '0');
-    
-    document.body.insertBefore(skipLink, document.body.firstChild);
-    
-    // Add skip to navigation link
-    const skipNavLink = document.createElement('a');
-    skipNavLink.href = '#main-navigation';
-    skipNavLink.textContent = 'Skip to navigation';
-    skipNavLink.className = 'skip-nav';
-    skipNavLink.style.left = '30%';
-    
-    document.body.insertBefore(skipNavLink, skipLink.nextSibling);
+    // Add skip to navigation link only (pages already have skip to main content in HTML)
+    if (!document.querySelector('a[href="#main-navigation"]')) {
+        const skipNavLink = document.createElement('a');
+        skipNavLink.href = '#main-navigation';
+        skipNavLink.textContent = 'Skip to navigation';
+        skipNavLink.className = 'skip-link';
+        document.body.insertBefore(skipNavLink, document.body.firstChild);
+    }
     
     // Add main content and navigation IDs if they don't exist
     const mainContent = document.querySelector('main') || document.querySelector('section');
