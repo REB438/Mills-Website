@@ -1,0 +1,2 @@
+# Dependencies for attorney resume PDF generation
+reportlab>=4.0.0
