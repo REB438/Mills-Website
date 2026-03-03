@@ -106,7 +106,7 @@ def create_resume():
     # Biography
     story.append(Paragraph("PROFESSIONAL PROFILE", styles['SectionHeader']))
     story.append(Paragraph(
-        "Partner in the litigation section of Mills Shirley LLP. Represents clients in commercial, construction, maritime, insurance defense, and civil disputes. Practice includes both trial and appellate work, with a particular focus on interstate and international transportation and maritime law. Based in Houston and Galveston, advising a range of businesses, owners, and insurers.",
+        "Partner in the litigation section of Mills Shirley LLP. Represents clients in commercial, construction, maritime, insurance defense, and civil disputes. Practice includes both trial and appellate work, with a particular focus on construction, design, and commercial litigation. Based in Houston and Galveston, advising a range of businesses, owners, and insurers.",
         styles['ResumeBody']
     ))
 
