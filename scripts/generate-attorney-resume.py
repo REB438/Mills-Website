@@ -32,7 +32,7 @@ ADDRESS = "2200 Market St, Suite 300 | Galveston, TX 77550"
 ATTORNEY_CONFIG = {
     "andy-soto": ("andres-soto.jpg", "(409) 761-4035", "asoto@millsshirley.com", None, None),
     "gus-knebel": ("gus-knebel.jpg", "(409) 761-4056", "", None, None),
-    "maureen-mccutchen": ("maureen-mccutchen.jpg", "(409) 761-4023", "", None, "board-certified-estate-planning.png"),
+    "maureen-mccutchen": ("maureen-mccutchen.jpg", "(409) 761-4023", "mmccutchen@millsshirley.com", None, "board-certified-estate-planning.png"),
     "fred-raschke": ("fred-raschke.jpg", "(409) 761-4028", "", None, None),
     "jack-brock": ("jack-brock.jpg", "(713) 242-1880", "", None, None),
     "rachel-delgado": ("rachel-delgado26.jpg", "(409) 761-4038", "rdelgado@millsshirley.com",
