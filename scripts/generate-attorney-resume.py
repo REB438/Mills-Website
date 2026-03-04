@@ -30,14 +30,15 @@ WHITE = HexColor('#ffffff')
 ADDRESS = "2200 Market St, Suite 300 | Galveston, TX 77550"
 
 ATTORNEY_CONFIG = {
-    "andy-soto": ("andres-soto.jpg", "(409) 761-4035", "asoto@millsshirley.com", None),
-    "gus-knebel": ("gus-knebel.jpg", "(409) 761-4056", "", None),
-    "maureen-mccutchen": ("maureen-mccutchen.jpg", "(409) 761-4023", "", None),
-    "fred-raschke": ("fred-raschke.jpg", "(409) 761-4028", "", None),
-    "jack-brock": ("jack-brock.jpg", "(713) 242-1880", "", None),
+    "andy-soto": ("andres-soto.jpg", "(409) 761-4035", "asoto@millsshirley.com", None, None),
+    "gus-knebel": ("gus-knebel.jpg", "(409) 761-4056", "", None, None),
+    "maureen-mccutchen": ("maureen-mccutchen.jpg", "(409) 761-4023", "", None, "board-certified-estate-planning.png"),
+    "fred-raschke": ("fred-raschke.jpg", "(409) 761-4028", "", None, None),
+    "jack-brock": ("jack-brock.jpg", "(713) 242-1880", "", None, None),
     "rachel-delgado": ("rachel-delgado26.jpg", "(409) 761-4038", "rdelgado@millsshirley.com",
-        ["Appeals", "Real Estate", "Construction", "Contracts", "Business Torts", "Fraud Claims", "Employment Contracts"]),
+        ["Appeals", "Real Estate", "Construction", "Contracts", "Business Torts", "Fraud Claims", "Employment Contracts"], None),
 }
+# Config tuple: (photo_file, phone, email, practice_areas_override, certification_logo)
 
 
 def _clean_text(s):
@@ -168,9 +169,10 @@ def create_resume(slug):
         print(f"  No data file for {slug}, skipping")
         return False
 
-    config = ATTORNEY_CONFIG.get(slug, (f"{slug}.jpg", "", "", None))
+    config = ATTORNEY_CONFIG.get(slug, (f"{slug}.jpg", "", "", None, None))
     photo_file, phone, email = config[0], config[1], config[2]
     practices_override = config[3] if len(config) > 3 else None
+    cert_logo_file = config[4] if len(config) > 4 else None
     if not phone and data.get("phone"):
         phone = data["phone"]
     photo_path = os.path.join(project_root, "assets", "img", "attorneys", photo_file)
@@ -239,13 +241,23 @@ def create_resume(slug):
     title_para = Paragraph(f"{title_text}  |  Mills Shirley LLP", styles["TitleStyle"])
     contact_para = Paragraph(contact_line, styles["ContactStyle"])
 
+    # Build optional certification logo for header
+    cert_img_obj = None
+    if cert_logo_file:
+        cert_path = os.path.join(project_root, "assets", "img", cert_logo_file)
+        if os.path.exists(cert_path):
+            cert_img_obj = Image(cert_path, width=1.4 * inch, height=0.79 * inch, kind='proportional')
+            cert_img_obj.hAlign = "RIGHT"
+
     if has_photo:
         img = Image(photo_path, width=1.15 * inch, height=1.45 * inch)
         img.hAlign = "LEFT"
-        text_block = Table(
-            [[name_para], [title_para], [contact_para]],
-            colWidths=[5.2 * inch]
-        )
+
+        # Text rows: name, title, contact — and cert logo aligned right if present
+        text_rows = [[name_para], [title_para], [contact_para]]
+        text_col_width = 3.85 * inch if cert_img_obj else 5.2 * inch
+
+        text_block = Table(text_rows, colWidths=[text_col_width])
         text_block.setStyle(TableStyle([
             ('VALIGN', (0, 0), (-1, -1), 'TOP'),
             ('TOPPADDING', (0, 0), (-1, -1), 0),
@@ -253,10 +265,29 @@ def create_resume(slug):
             ('LEFTPADDING', (0, 0), (-1, -1), 0),
             ('RIGHTPADDING', (0, 0), (-1, -1), 0),
         ]))
-        header_table = Table(
-            [[img, text_block]],
-            colWidths=[1.35 * inch, 5.35 * inch]
-        )
+
+        if cert_img_obj:
+            mid_block = Table(
+                [[text_block, cert_img_obj]],
+                colWidths=[3.95 * inch, 1.4 * inch]
+            )
+            mid_block.setStyle(TableStyle([
+                ('VALIGN', (0, 0), (0, 0), 'TOP'),
+                ('VALIGN', (1, 0), (1, 0), 'MIDDLE'),
+                ('TOPPADDING', (0, 0), (-1, -1), 0),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+                ('LEFTPADDING', (0, 0), (-1, -1), 0),
+                ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+            ]))
+            header_table = Table(
+                [[img, mid_block]],
+                colWidths=[1.35 * inch, 5.35 * inch]
+            )
+        else:
+            header_table = Table(
+                [[img, text_block]],
+                colWidths=[1.35 * inch, 5.35 * inch]
+            )
         header_table.setStyle(TableStyle([
             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
             ('TOPPADDING', (0, 0), (-1, -1), 0),
