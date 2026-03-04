@@ -4,14 +4,38 @@ Allow: /
 # Duplicate attorney URLs - canonical versions are at /attorneys/name.html
 Disallow: /attorney/
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
 # Allow all search engines to crawl the site
 Allow: /assets/
 Allow: /attorneys/
 Allow: /practice-areas/
+
+# AI Crawlers - explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# LLM-readable site summary
+# See https://millsshirley.com/llms.txt
 
 # Sitemap location
 Sitemap: https://millsshirley.com/sitemap.xml
