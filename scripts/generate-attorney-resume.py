@@ -104,16 +104,19 @@ def parse_data_file(path):
     return data
 
 
-def _add_section_header(story, title, styles):
-    story.append(Spacer(1, 14))
-    story.append(HRFlowable(
-        width="100%", thickness=0.75, color=NAVY, spaceAfter=4, spaceBefore=0
-    ))
-    story.append(Paragraph(title, styles["SectionTitle"]))
-    story.append(Spacer(1, 4))
+def _section_header_flowables(title, styles):
+    """Return the flowables that make up a section header (spacer, rule, title)."""
+    return [
+        Spacer(1, 14),
+        HRFlowable(width="100%", thickness=0.75, color=NAVY, spaceAfter=4, spaceBefore=0),
+        Paragraph(title, styles["SectionTitle"]),
+        Spacer(1, 4),
+    ]
 
 
-def _add_bullet_items(story, items, styles, columns=1):
+def _build_bullet_flowables(items, styles, columns=1):
+    """Return a list of flowables for bullet items."""
+    flowables = []
     if columns == 2 and len(items) >= 4:
         mid = (len(items) + 1) // 2
         left_col = items[:mid]
@@ -132,10 +135,25 @@ def _add_bullet_items(story, items, styles, columns=1):
             ('LEFTPADDING', (0, 0), (-1, -1), 0),
             ('RIGHTPADDING', (0, 0), (-1, -1), 4),
         ]))
-        story.append(tbl)
+        flowables.append(tbl)
     else:
         for item in items:
-            story.append(Paragraph(f"<bullet>&bull;</bullet> {item}", styles["ResumeBullet"]))
+            flowables.append(Paragraph(f"<bullet>&bull;</bullet> {item}", styles["ResumeBullet"]))
+    return flowables
+
+
+def _add_section(story, title, content_flowables, styles):
+    """Add a section with header kept together with the first content items.
+
+    Uses KeepTogether to prevent the header from being orphaned at
+    the bottom of a page while its content starts on the next page.
+    """
+    header = _section_header_flowables(title, styles)
+    # Keep the header together with at least the first 3 content items
+    peek = content_flowables[:3]
+    rest = content_flowables[3:]
+    story.append(KeepTogether(header + peek))
+    story.extend(rest)
 
 
 def create_resume(slug):
@@ -259,85 +277,80 @@ def create_resume(slug):
     # ── Professional Profile ──
     bio = data.get("bio_summary", "")
     if bio:
-        _add_section_header(story, "PROFESSIONAL PROFILE", styles)
-        story.append(Paragraph(bio, styles["BodyText2"]))
+        _add_section(story, "PROFESSIONAL PROFILE",
+                     [Paragraph(bio, styles["BodyText2"])], styles)
 
     # ── Practice Areas (2-column) ──
     practices = practices_override if practices_override else data.get("practice_areas", [])
     if practices:
-        _add_section_header(story, "PRACTICE AREAS", styles)
-        _add_bullet_items(story, practices, styles, columns=2)
+        _add_section(story, "PRACTICE AREAS",
+                     _build_bullet_flowables(practices, styles, columns=2), styles)
 
     # ── Education ──
     education = data.get("education", [])
     if education:
-        _add_section_header(story, "EDUCATION", styles)
-        for e in education:
-            story.append(Paragraph(f"<bullet>&bull;</bullet> {e}", styles["ResumeBullet"]))
+        _add_section(story, "EDUCATION",
+                     [Paragraph(f"<bullet>&bull;</bullet> {e}", styles["ResumeBullet"]) for e in education], styles)
 
     # ── Bar Admissions ──
     bar = data.get("bar_admissions", [])
     if bar:
-        _add_section_header(story, "BAR ADMISSIONS", styles)
-        story.append(Paragraph("  |  ".join(bar), styles["SmallBody"]))
+        _add_section(story, "BAR ADMISSIONS",
+                     [Paragraph("  |  ".join(bar), styles["SmallBody"])], styles)
 
     # ── Legal Certifications ──
     certs = data.get("legal_certifications", [])
     if certs:
-        _add_section_header(story, "LEGAL CERTIFICATIONS", styles)
-        for c in certs:
-            story.append(Paragraph(f"<bullet>&bull;</bullet> {c}", styles["ResumeBullet"]))
+        _add_section(story, "LEGAL CERTIFICATIONS",
+                     [Paragraph(f"<bullet>&bull;</bullet> {c}", styles["ResumeBullet"]) for c in certs], styles)
 
     # ── Professional Memberships (2-column) ──
     memberships = data.get("professional_memberships", [])
     if memberships:
-        _add_section_header(story, "PROFESSIONAL MEMBERSHIPS", styles)
-        _add_bullet_items(story, memberships, styles, columns=2)
+        _add_section(story, "PROFESSIONAL MEMBERSHIPS",
+                     _build_bullet_flowables(memberships, styles, columns=2), styles)
 
     # ── Representative Matters ──
     matters = data.get("representative_matters", [])
     if matters:
-        _add_section_header(story, "REPRESENTATIVE MATTERS", styles)
-        _add_bullet_items(story, matters, styles, columns=1)
+        _add_section(story, "REPRESENTATIVE MATTERS",
+                     _build_bullet_flowables(matters, styles, columns=1), styles)
 
     # ── Awards & Recognition ──
     awards = data.get("awards_&_recognition", [])
     if awards:
-        _add_section_header(story, "RECOGNITION & AWARDS", styles)
-        _add_bullet_items(story, awards, styles, columns=1)
+        _add_section(story, "RECOGNITION & AWARDS",
+                     _build_bullet_flowables(awards, styles, columns=1), styles)
 
     # ── Publications ──
     pubs = data.get("publications", [])
     if pubs:
-        _add_section_header(story, "PUBLICATIONS", styles)
-        for p in pubs:
-            story.append(Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]))
+        _add_section(story, "PUBLICATIONS",
+                     [Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]) for p in pubs], styles)
 
     # ── Presentations & Seminars ──
     pres = data.get("presentations_&_seminars", [])
     if pres:
-        _add_section_header(story, "PRESENTATIONS & SEMINARS", styles)
-        for p in pres:
-            story.append(Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]))
+        _add_section(story, "PRESENTATIONS & SEMINARS",
+                     [Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]) for p in pres], styles)
 
     # ── Community Involvement ──
     community = data.get("community_involvement", [])
     if community:
-        _add_section_header(story, "COMMUNITY INVOLVEMENT", styles)
-        _add_bullet_items(story, community, styles, columns=2)
+        _add_section(story, "COMMUNITY INVOLVEMENT",
+                     _build_bullet_flowables(community, styles, columns=2), styles)
 
     # ── Past Positions ──
     past = data.get("past_positions", [])
     if past:
-        _add_section_header(story, "PAST POSITIONS", styles)
-        for p in past:
-            story.append(Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]))
+        _add_section(story, "PAST POSITIONS",
+                     [Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]) for p in past], styles)
 
     # ── Languages ──
     langs = data.get("languages", [])
     if langs:
-        _add_section_header(story, "LANGUAGES", styles)
-        story.append(Paragraph("  |  ".join(langs), styles["SmallBody"]))
+        _add_section(story, "LANGUAGES",
+                     [Paragraph("  |  ".join(langs), styles["SmallBody"])], styles)
 
     # ── Footer ──
     story.append(Spacer(1, 16))
