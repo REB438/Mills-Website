@@ -35,6 +35,26 @@
     <!-- Tailwind Config -->
     <script src="../assets/js/tailwind-config.js"></script>
     <script>tailwind.config = window.tailwindConfig;</script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Mills Shirley LLP - Practice Areas",
+        "description": "Comprehensive legal services including employment law, litigation, transactional, and trusts & estates for Galveston County businesses and individuals.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Mills Shirley LLP",
+            "url": "https://millsshirley.com"
+        },
+        "areaServed": [
+            {"@type": "AdministrativeArea", "name": "Galveston County, Texas"},
+            {"@type": "State", "name": "Texas"}
+        ],
+        "serviceType": ["Employment Law", "Commercial Litigation", "Business Transactions", "Estate Planning", "Construction Law", "Insurance Defense"]
+    }
+    </script>
 </head>
 <body class="text-gray-800">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -234,6 +254,7 @@
                 <div>
                     <h3 class="text-xl font-caps font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-navy-100">
+                        <li><a href="../index.html#about" class="footer-link">About</a></li>
                         <li><a href="index.html" class="footer-link">Practice Areas</a></li>
                         <li><a href="../index.html#attorneys" class="footer-link">Our Attorneys</a></li>
                         <li><a href="../index.html#contact" class="footer-link">Contact</a></li>

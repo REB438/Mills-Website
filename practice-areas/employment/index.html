@@ -15,6 +15,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://millsshirley.com/practice-areas/employment/">
     <meta property="og:site_name" content="Mills Shirley LLP">
+    <meta property="og:image" content="https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg">
+    <meta property="og:image:alt" content="Mills Shirley LLP - Employment Law Practice">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +35,26 @@
     <!-- Centralized Tailwind Config -->
     <script src="../../assets/js/tailwind-config.js"></script>
     <script>tailwind.config = window.tailwindConfig;</script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Employment Law Practice - Mills Shirley LLP",
+        "description": "Employer representation, compliance counseling, workplace investigations, and employment litigation in Galveston County and across Texas.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Mills Shirley LLP",
+            "url": "https://millsshirley.com"
+        },
+        "areaServed": [
+            {"@type": "AdministrativeArea", "name": "Galveston County, Texas"},
+            {"@type": "State", "name": "Texas"}
+        ],
+        "serviceType": ["Employer Representation & Compliance", "Employment Litigation & Disputes", "Workplace Safety & EEOC Matters"]
+    }
+    </script>
 </head>
 <body class="text-gray-800">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -219,6 +241,7 @@
                 <div>
                     <h3 class="text-xl font-caps font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-navy-100">
+                        <li><a href="../../index.html#about" class="footer-link">About</a></li>
                         <li><a href="../index.html" class="footer-link">Practice Areas</a></li>
                         <li><a href="../../index.html#attorneys" class="footer-link">Our Attorneys</a></li>
                         <li><a href="../../index.html#contact" class="footer-link">Contact</a></li>

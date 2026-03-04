@@ -7,41 +7,47 @@ With no args, generates all attorney resumes.
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
-from reportlab.lib.colors import HexColor
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
-from reportlab.lib.enums import TA_LEFT, TA_CENTER
+from reportlab.lib.colors import HexColor, Color
+from reportlab.platypus import (
+    SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle,
+    HRFlowable, KeepTogether
+)
+from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
 import os
 import re
 import sys
 
-# Brand colors (Mills Shirley)
 NAVY = HexColor('#1A2A40')
-NAVY_LIGHT = HexColor('#334155')
-GRAY = HexColor('#6b7280')
+NAVY_LIGHT = HexColor('#2a3a56')
+ACCENT = HexColor('#4a5d77')
+DARK_TEXT = HexColor('#1f2937')
+BODY_TEXT = HexColor('#374151')
+MUTED = HexColor('#6b7280')
+LIGHT_LINE = HexColor('#d1d5db')
+VERY_LIGHT = HexColor('#f3f4f6')
+WHITE = HexColor('#ffffff')
+
 ADDRESS = "2200 Market St, Suite 300 | Galveston, TX 77550"
 
-# Attorney config: slug -> (photo_file, phone, email, practice_areas_override)
 ATTORNEY_CONFIG = {
     "andy-soto": ("andres-soto.jpg", "(409) 761-4035", "asoto@millsshirley.com", None),
     "gus-knebel": ("gus-knebel.jpg", "(409) 761-4056", "", None),
     "maureen-mccutchen": ("maureen-mccutchen.jpg", "(409) 761-4023", "", None),
     "fred-raschke": ("fred-raschke.jpg", "(409) 761-4028", "", None),
     "jack-brock": ("jack-brock.jpg", "(713) 242-1880", "", None),
-    "rachel-delgado": ("rachel-delgado.jpg", "(409) 761-4038", "rdelgado@millsshirley.com",
+    "rachel-delgado": ("rachel-delgado26.jpg", "(409) 761-4038", "rdelgado@millsshirley.com",
         ["Appeals", "Real Estate", "Construction", "Contracts", "Business Torts", "Fraud Claims", "Employment Contracts"]),
 }
 
 
 def _clean_text(s):
-    """Fix encoding and placeholder text. Replace curly/smart quotes and mojibake with ASCII."""
     if not s:
         return s
-    # Curly quotes, en-dash mojibake (0xD0 in cp1252 = Ð), and common replacements
     replacements = [
-        ("Ò", "'"), ("Ó", "'"), ("Õ", "'"), ("Ð", "-"), ("–", "-"), ("—", "-"),
-        (""", "'"), (""", "'"), (""", '"'), (""", '"'),  # Unicode curly quotes
-        ("\u00d2", "'"), ("\u00d3", "'"),  # Latin O variants used as quote mojibake
-        ("\u00d0", "-"),  # Ð - often used as en-dash in cp1252 files (e.g. 2014Ð2015)
+        ("\u00d2", "'"), ("\u00d3", "'"), ("\u00d5", "'"), ("\u00d0", "-"),
+        ("\u2013", "-"), ("\u2014", "-"),
+        ("\u201c", '"'), ("\u201d", '"'), ("\u2018", "'"), ("\u2019", "'"),
+        ("Ò", "'"), ("Ó", "'"), ("Õ", "'"), ("Ð", "-"), ("\x9d", "-"),
     ]
     for old, new in replacements:
         s = s.replace(old, new)
@@ -49,10 +55,8 @@ def _clean_text(s):
 
 
 def parse_data_file(path):
-    """Parse attorney data file into structured dict."""
     if not os.path.exists(path):
         return None
-    # Try cp1252 first (common for Windows-saved files with curly quotes), fallback to utf-8
     try:
         with open(path, "r", encoding="cp1252") as f:
             content = f.read()
@@ -68,15 +72,12 @@ def parse_data_file(path):
             continue
         lines = block.split("\n")
         first = lines[0].strip()
-        # Section header: "Section Name:" at start (not a bullet)
         if ":" in first and not first.startswith("- ") and not first.startswith("  -"):
-            key, _, val = first.partition(":")  # split on first colon
+            key, _, val = first.partition(":")
             key = key.strip().lower().replace(" ", "_")
             val = _clean_text(val.strip())
-            # Single-line metadata - first block has multiple such lines
             if key in ("name", "title", "office", "phone", "email", "headshot", "vcard", "linkedin"):
                 data[key] = val
-                # Process remaining lines in block if they're also key:value (metadata block)
                 for line in lines[1:]:
                     s = line.strip()
                     if ":" in s and not s.startswith("- "):
@@ -86,13 +87,11 @@ def parse_data_file(path):
                         if k in ("name", "title", "office", "phone", "email", "headshot"):
                             data[k] = v
                 continue
-            # Bio Summary: content is on following line(s)
             if key == "bio_summary":
                 body = "\n".join(lines[1:]).strip() if len(lines) > 1 else val
                 if body and "[Insert" not in body:
                     data["bio_summary"] = _clean_text(body)
                 continue
-            # List sections: collect "- item" lines
             items = []
             for line in lines[1:]:
                 s = line.strip()
@@ -105,29 +104,41 @@ def parse_data_file(path):
     return data
 
 
-def _debug_parse(path):
-    """Debug: print parse state for first 30 lines."""
-    with open(path, "r", encoding="utf-8", errors="replace") as f:
-        lines = f.read().split("\n")
-    for i, line in enumerate(lines[:30]):
-        has_colon = ": " in line
-        starts_dash = line.startswith("- ") or line.startswith("  -")
-        print(f"{i:2}: has_colon={has_colon} dash={starts_dash} | {repr(line[:60])}")
+def _add_section_header(story, title, styles):
+    story.append(Spacer(1, 14))
+    story.append(HRFlowable(
+        width="100%", thickness=0.75, color=NAVY, spaceAfter=4, spaceBefore=0
+    ))
+    story.append(Paragraph(title, styles["SectionTitle"]))
+    story.append(Spacer(1, 4))
 
 
-def clean_text(s):
-    """Clean placeholder text."""
-    if not s:
-        return ""
-    placeholders = ["[Insert if known]", "[Insert if available]", "[None listed]", "[Not specified]", "[Insert if known or applicable]"]
-    for p in placeholders:
-        if p in s:
-            return ""
-    return s
+def _add_bullet_items(story, items, styles, columns=1):
+    if columns == 2 and len(items) >= 4:
+        mid = (len(items) + 1) // 2
+        left_col = items[:mid]
+        right_col = items[mid:]
+        col_data = []
+        for i in range(max(len(left_col), len(right_col))):
+            left = Paragraph(f"<bullet>&bull;</bullet> {left_col[i]}", styles["ResumeBullet"]) if i < len(left_col) else ""
+            right = Paragraph(f"<bullet>&bull;</bullet> {right_col[i]}", styles["ResumeBullet"]) if i < len(right_col) else ""
+            col_data.append([left, right])
+        col_width = 3.25 * inch
+        tbl = Table(col_data, colWidths=[col_width, col_width])
+        tbl.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('TOPPADDING', (0, 0), (-1, -1), 1),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 1),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ]))
+        story.append(tbl)
+    else:
+        for item in items:
+            story.append(Paragraph(f"<bullet>&bull;</bullet> {item}", styles["ResumeBullet"]))
 
 
 def create_resume(slug):
-    """Generate resume PDF for attorney."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
     data_path = os.path.join(project_root, "data", "attorneys", f"{slug}.txt")
@@ -140,144 +151,205 @@ def create_resume(slug):
         return False
 
     config = ATTORNEY_CONFIG.get(slug, (f"{slug}.jpg", "", "", None))
-    photo_file = config[0]
-    phone = config[1] if len(config) > 1 else ""
-    email = config[2] if len(config) > 2 else ""
+    photo_file, phone, email = config[0], config[1], config[2]
     practices_override = config[3] if len(config) > 3 else None
     if not phone and data.get("phone"):
         phone = data["phone"]
     photo_path = os.path.join(project_root, "assets", "img", "attorneys", photo_file)
 
     name = data.get("name", slug.replace("-", " ").title())
-    title = data.get("title", "")
-    contact_line = ADDRESS
-    if phone:
-        contact_line += f" | {phone}"
-    if email:
-        contact_line += f" | {email}"
+    title_text = data.get("title", "")
 
     doc = SimpleDocTemplate(
         output_path,
         pagesize=letter,
-        rightMargin=0.75 * inch,
-        leftMargin=0.75 * inch,
-        topMargin=0.75 * inch,
-        bottomMargin=0.75 * inch,
-        title="Professional Resume",
+        rightMargin=0.65 * inch,
+        leftMargin=0.65 * inch,
+        topMargin=0.5 * inch,
+        bottomMargin=0.5 * inch,
+        title=f"{name} - Resume",
     )
 
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name="SectionHeader", fontSize=12, textColor=NAVY, spaceBefore=14, spaceAfter=6, fontName="Helvetica-Bold"))
-    styles.add(ParagraphStyle(name="ResumeBody", fontSize=10, textColor=HexColor("#374151"), spaceAfter=6, fontName="Helvetica"))
-    styles.add(ParagraphStyle(name="ResumeBullet", fontSize=10, textColor=HexColor("#374151"), leftIndent=20, spaceAfter=2, fontName="Helvetica"))
+
+    styles.add(ParagraphStyle(
+        name="NameStyle", fontSize=22, textColor=NAVY, fontName="Helvetica-Bold",
+        spaceAfter=2, leading=26
+    ))
+    styles.add(ParagraphStyle(
+        name="TitleStyle", fontSize=11, textColor=ACCENT, fontName="Helvetica",
+        spaceAfter=6, leading=14
+    ))
+    styles.add(ParagraphStyle(
+        name="ContactStyle", fontSize=8.5, textColor=MUTED, fontName="Helvetica",
+        spaceAfter=0, leading=12
+    ))
+    styles.add(ParagraphStyle(
+        name="SectionTitle", fontSize=11, textColor=NAVY, fontName="Helvetica-Bold",
+        spaceBefore=0, spaceAfter=4, leading=14
+    ))
+    styles.add(ParagraphStyle(
+        name="BodyText2", fontSize=9.5, textColor=BODY_TEXT, fontName="Helvetica",
+        spaceAfter=4, leading=13.5
+    ))
+    styles.add(ParagraphStyle(
+        name="ResumeBullet", fontSize=9.5, textColor=BODY_TEXT, fontName="Helvetica",
+        leftIndent=14, bulletIndent=0, spaceAfter=2, leading=13
+    ))
+    styles.add(ParagraphStyle(
+        name="SmallBody", fontSize=9, textColor=BODY_TEXT, fontName="Helvetica",
+        spaceAfter=3, leading=12.5
+    ))
+    styles.add(ParagraphStyle(
+        name="FooterStyle", fontSize=7.5, textColor=MUTED, fontName="Helvetica",
+        alignment=TA_CENTER, spaceBefore=12
+    ))
 
     story = []
 
-    # Photo
-    if os.path.exists(photo_path):
-        img = Image(photo_path, width=1.25 * inch, height=1.6 * inch)
-        img.hAlign = "CENTER"
-        story.append(img)
-        story.append(Spacer(1, 8))
+    # ── Header: Photo + Name/Title/Contact side-by-side ──
+    has_photo = os.path.exists(photo_path)
 
-    # Header
-    # Use plain ASCII for header - avoid HTML entities that can cause rendering issues
-    name_upper = name.upper()
-    title_safe = title
-    header_text = f"<b><font size='24' color='#1A2A40'>{name_upper}</font></b><br/><font size='12' color='#334155'>{title_safe} | Mills Shirley LLP</font><br/><font size='9' color='#6b7280'>{contact_line}</font>"
-    story.append(Paragraph(header_text, ParagraphStyle("Header", alignment=TA_CENTER, spaceAfter=20)))
+    contact_parts = [ADDRESS]
+    if phone:
+        contact_parts.append(phone)
+    if email:
+        contact_parts.append(email)
+    contact_line = "  |  ".join(contact_parts)
 
-    # Bio
+    name_para = Paragraph(name.upper(), styles["NameStyle"])
+    title_para = Paragraph(f"{title_text}  |  Mills Shirley LLP", styles["TitleStyle"])
+    contact_para = Paragraph(contact_line, styles["ContactStyle"])
+
+    if has_photo:
+        img = Image(photo_path, width=1.15 * inch, height=1.45 * inch)
+        img.hAlign = "LEFT"
+        text_block = Table(
+            [[name_para], [title_para], [contact_para]],
+            colWidths=[5.2 * inch]
+        )
+        text_block.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('TOPPADDING', (0, 0), (-1, -1), 0),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 1),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+        ]))
+        header_table = Table(
+            [[img, text_block]],
+            colWidths=[1.35 * inch, 5.35 * inch]
+        )
+        header_table.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('TOPPADDING', (0, 0), (-1, -1), 0),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+        ]))
+        story.append(header_table)
+    else:
+        story.append(name_para)
+        story.append(title_para)
+        story.append(contact_para)
+
+    # Thick accent bar under header
+    story.append(Spacer(1, 8))
+    story.append(HRFlowable(width="100%", thickness=2.5, color=NAVY, spaceAfter=4))
+
+    # ── Professional Profile ──
     bio = data.get("bio_summary", "")
     if bio:
-        story.append(Paragraph("PROFESSIONAL PROFILE", styles["SectionHeader"]))
-        story.append(Paragraph(bio, styles["ResumeBody"]))
+        _add_section_header(story, "PROFESSIONAL PROFILE", styles)
+        story.append(Paragraph(bio, styles["BodyText2"]))
 
-    # Practice Areas
+    # ── Practice Areas (2-column) ──
     practices = practices_override if practices_override else data.get("practice_areas", [])
     if practices:
-        story.append(Paragraph("PRACTICE AREAS", styles["SectionHeader"]))
-        for p in practices:
-            story.append(Paragraph(f"• {p}", styles["ResumeBullet"]))
+        _add_section_header(story, "PRACTICE AREAS", styles)
+        _add_bullet_items(story, practices, styles, columns=2)
 
-    # Education
+    # ── Education ──
     education = data.get("education", [])
     if education:
-        story.append(Paragraph("EDUCATION", styles["SectionHeader"]))
+        _add_section_header(story, "EDUCATION", styles)
         for e in education:
-            story.append(Paragraph(f"• {e}", styles["ResumeBullet"]))
+            story.append(Paragraph(f"<bullet>&bull;</bullet> {e}", styles["ResumeBullet"]))
 
-    # Bar Admissions
+    # ── Bar Admissions ──
     bar = data.get("bar_admissions", [])
     if bar:
-        story.append(Paragraph("BAR ADMISSIONS", styles["SectionHeader"]))
-        story.append(Paragraph(" | ".join(bar), styles["ResumeBody"]))
+        _add_section_header(story, "BAR ADMISSIONS", styles)
+        story.append(Paragraph("  |  ".join(bar), styles["SmallBody"]))
 
-    # Legal Certifications (Maureen)
+    # ── Legal Certifications ──
     certs = data.get("legal_certifications", [])
     if certs:
-        story.append(Paragraph("LEGAL CERTIFICATIONS", styles["SectionHeader"]))
+        _add_section_header(story, "LEGAL CERTIFICATIONS", styles)
         for c in certs:
-            story.append(Paragraph(f"• {c}", styles["ResumeBullet"]))
+            story.append(Paragraph(f"<bullet>&bull;</bullet> {c}", styles["ResumeBullet"]))
 
-    # Professional Memberships
+    # ── Professional Memberships (2-column) ──
     memberships = data.get("professional_memberships", [])
     if memberships:
-        story.append(Paragraph("PROFESSIONAL MEMBERSHIPS", styles["SectionHeader"]))
-        for m in memberships:
-            story.append(Paragraph(f"• {m}", styles["ResumeBullet"]))
+        _add_section_header(story, "PROFESSIONAL MEMBERSHIPS", styles)
+        _add_bullet_items(story, memberships, styles, columns=2)
 
-    # Representative Matters
+    # ── Representative Matters ──
     matters = data.get("representative_matters", [])
     if matters:
-        story.append(Paragraph("REPRESENTATIVE MATTERS", styles["SectionHeader"]))
-        for m in matters:
-            story.append(Paragraph(f"• {m}", styles["ResumeBullet"]))
+        _add_section_header(story, "REPRESENTATIVE MATTERS", styles)
+        _add_bullet_items(story, matters, styles, columns=1)
 
-    # Awards & Recognition
+    # ── Awards & Recognition ──
     awards = data.get("awards_&_recognition", [])
     if awards:
-        story.append(Paragraph("RECOGNITION & AWARDS", styles["SectionHeader"]))
-        for a in awards:
-            story.append(Paragraph(f"• {a}", styles["ResumeBullet"]))
+        _add_section_header(story, "RECOGNITION & AWARDS", styles)
+        _add_bullet_items(story, awards, styles, columns=1)
 
-    # Publications
+    # ── Publications ──
     pubs = data.get("publications", [])
     if pubs:
-        story.append(Paragraph("PUBLICATIONS", styles["SectionHeader"]))
+        _add_section_header(story, "PUBLICATIONS", styles)
         for p in pubs:
-            story.append(Paragraph(f"• {p}", styles["ResumeBullet"]))
+            story.append(Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]))
 
-    # Presentations & Seminars
+    # ── Presentations & Seminars ──
     pres = data.get("presentations_&_seminars", [])
     if pres:
-        story.append(Paragraph("PRESENTATIONS & SEMINARS", styles["SectionHeader"]))
+        _add_section_header(story, "PRESENTATIONS & SEMINARS", styles)
         for p in pres:
-            story.append(Paragraph(f"• {p}", styles["ResumeBullet"]))
+            story.append(Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]))
 
-    # Community Involvement
+    # ── Community Involvement ──
     community = data.get("community_involvement", [])
     if community:
-        story.append(Paragraph("COMMUNITY INVOLVEMENT", styles["SectionHeader"]))
-        for c in community:
-            story.append(Paragraph(f"• {c}", styles["ResumeBullet"]))
+        _add_section_header(story, "COMMUNITY INVOLVEMENT", styles)
+        _add_bullet_items(story, community, styles, columns=2)
 
-    # Past Positions (Jack)
+    # ── Past Positions ──
     past = data.get("past_positions", [])
     if past:
-        story.append(Paragraph("PAST POSITIONS", styles["SectionHeader"]))
+        _add_section_header(story, "PAST POSITIONS", styles)
         for p in past:
-            story.append(Paragraph(f"• {p}", styles["ResumeBullet"]))
+            story.append(Paragraph(f"<bullet>&bull;</bullet> {p}", styles["ResumeBullet"]))
 
-    # Languages (Rachel)
+    # ── Languages ──
     langs = data.get("languages", [])
     if langs:
-        story.append(Paragraph("LANGUAGES", styles["SectionHeader"]))
-        story.append(Paragraph(" | ".join(langs), styles["ResumeBody"]))
+        _add_section_header(story, "LANGUAGES", styles)
+        story.append(Paragraph("  |  ".join(langs), styles["SmallBody"]))
 
-    # Footer
-    story.append(Spacer(1, 20))
-    story.append(Paragraph("Mills Shirley LLP | Texas's Oldest Continuously Operating Law Firm | Established 1846", ParagraphStyle("Footer", fontSize=8, textColor=GRAY, alignment=TA_CENTER)))
+    # ── Footer ──
+    story.append(Spacer(1, 16))
+    story.append(HRFlowable(width="100%", thickness=0.5, color=LIGHT_LINE, spaceAfter=6))
+    story.append(Paragraph(
+        "Mills Shirley LLP  |  Texas's Oldest Continuously Operating Law Firm  |  Established 1846",
+        styles["FooterStyle"]
+    ))
+    story.append(Paragraph(
+        "Galveston  |  Houston  |  millsshirley.com",
+        styles["FooterStyle"]
+    ))
 
     doc.build(story)
     print(f"  Generated: {output_path}")
@@ -285,10 +357,6 @@ def create_resume(slug):
 
 
 def main():
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(script_dir)
-    data_dir = os.path.join(project_root, "data", "attorneys")
-
     if len(sys.argv) > 1:
         slugs = [sys.argv[1]]
     else:
