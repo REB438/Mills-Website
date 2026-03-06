@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Raschke;Fred;D.;;
+FN:Fred D. Raschke
+ORG:Mills Shirley LLP
+TITLE:Senior Partner
+TEL;TYPE=WORK,VOICE:(409) 763-2341
+TEL;TYPE=WORK,DIRECT:(409) 761-4028
+EMAIL;TYPE=WORK:fraschke@millsshirley.com
+ADR;TYPE=WORK:;;2200 Market St. Ste 300;Galveston;TX;77550;United States
+ADR;TYPE=POSTAL:;;PO Box 1943;Galveston;TX;77553;United States
+URL:https://millsshirley.com/attorneys/fred-raschke.html
+NOTE:Fred Raschke is a Senior Partner at Mills Shirley LLP and leads the firm's personal injury defense trial group. With the firm since 1980\, he has extensive experience in personal injury defense\, workers' compensation\, products liability\, toxic tort\, utilities litigation\, and commercial disputes.
+END:VCARD

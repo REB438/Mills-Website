@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Delgado;Rachel;;;
+FN:Rachel Delgado
+ORG:Mills Shirley LLP
+TITLE:Associate Attorney
+TEL;TYPE=WORK,VOICE:(409) 763-2341
+TEL;TYPE=WORK,DIRECT:(409) 761-4038
+EMAIL;TYPE=WORK:rdelgado@millsshirley.com
+ADR;TYPE=WORK:;;2200 Market St. Ste 300;Galveston;TX;77550;United States
+ADR;TYPE=POSTAL:;;PO Box 1943;Galveston;TX;77553;United States
+URL:https://millsshirley.com/attorneys/rachel-delgado.html
+NOTE:Rachel Delgado is an Associate Attorney at Mills Shirley LLP. She distills complex facts into clear narratives and crafts compelling legal arguments. Her practice spans appeals\, real estate\, construction\, contracts\, business torts\, and fraud claims.
+END:VCARD

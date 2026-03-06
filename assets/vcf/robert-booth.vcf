@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Booth;Robert;Edward;;
+FN:Robert Edward Booth
+ORG:Mills Shirley LLP
+TITLE:Managing Partner
+TEL;TYPE=WORK,VOICE:(409) 763-2341
+TEL;TYPE=WORK,DIRECT:(409) 761-4001
+EMAIL;TYPE=WORK:rbooth@millsshirley.com
+ADR;TYPE=WORK:;;2200 Market St. Ste 300;Galveston;TX;77550;United States
+ADR;TYPE=POSTAL:;;PO Box 1943;Galveston;TX;77553;United States
+URL:https://millsshirley.com/attorneys/robert-booth.html
+NOTE:Robert Booth is the Managing Partner of Mills Shirley LLP. Board Certified in Civil Trial Law by the Texas Board of Legal Specialization. He is renowned for successfully litigating cases before juries and winning cases on appeal. Practice areas include commercial litigation\, construction disputes\, insurance coverage\, and civil trial law.
+END:VCARD

@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Brock;Jack;C.;;
+FN:Jack C. Brock
+ORG:Mills Shirley LLP
+TITLE:Of Counsel
+TEL;TYPE=WORK,VOICE:(409) 763-2341
+TEL;TYPE=WORK,DIRECT:(713) 242-1880
+EMAIL;TYPE=WORK:jbrock@millsshirley.com
+ADR;TYPE=WORK:;;2200 Market St. Ste 300;Galveston;TX;77550;United States
+ADR;TYPE=POSTAL:;;PO Box 1943;Galveston;TX;77553;United States
+URL:https://millsshirley.com/attorneys/jack-brock.html
+NOTE:Jack Brock is Of Counsel at Mills Shirley LLP with extensive trial experience in commercial litigation\, construction law\, environmental matters\, and professional liability in the Houston and Galveston areas.
+END:VCARD

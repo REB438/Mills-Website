@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Soto;Andres;O.;;
+FN:Andres O. Soto
+ORG:Mills Shirley LLP
+TITLE:Partner
+TEL;TYPE=WORK,VOICE:(409) 763-2341
+TEL;TYPE=WORK,DIRECT:(409) 761-4035
+EMAIL;TYPE=WORK:asoto@millsshirley.com
+ADR;TYPE=WORK:;;2200 Market St. Ste 300;Galveston;TX;77550;United States
+ADR;TYPE=POSTAL:;;PO Box 1943;Galveston;TX;77553;United States
+URL:https://millsshirley.com/attorneys/andy-soto.html
+NOTE:Andres Soto is a litigation partner at Mills Shirley LLP. His practice focuses on construction\, design\, and commercial litigation\, as well as maritime cases and insurance defense in the Galveston County and Houston areas.
+END:VCARD
