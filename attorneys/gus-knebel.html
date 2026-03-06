@@ -179,7 +179,10 @@
                 <div class="lg:col-span-1">
                     <div class="text-center lg:text-left">
                         <div class="w-72 h-96 mx-auto lg:mx-0 bg-gradient-to-br from-slate-50 to-slate-200 rounded-xl flex items-center justify-center text-gray-500 mb-6 shadow-lg shadow-navy-900/5">
-                            <img src="../assets/img/attorneys/gus-knebel.jpg" alt="Matthew Gus Knebel" class="w-full h-full object-cover rounded-xl" style="object-position: center top;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <picture class="w-full h-full">
+                                <source srcset="../assets/img/attorneys/gus-knebel.webp" type="image/webp">
+                                <img src="../assets/img/attorneys/gus-knebel.jpg" alt="Matthew Gus Knebel" class="w-full h-full object-cover rounded-xl" style="object-position: center top;" onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+                            </picture>
                             <svg class="w-24 h-24 hidden" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                             </svg>
