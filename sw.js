@@ -1,7 +1,9 @@
 // Service Worker for Mills Shirley LLP Website
 // Provides caching and offline functionality
 
-const CACHE_NAME = 'mills-shirley-v1.0.0';
+// Bump CACHE_NAME on every asset change; the fetch handler is cache-first,
+// so a stale name pins visitors to old CSS and JS indefinitely.
+const CACHE_NAME = 'mills-shirley-v1.2.0';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -9,8 +11,6 @@ const urlsToCache = [
     '/assets/js/scripts.js',
     '/assets/js/performance.js',
     '/assets/js/tailwind-config.js',
-    '/assets/fonts/equity/Equity Text A Regular.ttf',
-    '/assets/fonts/equity/Equity Caps A Regular.ttf',
     '/assets/favicon/favicon.png'
 ];
 

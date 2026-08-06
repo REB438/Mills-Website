@@ -33,10 +33,13 @@ window.tailwindConfig = {
                 'white': '#ffffff',
                 'black': '#000000'
             },
+            // The site runs on Inter. `serif` and `caps` are retained because ~34 pages
+            // still carry font-serif/font-caps classes; they now resolve to the same
+            // stack rather than to the retired Equity faces.
             fontFamily: {
-                'serif': ['Equity Text', 'Georgia', 'serif'],
-                'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                'caps': ['Equity Caps', 'Equity Text', 'Georgia', 'serif']
+                'serif': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                'caps': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
             },
             spacing: {
                 '1': '0.125rem',

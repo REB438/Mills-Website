@@ -13,11 +13,9 @@
     --navy-800: #1e293b;
     --navy-900: #0f172a;
     --navy-950: #020617;
-    --sage: #84cc16;
-    --sage-100: #ecfccb;
-    --sage-600: #65a30d;
     --pearl: #f8fafc;
     --charcoal-light: #6b7280;
+    --header-height: 77px;
 }
 
 /* Normalize light gray backgrounds to match homepage white aesthetic */
@@ -36,54 +34,6 @@
 /* Modern Font Import - Inter from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Equity Font Declarations */
-/* Optimized Font Loading with Preloading and Fallbacks */
-@font-face {
-    font-family: 'Equity Text';
-    src: url('../fonts/equity/Equity Text A Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0020-007F, U+00A0-00FF; /* Latin characters */
-}
-
-@font-face {
-    font-family: 'Equity Text';
-    src: url('../fonts/equity/Equity Text A Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0020-007F, U+00A0-00FF;
-}
-
-@font-face {
-    font-family: 'Equity Caps';
-    src: url('../fonts/equity/Equity Caps A Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0020-007F, U+00A0-00FF;
-}
-
-@font-face {
-    font-family: 'Equity Caps';
-    src: url('../fonts/equity/Equity Caps A Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0020-007F, U+00A0-00FF;
-}
-
-/* Fallback font metrics to minimize layout shift */
-@font-face {
-    font-family: 'Equity Text Fallback';
-    src: local('Georgia');
-    size-adjust: 95%; /* Adjust to match Equity Text metrics */
-    ascent-override: 85%;
-    descent-override: 20%;
-    line-gap-override: 0%;
-}
-
 /* Global Typography */
 html, body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -94,6 +44,11 @@ html, body {
     letter-spacing: -0.008em; /* Optimized letter spacing */
     scroll-behavior: smooth;
     font-size: 16px;
+}
+
+/* Keep anchor targets clear of the sticky header (72px) when jumping to #id */
+html {
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
 }
 
 /* Performance optimization for animated elements */
@@ -444,6 +399,55 @@ nav a:focus-visible {
     outline-offset: 2px;
 }
 
+/* Client Services payment links. These are transactional actions, so they carry a
+   persistent underline rather than the hover-only one used for inline prose links. */
+.client-service-links {
+    list-style: none;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem; /* 8px */
+}
+
+.client-service-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: #0f172a; /* Navy-900 */
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(15, 23, 42, 0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+/* Arrow marks these as leaving the page; aria-hidden not needed since it is generated content */
+.client-service-links a::after {
+    content: '→';
+    font-size: 0.9375rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.client-service-links a:hover {
+    color: #1e293b; /* Navy-800 */
+    text-decoration-color: currentColor;
+}
+
+.client-service-links a:hover::after {
+    transform: translate3d(2px, 0, 0);
+}
+
+.client-service-links a:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+}
+
 .contact-link {
     color: #1A2A40;
     font-weight: 500;
@@ -691,19 +695,6 @@ textarea:hover {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-}
-
-/* Font Override Utilities */
-.font-serif {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-}
-
-.font-sans {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-}
-
-.font-caps {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
 p, span, div, li, td, th, button, input, textarea, select, nav a {
@@ -955,7 +946,38 @@ p, span, div, li, td, th, button, input, textarea, select, nav a {
     letter-spacing: -0.002em;
 }
 
+/* Align card internals row-by-row across the grid. Each card is otherwise an
+   independent flex column that distributes its own leftover space, so the
+   specialty lists drift apart whenever intro copy differs in length.
+   Rows per card: icon, title, description, then 3 specialty items. */
+@supports (grid-template-rows: subgrid) {
+    /* Doubled class beats Tailwind's gap-8/gap-10, which would otherwise
+       inject the grid gutter between every row inside a card. */
+    .grid.practice-areas-grid {
+        row-gap: 0;
+    }
+
+    .practice-area-card {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 6;
+        row-gap: 0;
+        contain: none; /* layout containment would detach the card from the parent grid */
+        margin-bottom: 2.5rem; /* restores the band separation lost to row-gap: 0 */
+    }
+
+    .practice-specialties {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3;
+        row-gap: 0;
+    }
+}
+
 /* Attorney Cards - 8px Grid System */
+/* Type selector raises specificity above Tailwind's `block` utility, which the
+   markup also applies and would otherwise win on source order and kill the flex column. */
+a.attorney-card,
 .attorney-card {
     background: white;
     border-radius: 1rem; /* 16px - enhanced radius for premium feel */
@@ -968,10 +990,22 @@ p, span, div, li, td, th, button, input, textarea, select, nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem; /* 32px - 4 * 8px */
     will-change: transform; /* Optimize for animations */
     position: relative;
     overflow: hidden;
+}
+
+/* Pin the profile link to the card floor so it lines up across a row
+   regardless of how many lines each bio runs to. */
+.attorney-card .arrow-link {
+    margin-top: auto;
+}
+
+/* The Tailwind config halves the default spacing scale, so gap-8/gap-10 resolve
+   to 16-20px, which is too tight between stacked cards. Doubled class outranks
+   the utility. */
+.grid.attorneys-grid {
+    row-gap: 3rem; /* 48px */
 }
 
 .attorney-card:hover {

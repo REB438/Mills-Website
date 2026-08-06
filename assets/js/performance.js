@@ -28,24 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Preload critical resources
-    function preloadCriticalResources() {
-        const criticalResources = [
-            'assets/fonts/equity/Equity Text A Regular.ttf',
-            'assets/fonts/equity/Equity Caps A Regular.ttf'
-        ];
-
-        criticalResources.forEach(resource => {
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.href = resource;
-            link.as = 'font';
-            link.type = 'font/ttf';
-            link.crossOrigin = 'anonymous';
-            document.head.appendChild(link);
-        });
-    }
-
     // Optimize images for different screen sizes
     function optimizeImages() {
         const images = document.querySelectorAll('img[src*="attorneys"]');
@@ -90,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
 
     // Initialize performance optimizations
-    preloadCriticalResources();
     optimizeImages();
 
     // Service Worker registration for caching (if supported)

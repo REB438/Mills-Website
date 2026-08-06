@@ -12,31 +12,46 @@ Static website for Mills Shirley LLP, Texas's oldest continuously operating law 
 ## Project Structure
 
 ### Core Pages
-- **Homepage** (`/index.html`): Hero section, about, two-tiered practice areas, attorney preview, contact
-- **Attorney Profiles** (`/attorneys/`): Individual pages generated from data files
-- **Practice Areas** (`/practice-areas/`): Two-tiered structure (Litigation/Transactional)
+- **Homepage** (`/index.html`): Hero section, about, four practice categories, attorney preview, contact
+- **About** (`/about.html`): Firm history narrative and timeline
+- **Attorney Profiles** (`/attorneys/`): Individual pages generated from data files, plus
+  `/attorneys/index.html` as the team landing page
+- **Practice Areas** (`/practice-areas/`): Four categories (Litigation, Transactional,
+  Employment, Trusts & Estates), each with a landing page and detail pages
 - **404 Page** (`/404.html`): Custom error page with helpful navigation
+
+34 HTML files in total: 27 real pages plus 7 redirect stubs under `/attorney/` and
+`/estate-trusts-and-guardianship/` that preserve legacy URLs.
 
 ### Directory Structure
 ```
 /
 ├── index.html                          # Homepage
-├── 404.html                           # Error page
+├── about.html                          # Firm history
+├── 404.html                            # Error page
 ├── assets/
-│   ├── css/styles.css                 # Custom CSS with @font-face declarations
-│   ├── js/scripts.js                  # Navigation and interactions
-│   ├── favicon/favicon.png            # Site favicon
-│   └── fonts/equity/                  # Equity Text/Caps TTF files
-├── attorneys/                         # Generated attorney profile pages
-├── practice-areas/
-│   ├── litigation/                    # Litigation practice area pages
-│   ├── transactional/                 # Transactional practice area pages
-│   └── trusts-and-estates/            # Trusts and estates practice area pages
-└── data/                             # Source data files
-    ├── attorneys/                     # Attorney .txt files
-    └── practice-areas/               # Practice area .txt files
+│   ├── css/styles.css                  # Custom CSS
+│   ├── js/scripts.js                   # Navigation and interactions
+│   ├── js/tailwind-config.js           # Shared Tailwind config for every page
+│   ├── js/performance.js               # Perf helpers (loaded on 4 pages only)
+│   ├── favicon/favicon.png             # Site favicon
+│   ├── img/attorneys/                  # Attorney portraits (.webp + .jpg)
+│   ├── pdf/, vcf/                      # Resumes and contact cards
+│   └── fonts/equity/                   # UNUSED: Equity TTFs, retired in favour of Inter
+├── attorneys/                          # Attorney profile pages + index.html
+├── practice-areas/                     # index.html + one folder per category
+│   ├── litigation/                     # index.html + 3 detail pages
+│   ├── transactional/                  # index.html + 3 detail pages
+│   ├── employment/                     # index.html + 3 detail pages
+│   └── trusts-and-estates/             # index.html + 3 detail pages
+├── attorney/                           # Legacy redirect stubs (JS redirect)
+├── estate-trusts-and-guardianship/     # Legacy redirect stub (meta refresh)
+└── data/                               # Source data files
+    ├── attorneys/                      # Attorney .txt files
+    └── practice-areas/                 # Practice area .txt files
         ├── litigation/
         ├── transactional/
+        ├── employment/
         └── trusts-and-estates/
 ```
 
@@ -55,11 +70,14 @@ Static website for Mills Shirley LLP, Texas's oldest continuously operating law 
 - `rachel-delgado.txt` → `rachel-delgado.html`
 - `robert-booth.txt` → `robert-booth.html`
 
-### Practice Areas (Three-Tiered Structure)
+### Practice Areas (Four Categories)
 **Source**: `/data/practice-areas/`
 **Generated Pages**: `/practice-areas/[category]/[practice].html`
 
-**Current Structure**:
+Each category also has a landing page at `/practice-areas/[category]/index.html`, and
+`/practice-areas/index.html` lists all four.
+
+**Current Structure** (4 categories, 12 practices):
 - **Litigation**:
   - `commercial-litigation-and-business-disputes.txt` → `/practice-areas/litigation/commercial-litigation-and-business-disputes.html`
   - `construction-litigation-and-defect-claims.txt` → `/practice-areas/litigation/construction-litigation-and-defect-claims.html`
@@ -68,35 +86,44 @@ Static website for Mills Shirley LLP, Texas's oldest continuously operating law 
   - `business-formation-and-governance.txt` → `/practice-areas/transactional/business-formation-and-governance.html`
   - `commercial-real-estate-transactions.txt` → `/practice-areas/transactional/commercial-real-estate-transactions.html`
   - `contract-negotiation-and-drafting.txt` → `/practice-areas/transactional/contract-negotiation-and-drafting.html`
+- **Employment**:
+  - `employer-representation-and-compliance.txt` → `/practice-areas/employment/employer-representation-and-compliance.html`
+  - `employment-litigation-and-disputes.txt` → `/practice-areas/employment/employment-litigation-and-disputes.html`
+  - `workplace-safety-and-eeoc-matters.txt` → `/practice-areas/employment/workplace-safety-and-eeoc-matters.html`
 - **Trusts and Estates**:
   - `estate-planning-and-asset-protection.txt` → `/practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html`
   - `probate-and-guardianship-administration.txt` → `/practice-areas/trusts-and-estates/probate-and-guardianship-administration.html`
   - `trust-and-fiduciary-litigation.txt` → `/practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html`
 
-## Typography System (Equity Fonts)
+## Typography System (Inter)
 
 ### Font Implementation
-- **Primary Font**: Equity Text (body text, navigation)
-- **Heading Font**: Equity Caps (headings, titles)
-- **Fallbacks**: Georgia, serif (accessibility)
-- **Location**: `/assets/fonts/equity/` (TTF format)
+- **All text**: Inter, loaded from Google Fonts via `@import` at the top of `styles.css`
+- **Fallbacks**: `-apple-system`, `BlinkMacSystemFont`, `Segoe UI`, Roboto, Helvetica Neue, Arial, sans-serif
+- **Equity is retired.** The site was migrated from Equity Text/Caps to Inter. The
+ `@font-face` blocks, `<link rel="preload">` tags, and service worker precache entries
+ have been removed. The TTF files still sit in `/assets/fonts/equity/` but are unreferenced.
 
 ### CSS Implementation
 ```css
 /* Global font families set in styles.css */
-html, body { font-family: 'Equity Text', Georgia, serif; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Equity Caps', 'Equity Text', Georgia, serif; }
+html, body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, ...; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, ...; }
 ```
 
 ### Tailwind Configuration
-All HTML files include custom Tailwind configuration:
-```javascript
-fontFamily: {
-    'serif': ['Equity Text', 'Georgia', 'serif'],
-    'sans': ['Equity Text', 'Georgia', 'serif'],
-    'caps': ['Equity Caps', 'Equity Text', 'Georgia', 'serif']
-}
-```
+Centralized in `/assets/js/tailwind-config.js` and loaded by every page via
+`<script src=".../tailwind-config.js?v=N">`. It is **not** duplicated per page.
+
+`font-serif`, `font-sans`, and `font-caps` all resolve to the same Inter stack. The
+`caps`/`serif` keys are kept only because ~34 pages still carry those classes; they are
+no longer meaningful distinctions and new markup should not rely on them.
+
+### Spacing scale caution
+The config **overrides Tailwind's default spacing scale with roughly half the usual
+values** (`'8': '1rem'` rather than `2rem`, `'12': '1.5rem'` rather than `3rem`). So
+`gap-8` is 16px and `w-12` is 24px, not the 32px/48px a stock Tailwind mental model
+predicts. Check `tailwind-config.js` before reasoning about any spacing utility.
 
 ## Content Management
 
@@ -165,12 +192,11 @@ Related Keywords: [SEO keywords]
 - **8px Spacing System**: Mathematical spacing for Apple-style precision
 
 ### Practice Area Expansion
-- **Previous Structure**: Two-tiered with 3 total practices (Litigation: 2, Transactional: 1)
-- **New Structure**: Three-tiered with 9 total practices across 3 categories
-- **Added Category**: Trusts & Estates with 3 specialized practices
-- **Expanded Categories**: Litigation (3 practices) and Transactional (3 practices)
-- **Homepage Update**: Updated to 3-column layout showcasing all categories
-- **URL Changes**: All practice area URLs follow nested pattern with new category
+- **Current Structure**: 12 practices across 4 categories
+- **Added Categories**: Trusts & Estates, then Employment, each with 3 practices
+- **Landing Pages**: `/practice-areas/index.html` plus one `index.html` per category
+- **Homepage Update**: Lists all four categories with their practices
+- **URL Changes**: All practice area URLs follow the nested `[category]/[practice]` pattern
 
 ### Font Implementation
 - Added Equity Text and Equity Caps @font-face declarations
@@ -207,10 +233,20 @@ Related Keywords: [SEO keywords]
 - **Email**: info@millsshirley.com
 
 ## Important Notes
-- **Typography**: Use `font-caps` for all headings, `font-serif` for body text
+- **Typography**: Everything is Inter. `font-caps`/`font-serif` are legacy no-ops kept for
+ existing markup; don't add them to new markup
 - **Colors**: Use `navy-900` for primary navy, avoid bare `navy` references
-- **Fonts**: Equity fonts now load properly via corrected @font-face paths
-- **Consistency**: All 20+ pages share unified Tailwind configuration
+- **Headings on dark sections need an explicit `text-white`**: `styles.css` sets
+ `h1..h6 { color: #0f172a }`. An element-targeted rule beats an inherited value, so a
+ heading inside a `text-white` dark section stays navy and can end up invisible against
+ the navy background. Put the color class on the heading itself, not just the section
+- **No `sage` accent**: the palette is monochrome navy. The old `bg-sage`/`text-sage-*`
+ classes were never defined in the Tailwind config (they rendered transparent) and have
+ been replaced with navy equivalents. Don't reintroduce them
+- **Consistency**: All 34 pages share the centralized config at `/assets/js/tailwind-config.js`
+- **Cache busting**: `styles.css` and `tailwind-config.js` are versioned with `?v=N`. Bump
+ the query in all HTML files *and* `CACHE_NAME` in `sw.js` whenever either changes, since
+ the service worker is cache-first
 - **Practice Areas**: Content generated from .txt data files in nested structure
 - **Attorney Profiles**: Auto-generated from data - don't manually edit
 - **URL Structure**: Nested pattern `/practice-areas/[category]/[practice].html`
@@ -224,5 +260,5 @@ Related Keywords: [SEO keywords]
 - Consider adding more practice areas to existing categories
 - Potential for adding blog/news section
 - Integration with contact form backend
-- Performance optimization for font loading
-- Addition of practice area category landing pages
+- Delete the unused `/assets/fonts/equity/` TTFs now that the site runs on Inter
+- Trim the remaining legacy `font-caps`/`font-serif` classes from markup
