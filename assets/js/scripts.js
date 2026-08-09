@@ -411,5 +411,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Service Worker registration for caching (if supported)
+    // Lives here rather than in performance.js because this file is the only one
+    // loaded by every page; registering elsewhere left most entry points uncovered.
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+    
     console.log('Mills Shirley LLP website scripts loaded successfully');
 });
