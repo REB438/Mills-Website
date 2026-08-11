@@ -229,7 +229,6 @@ Related Keywords: [SEO keywords]
 
 ## Contact Information
 - **Galveston Office**: (409) 763-2341
-- **Houston Office**: (713) 242-1880
 - **Email**: info@millsshirley.com
 
 ## Important Notes

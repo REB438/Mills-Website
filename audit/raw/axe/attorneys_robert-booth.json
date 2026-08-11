@@ -1,0 +1,15 @@
+{
+  "url": "http://localhost:8899/attorneys/robert-booth.html",
+  "tool": "axe-core 4.10.3 via browser injection",
+  "violationCount": 1,
+  "violations": [
+    {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "help": "Landmarks should have a unique role or role/label/title combination",
+      "nodes": 1
+    }
+  ],
+  "incomplete": [],
+  "passes": 37
+}

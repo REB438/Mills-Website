@@ -1,6 +1,7 @@
 Name: Andres O. Soto  
 Title: Partner  
-Office: Houston and Galveston  
+Office: Galveston  
+
 Email: [Insert if known]  
 Phone: (409) 761-4035  
 Headshot: /assets/img/attorneys/andres-soto.jpg  
@@ -8,7 +9,7 @@ vCard: [Insert link if available]
 LinkedIn: [Insert link if available]  
 
 Bio Summary:  
-Andres “Andy” Soto is a partner in the litigation section of Mills Shirley LLP. He represents clients in commercial, construction, maritime, insurance defense, and civil disputes. Andy’s practice includes both trial and appellate work, with a particular focus on construction, design, and commercial litigation. He is based in Houston and Galveston and advises a range of businesses, owners, and insurers.
+Andres ùAndyù Soto is a partner in the litigation section of Mills Shirley LLP. He represents clients in commercial, construction, maritime, insurance defense, and civil disputes. Andyùs practice includes both trial and appellate work, with a particular focus on construction, design, and commercial litigation. He is based in Galveston and advises a range of businesses, owners, and insurers.
 
 Practice Areas:  
 - Commercial Litigation  
@@ -32,7 +33,7 @@ Bar Admissions:
 
 Professional Memberships:  
 - Galveston County Bar Association, Past President  
-- Galveston County Bar Association – Young Lawyers Section, Past President  
+- Galveston County Bar Association ù Young Lawyers Section, Past President  
 - Texas Association of Defense Counsel, District #9 Director  
 - State Bar of Texas  
 - U.S. Federal Bar  
@@ -46,7 +47,7 @@ Representative Matters:
 - Representing marine suppliers and ship owners in admiralty claims  
 
 Awards & Recognition:  
-- Texas Super Lawyers – Rising Star, 2020–2022  
+- Texas Super Lawyers ù Rising Star, 2020ù2022  
 - Galveston County Outstanding Young Lawyer, 2015  
 
 Publications:  
@@ -58,6 +59,6 @@ Presentations & Seminars:
 Community Involvement:  
 - Wills for Heroes, 2011  
 - Court Appointed Special Advocate, 2009  
-- Veterans’ Clinic volunteer  
+- Veteransù Clinic volunteer  
 - Galveston County Share Your Holiday Food Drive  
 - Resides in League City with his wife and sons, Samuel and Simon

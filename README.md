@@ -103,7 +103,6 @@ Search for `<!-- TODO:` comments throughout the files to find content that needs
 
 #### Contact Information
 - **Galveston Office**: Update address, phone, and fax
-- **Houston Office**: Update address, phone, and fax
 - **Email**: Replace `info@millsshirley.com` with actual email
 - **Form Action**: Configure contact form for Formspree, Netlify, or other service
 

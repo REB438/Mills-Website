@@ -1,8 +1,9 @@
 Name: Jack C. Brock  
 Title: Of Counsel  
-Office: Houston and Galveston  
+Office: Galveston  
+
 Email: [Insert if known]  
-Phone: (713) 242-1880  
+Phone: (409) 763-2341  
 Headshot: /assets/img/attorneys/jack-brock.jpg  
 vCard: [Insert link if available]  
 LinkedIn: [Insert link if available]  
@@ -36,8 +37,8 @@ Bar Admissions:
 
 Professional Memberships:  
 - State Bar of Texas  
-  - Chairman, Grievance Committee for Galveston County (1982–1986)  
-  - Member, Administration of Rules of Evidence Committee (2007–2013)  
+  - Chairman, Grievance Committee for Galveston County (1982ù1986)  
+  - Member, Administration of Rules of Evidence Committee (2007ù2013)  
 - Galveston County Bar Association  
 - Association of Defense Trial Attorneys  
 - American Board of Trial Advocates  
@@ -58,11 +59,11 @@ Representative Matters:
 - Prosecuted insurance broker for failure to secure coverage  
 
 Awards & Recognition:  
-- Texas Super Lawyer – Business Litigation, 2014–2015, 2017–2018  
-- Texas Super Lawyers – 2005–2008  
-- Texas Top Rated Lawyers List – 2014–2015  
-- Life Fellow – Texas Bar Foundation  
-- Life Fellow – American Bar Association  
+- Texas Super Lawyer ù Business Litigation, 2014ù2015, 2017ù2018  
+- Texas Super Lawyers ù 2005ù2008  
+- Texas Top Rated Lawyers List ù 2014ù2015  
+- Life Fellow ù Texas Bar Foundation  
+- Life Fellow ù American Bar Association  
 
 Publications:  
 [None listed]
@@ -74,5 +75,5 @@ Community Involvement:
 [Not specified]
 
 Past Positions:  
-- Chief Assistant Criminal District Attorney, Galveston County (1976–1981)  
-- Assistant District Attorney, Galveston County (1973–1981)
+- Chief Assistant Criminal District Attorney, Galveston County (1976ù1981)  
+- Assistant District Attorney, Galveston County (1973ù1981)

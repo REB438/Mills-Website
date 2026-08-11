@@ -1,0 +1,4463 @@
+{
+  "page_count": 34,
+  "pages": [
+    {
+      "path": "404.html",
+      "title": "Page Not Found | Mills Shirley LLP | Texas Law Firm",
+      "title_len": 51,
+      "description": "The page you're looking for could not be found. Explore our practice areas and attorneys at Mills Shirley LLP, Texas's oldest law firm since 1846.",
+      "desc_len": 146,
+      "canonical": "https://millsshirley.com/404.html",
+      "h1": [
+        "404"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "404"
+        ],
+        [
+          2,
+          "Page Not Found"
+        ],
+        [
+          3,
+          "You might be looking for:"
+        ],
+        [
+          4,
+          "Practice Areas"
+        ],
+        [
+          4,
+          "About Our Firm"
+        ],
+        [
+          4,
+          "Still can't find what you're looking for?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 154,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [],
+      "imgs": [],
+      "iframes": [],
+      "meta_keywords": "Mills Shirley LLP, Texas law firm, page not found, legal services Texas, attorneys Houston Galveston",
+      "og_image": null,
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "assets/js/tailwind-config.js?v=2",
+        "assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "about.html",
+      "title": "About Mills Shirley LLP | Texas's Oldest Law Firm Since 1846",
+      "title_len": 60,
+      "description": "Mills Shirley LLP, founded in Galveston on November 13, 1846, is the oldest continuously operating law firm in Texas. Nearly 180 years on the Gulf Coast.",
+      "desc_len": 153,
+      "canonical": "https://millsshirley.com/about.html",
+      "h1": [
+        "The Oldest Continuously Operating Law Firm in Texas"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "The Oldest Continuously Operating Law Firm in Texas"
+        ],
+        [
+          2,
+          "A Legacy Spanning Three Centuries"
+        ],
+        [
+          3,
+          "Firm Founded in Galveston"
+        ],
+        [
+          3,
+          "U.S. District Attorney"
+        ],
+        [
+          3,
+          "Landmark Texas Supreme Court Case"
+        ],
+        [
+          3,
+          "Constitutional Convention"
+        ],
+        [
+          3,
+          "Surviving the Great Storm"
+        ],
+        [
+          3,
+          "Texas City Disaster"
+        ],
+        [
+          3,
+          "Preston Shirley Joins the Firm"
+        ],
+        [
+          3,
+          "150th Anniversary"
+        ],
+        [
+          3,
+          "Hurricane Ike"
+        ],
+        [
+          3,
+          "175th Anniversary"
+        ],
+        [
+          3,
+          "Nearly 180 Years of Continuous Service"
+        ],
+        [
+          2,
+          "Our Attorneys"
+        ],
+        [
+          2,
+          "Our Commitment"
+        ],
+        [
+          3,
+          "Client-Centered Service"
+        ],
+        [
+          3,
+          "Community Roots"
+        ],
+        [
+          3,
+          "Modern Approach"
+        ],
+        [
+          2,
+          "Ready to Work With Us?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 1423,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "AboutPage",
+        "LegalService",
+        "Place",
+        "Person",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "QuantitativeValue",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert Edward Booth"
+        },
+        {
+          "src": "assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen Kuzik McCutchen"
+        },
+        {
+          "src": "assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        },
+        {
+          "src": "assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew Gus Knebel"
+        },
+        {
+          "src": "assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        },
+        {
+          "src": "assets/img/attorneys/rachel-delgado26.jpg",
+          "alt": "Rachel Delgado"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Mills Shirley history, oldest law firm Texas, Galveston law firm history, Texas legal heritage, law firm established 1846, William Pitt Ballinger, Ballinger Mills, Preston Shirley",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "assets/js/tailwind-config.js?v=2",
+        "assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [
+        "best ",
+        "strategic wins"
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorney/andres-o-soto/index.html",
+      "title": "Andres O. Soto - Attorney Profile | Mills Shirley LLP",
+      "title_len": 53,
+      "description": "Andres O. Soto - Associate at Mills Shirley LLP. Experienced attorney specializing in commercial litigation, construction law, and business disputes.",
+      "desc_len": 149,
+      "canonical": "https://millsshirley.com/attorneys/andy-soto.html",
+      "h1": [
+        "Andres O. Soto"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Andres O. Soto"
+        ]
+      ],
+      "word_count": 8,
+      "lang": "en",
+      "landmarks": {
+        "main": false,
+        "nav": false,
+        "header": false,
+        "footer": false,
+        "skip": false
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "EducationalOrganization"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/andres-soto.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 0,
+      "superlatives_flagged": [],
+      "is_redirect_stub": true
+    },
+    {
+      "path": "attorney/fred-d-raschke/index.html",
+      "title": "Fred D. Raschke - Attorney Profile | Mills Shirley LLP",
+      "title_len": 54,
+      "description": "Fred D. Raschke - Partner at Mills Shirley LLP. Experienced attorney specializing in commercial litigation, insurance defense, and premises liability.",
+      "desc_len": 150,
+      "canonical": "https://millsshirley.com/attorneys/fred-raschke.html",
+      "h1": [
+        "Fred D. Raschke"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Fred D. Raschke"
+        ]
+      ],
+      "word_count": 8,
+      "lang": "en",
+      "landmarks": {
+        "main": false,
+        "nav": false,
+        "header": false,
+        "footer": false,
+        "skip": false
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "EducationalOrganization"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/fred-raschke.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 0,
+      "superlatives_flagged": [],
+      "is_redirect_stub": true
+    },
+    {
+      "path": "attorney/jack-c-brock/index.html",
+      "title": "Jack C. Brock - Attorney Profile | Mills Shirley LLP",
+      "title_len": 52,
+      "description": "Jack C. Brock - Of Counsel at Mills Shirley LLP. Experienced attorney specializing in civil litigation, environmental law, and complex business disputes.",
+      "desc_len": 153,
+      "canonical": "https://millsshirley.com/attorneys/jack-brock.html",
+      "h1": [
+        "Jack C. Brock"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Jack C. Brock"
+        ]
+      ],
+      "word_count": 9,
+      "lang": "en",
+      "landmarks": {
+        "main": false,
+        "nav": false,
+        "header": false,
+        "footer": false,
+        "skip": false
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "EducationalOrganization"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/jack-brock.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 0,
+      "superlatives_flagged": [],
+      "is_redirect_stub": true
+    },
+    {
+      "path": "attorney/maureen-k-mccutchen/index.html",
+      "title": "Maureen K. McCutchen - Attorney Profile | Mills Shirley LLP",
+      "title_len": 59,
+      "description": "Maureen K. McCutchen, Senior Partner at Mills Shirley LLP, board certified in Estate Planning and Probate Law, guardianship and probate administration.",
+      "desc_len": 151,
+      "canonical": "https://millsshirley.com/attorneys/maureen-mccutchen.html",
+      "h1": [
+        "Maureen K. McCutchen"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Maureen K. McCutchen"
+        ]
+      ],
+      "word_count": 9,
+      "lang": "en",
+      "landmarks": {
+        "main": false,
+        "nav": false,
+        "header": false,
+        "footer": false,
+        "skip": false
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "EducationalOrganization",
+        "EducationalOccupationalCredential",
+        "Organization"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen K. McCutchen"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/maureen-mccutchen.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 0,
+      "superlatives_flagged": [
+        "Expert "
+      ],
+      "is_redirect_stub": true
+    },
+    {
+      "path": "attorney/robert-e-booth/index.html",
+      "title": "Robert E. Booth - Attorney Profile | Mills Shirley LLP",
+      "title_len": 54,
+      "description": "Robert E. Booth - Managing Partner at Mills Shirley LLP. Experienced trial attorney specializing in commercial litigation, construction law, and business disputes.",
+      "desc_len": 163,
+      "canonical": "https://millsshirley.com/attorneys/robert-booth.html",
+      "h1": [
+        "Robert E. Booth"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Robert E. Booth"
+        ]
+      ],
+      "word_count": 9,
+      "lang": "en",
+      "landmarks": {
+        "main": false,
+        "nav": false,
+        "header": false,
+        "footer": false,
+        "skip": false
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "EducationalOrganization"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 0,
+      "superlatives_flagged": [],
+      "is_redirect_stub": true
+    },
+    {
+      "path": "attorneys/andy-soto.html",
+      "title": "Andy Soto | Commercial Litigation | Galveston | Mills Shirley LLP",
+      "title_len": 65,
+      "description": "Andres Soto, Galveston litigation partner at Mills Shirley LLP for commercial, construction, maritime, and insurance defense.",
+      "desc_len": 125,
+      "canonical": "https://millsshirley.com/attorneys/andy-soto.html",
+      "h1": [
+        "Andres O. Soto"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Andres O. Soto"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          3,
+          "Commercial Litigation"
+        ],
+        [
+          3,
+          "Construction Litigation"
+        ],
+        [
+          3,
+          "Maritime / Admiralty Litigation"
+        ],
+        [
+          3,
+          "Insurance Defense"
+        ],
+        [
+          3,
+          "Transportation Law"
+        ],
+        [
+          3,
+          "Civil Disputes"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Professional Memberships"
+        ],
+        [
+          2,
+          "Representative Matters"
+        ],
+        [
+          2,
+          "Recognition & Awards"
+        ],
+        [
+          2,
+          "Community Involvement"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 351,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Andres Soto attorney, Andy Soto lawyer, commercial litigation attorney Houston, construction litigation lawyer Texas, maritime attorney Galveston, insurance defense lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/andres-soto.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/fred-raschke.html",
+      "title": "Fred Raschke | Injury Defense | Galveston | Mills Shirley LLP",
+      "title_len": 61,
+      "description": "Fred Raschke leads personal injury defense at Mills Shirley LLP in Galveston, with decades of trial experience statewide.",
+      "desc_len": 121,
+      "canonical": "https://millsshirley.com/attorneys/fred-raschke.html",
+      "h1": [
+        "Fred D. Raschke"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Fred D. Raschke"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          3,
+          "Business and Commercial Law"
+        ],
+        [
+          3,
+          "Civil Litigation & Appeals"
+        ],
+        [
+          3,
+          "Personal Injury Defense"
+        ],
+        [
+          3,
+          "Workers' Compensation"
+        ],
+        [
+          3,
+          "Products Liability"
+        ],
+        [
+          3,
+          "Toxic Tort"
+        ],
+        [
+          3,
+          "Insurance Defense"
+        ],
+        [
+          3,
+          "Premises Liability"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Professional Memberships"
+        ],
+        [
+          2,
+          "Representative Matters"
+        ],
+        [
+          2,
+          "Recognition & Awards"
+        ],
+        [
+          2,
+          "Publications"
+        ],
+        [
+          2,
+          "Presentations & Seminars"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 575,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Fred Raschke attorney, personal injury defense lawyer Texas, toxic tort attorney, products liability lawyer, civil litigation attorney Galveston, workers compensation defense",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/fred-raschke.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/gus-knebel.html",
+      "title": "Gus Knebel | Business & Real Estate | TX | Mills Shirley LLP",
+      "title_len": 60,
+      "description": "Gus Knebel, Galveston transactional partner for business formation, commercial real estate, municipal law, and development deals.",
+      "desc_len": 129,
+      "canonical": "https://millsshirley.com/attorneys/gus-knebel.html",
+      "h1": [
+        "Matthew \"Gus\" Knebel"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Matthew \"Gus\" Knebel"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          3,
+          "Business and Commercial Law"
+        ],
+        [
+          3,
+          "Real Estate Transactions"
+        ],
+        [
+          3,
+          "Business Formation and Restructuring"
+        ],
+        [
+          3,
+          "Contract Formation and Analysis"
+        ],
+        [
+          3,
+          "Municipal Law"
+        ],
+        [
+          3,
+          "Land Use and Zoning"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Representative Matters"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 371,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew Gus Knebel"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Gus Knebel attorney, Matthew Knebel lawyer, business law attorney Texas, real estate attorney Houston, municipal law lawyer, contract attorney Galveston",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/gus-knebel.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/index.html",
+      "title": "Our Attorneys | Galveston, TX | Mills Shirley LLP",
+      "title_len": 49,
+      "description": "Meet the Galveston attorneys of Mills Shirley LLP: trial lawyers and advisors in commercial litigation, business transactions, employment, and estate planning.",
+      "desc_len": 159,
+      "canonical": "https://millsshirley.com/attorneys/",
+      "h1": [
+        "Our Attorneys"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Our Attorneys"
+        ],
+        [
+          2,
+          "The Mills Shirley Team"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Maureen K. McCutchen"
+        ],
+        [
+          3,
+          "Fred D. Raschke"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Matthew G. Knebel"
+        ],
+        [
+          3,
+          "Jack C. Brock"
+        ],
+        [
+          3,
+          "Rachel L. Delgado"
+        ],
+        [
+          2,
+          "Ready to Work With Our Team?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 235,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "CollectionPage",
+        "WebSite",
+        "LegalService",
+        "PostalAddress",
+        "City",
+        "AdministrativeArea",
+        "State"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        },
+        {
+          "src": "../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen K. McCutchen"
+        },
+        {
+          "src": "../assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        },
+        {
+          "src": "../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "../assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew G. Knebel"
+        },
+        {
+          "src": "../assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        },
+        {
+          "src": "../assets/img/attorneys/rachel-delgado26.jpg",
+          "alt": "Rachel L. Delgado"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/jack-brock.html",
+      "title": "Jack Brock | Litigation | Galveston, TX | Mills Shirley LLP",
+      "title_len": 59,
+      "description": "Jack Brock, Of Counsel at Mills Shirley LLP in Galveston, with trial experience in commercial, construction, and environmental cases.",
+      "desc_len": 133,
+      "canonical": "https://millsshirley.com/attorneys/jack-brock.html",
+      "h1": [
+        "Jack C. Brock"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Jack C. Brock"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          3,
+          "Commercial Litigation"
+        ],
+        [
+          3,
+          "Construction Litigation and Arbitration"
+        ],
+        [
+          3,
+          "Fiduciary Litigation"
+        ],
+        [
+          3,
+          "Insurance Defense"
+        ],
+        [
+          3,
+          "Professional Malpractice"
+        ],
+        [
+          3,
+          "Environmental Law"
+        ],
+        [
+          3,
+          "Toxic Tort"
+        ],
+        [
+          3,
+          "Business Litigation"
+        ],
+        [
+          3,
+          "Appeals"
+        ],
+        [
+          3,
+          "Wrongful Death"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Professional Memberships"
+        ],
+        [
+          2,
+          "Representative Matters"
+        ],
+        [
+          2,
+          "Recognition & Awards"
+        ],
+        [
+          2,
+          "Past Positions"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 412,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Jack Brock attorney, commercial litigation lawyer Texas, construction litigation attorney, environmental law lawyer, professional malpractice attorney, toxic tort lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/jack-brock.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [
+        "Best "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/maureen-mccutchen.html",
+      "title": "Maureen McCutchen | Estate Planning | TX | Mills Shirley LLP",
+      "title_len": 60,
+      "description": "Maureen McCutchen, board-certified Galveston estate planning and probate attorney with decades of trusts and guardianship experience.",
+      "desc_len": 133,
+      "canonical": "https://millsshirley.com/attorneys/maureen-mccutchen.html",
+      "h1": [
+        "Maureen Kuzik McCutchen"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Maureen Kuzik McCutchen"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          3,
+          "Estate, Trusts and Guardianship"
+        ],
+        [
+          3,
+          "Guardianship Administration and Litigation"
+        ],
+        [
+          3,
+          "Probate and Estate Administration"
+        ],
+        [
+          3,
+          "Will Contests"
+        ],
+        [
+          3,
+          "Trust and Fiduciary Litigation"
+        ],
+        [
+          3,
+          "Estate Planning and Trust Creation"
+        ],
+        [
+          3,
+          "Business and Commercial Law"
+        ],
+        [
+          3,
+          "Real Estate Transactions"
+        ],
+        [
+          3,
+          "Contract Formation and Disputes"
+        ],
+        [
+          3,
+          "Mediation and Arbitration"
+        ],
+        [
+          3,
+          "Litigation & Appeals"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Legal Certifications"
+        ],
+        [
+          2,
+          "Recognition & Awards"
+        ],
+        [
+          2,
+          "Community Involvement"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 331,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen Kuzik McCutchen"
+        },
+        {
+          "src": "../assets/img/board-certified-estate-planning.png",
+          "alt": "Board Certified in Estate Planning and Probate Law by the Texas Board of Legal Specialization"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Maureen McCutchen attorney, estate planning lawyer Texas, probate attorney Houston, trust litigation lawyer, guardianship attorney, board certified estate planning Texas",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/maureen-mccutchen.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [
+        "Best "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/rachel-delgado.html",
+      "title": "Rachel Delgado | Civil Litigation | Galveston | Mills Shirley LLP",
+      "title_len": 65,
+      "description": "Rachel Delgado, Galveston litigation associate at Mills Shirley LLP handling civil defense, appeals, and commercial disputes.",
+      "desc_len": 125,
+      "canonical": "https://millsshirley.com/attorneys/rachel-delgado.html",
+      "h1": [
+        "Rachel Delgado"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Rachel Delgado"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Languages"
+        ],
+        [
+          2,
+          "Professional Memberships"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 227,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/rachel-delgado26.jpg",
+          "alt": "Rachel Delgado"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Rachel Delgado attorney, litigation lawyer Texas, civil defense attorney Galveston, litigation associate Mills Shirley",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/rachel-delgado26.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "attorneys/robert-booth.html",
+      "title": "Robert Booth | Managing Partner | Galveston | Mills Shirley LLP",
+      "title_len": 63,
+      "description": "Robert Booth, Managing Partner of Mills Shirley LLP in Galveston, board-certified in Civil Trial Law, leads commercial litigation.",
+      "desc_len": 130,
+      "canonical": "https://millsshirley.com/attorneys/robert-booth.html",
+      "h1": [
+        "Robert Edward Booth"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Robert Edward Booth"
+        ],
+        [
+          2,
+          "Contact Information"
+        ],
+        [
+          2,
+          "Biography"
+        ],
+        [
+          2,
+          "Practice Areas"
+        ],
+        [
+          3,
+          "Business Litigation"
+        ],
+        [
+          3,
+          "Construction Law"
+        ],
+        [
+          3,
+          "Design and Construction Defect Litigation"
+        ],
+        [
+          3,
+          "Premises Liability"
+        ],
+        [
+          3,
+          "Professional Negligence"
+        ],
+        [
+          3,
+          "Real Estate Disputes"
+        ],
+        [
+          3,
+          "Public Entity Representation"
+        ],
+        [
+          3,
+          "Employment Law"
+        ],
+        [
+          3,
+          "Maritime Law"
+        ],
+        [
+          2,
+          "Education & Admissions"
+        ],
+        [
+          3,
+          "Education"
+        ],
+        [
+          3,
+          "Bar Admissions"
+        ],
+        [
+          2,
+          "Professional Memberships"
+        ],
+        [
+          2,
+          "Representative Matters"
+        ],
+        [
+          2,
+          "Representative Trials and Appeals"
+        ],
+        [
+          3,
+          "Jury Trial (2025): CV-0089899; County Court at Law No. 1 of Galveston County, Texas (Judge J. Grady)"
+        ],
+        [
+          3,
+          "Jury Trial (2025): 23-CV-0343; 405th District Court of Galveston County, Texas (Judge J. Robinson)"
+        ],
+        [
+          3,
+          "Jury Trial (2025): 4:20-CV-03997; Southern District of Texas\u2014Galveston Division (Judge A. Edison)"
+        ],
+        [
+          3,
+          "Jury Trial (2024): 23-CV-2035; 122nd District Court of Galveston County, Texas (Judge J. Jones)"
+        ],
+        [
+          3,
+          "Jury Trial (2024): 23-CV-0439; 10th District Court of Galveston County, Texas (Judge K. Neves)"
+        ],
+        [
+          3,
+          "Appeal: 22-40674\u2014United States Court of Appeals for the Fifth Circuit"
+        ],
+        [
+          3,
+          "Appeal: 22-40841\u2014United States Court of Appeals for the Fifth Circuit"
+        ],
+        [
+          3,
+          "Jury Trial (2023): 21-CV-0871A; 405th District Court of Galveston County, Texas (Judge J. Robinson)"
+        ],
+        [
+          3,
+          "Jury Trial (2022): 19-CV-1046; 56th District Court of Galveston County, Texas (Judge L. Cox)"
+        ],
+        [
+          3,
+          "Jury Trial (2021): PR-0079385-A; Probate Court of Galveston County, Texas (Judge K. Sullivan)"
+        ],
+        [
+          3,
+          "Bench Trial: 18-CV-0640; 10th District Court of Galveston County, Texas (Judge K. Neves)"
+        ],
+        [
+          3,
+          "Jury Trial: 16-CV-0942; 212th District Court of Galveston County, Texas (Judge P. Grady)"
+        ],
+        [
+          3,
+          "Jury Trial: 13-CV-0844; 56th District Court of Galveston County, Texas (Judge L. Cox)"
+        ],
+        [
+          3,
+          "Jury Trial: CV-0075191; County Court at Law No. 3 of Galveston County, Texas (Judge J. Ewing)"
+        ],
+        [
+          3,
+          "Jury Trial: 14-CV-0481; 405th District Court of Galveston County, Texas (Judge M. Slaughter)"
+        ],
+        [
+          3,
+          "Bench Trial: 14-CV-0528; 405th District Court of Galveston County, Texas (Judge M. Slaughter)"
+        ],
+        [
+          3,
+          "Bench Trial: PR-0075279-B; Probate Court of Galveston County, Texas (Judge K. Sullivan)"
+        ],
+        [
+          3,
+          "Bench Trial: 12-CV-0428; 122nd Judicial District Court of Galveston County, Texas (Judge J. Ellisor)"
+        ],
+        [
+          3,
+          "Maritime: No. 3:12-CV-304, 2013 WL 4505987 (S.D. Tex. Aug. 22, 2013), aff'd 817 F.3d 241 (5th Cir. 2016)"
+        ],
+        [
+          3,
+          "Bench Trial: 12-CV-0343; 405th Judicial District Court of Galveston County, Texas (Judge M. Slaughter)"
+        ],
+        [
+          3,
+          "Jury Trial: 11-CV-0071; 10th Judicial District of Galveston County, Texas (Judge K. Neves)"
+        ]
+      ],
+      "word_count": 1744,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "Person",
+        "Organization",
+        "PostalAddress",
+        "AdministrativeArea",
+        "State",
+        "EducationalOccupationalCredential",
+        "Organization",
+        "EducationalOrganization",
+        "EducationalOrganization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "imgs": [
+        {
+          "src": "../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert Edward Booth"
+        },
+        {
+          "src": "../assets/img/board-certified-civil-trial-law.png",
+          "alt": "Board Certified in Civil Trial Law by the Texas Board of Legal Specialization"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "Robert Booth attorney, managing partner Mills Shirley, business litigation lawyer Texas, construction law attorney Houston, maritime attorney Galveston, employment law lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [
+        "Best "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "estate-trusts-and-guardianship/estate-planning/index.html",
+      "title": "Estate Planning Attorneys | Texas Estate Planning Lawyers | Mills Shirley LLP",
+      "title_len": 77,
+      "description": "Expert estate planning attorneys in Texas. Board-certified estate planning and probate law specialists helping families protect their legacy. Wills, trusts, probate administration.",
+      "desc_len": 180,
+      "canonical": "https://millsshirley.com/practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html",
+      "h1": [
+        "Estate Planning & Probate Law"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Estate Planning & Probate Law"
+        ],
+        [
+          2,
+          "Comprehensive Estate Planning Services"
+        ],
+        [
+          2,
+          "Our Estate Planning Services"
+        ],
+        [
+          3,
+          "Estate Planning"
+        ],
+        [
+          3,
+          "Probate Administration"
+        ],
+        [
+          3,
+          "Guardianship"
+        ],
+        [
+          3,
+          "Trust Administration"
+        ],
+        [
+          3,
+          "Asset Protection"
+        ],
+        [
+          3,
+          "Estate Litigation"
+        ],
+        [
+          2,
+          "Meet Our Estate Planning Specialist"
+        ],
+        [
+          3,
+          "Maureen Kuzik McCutchen"
+        ],
+        [
+          4,
+          "Practice Areas"
+        ],
+        [
+          4,
+          "Credentials & Recognition"
+        ],
+        [
+          2,
+          "Why Choose Mills Shirley for Estate Planning?"
+        ],
+        [
+          3,
+          "Board Certified Expertise"
+        ],
+        [
+          3,
+          "30+ Years Experience"
+        ],
+        [
+          3,
+          "Personalized Approach"
+        ],
+        [
+          3,
+          "Ready to Protect Your Legacy?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 438,
+      "lang": "en",
+      "landmarks": {
+        "main": false,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": false
+      },
+      "schema": [
+        "LegalService",
+        "Organization",
+        "PostalAddress",
+        "State",
+        "OfferCatalog",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service"
+      ],
+      "imgs": [
+        {
+          "src": "../../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen McCutchen - Board Certified Estate Planning Attorney"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "estate planning attorney, Texas estate planning, probate attorney, will attorney, trust lawyer, estate administration, guardianship attorney, board certified estate planning",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/maureen-mccutchen.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../../assets/js/tailwind-config.js?v=2",
+        "../../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 4,
+      "superlatives_flagged": [
+        "Expert "
+      ],
+      "is_redirect_stub": true
+    },
+    {
+      "path": "index.html",
+      "title": "Mills Shirley LLP | Galveston, TX Business & Litigation Attorneys",
+      "title_len": 65,
+      "description": "Galveston law firm since 1846. Counsel for businesses and individuals on litigation, transactions, employment, and estates on the Texas Gulf Coast.",
+      "desc_len": 147,
+      "canonical": "https://millsshirley.com",
+      "h1": [
+        "Mills Shirley LLP Since 1846"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Mills Shirley LLP Since 1846"
+        ],
+        [
+          2,
+          "Comprehensive Legal Services for Galveston County Businesses and Individuals"
+        ],
+        [
+          3,
+          "Commercial Litigation"
+        ],
+        [
+          4,
+          "Commercial Litigation & Business Disputes"
+        ],
+        [
+          4,
+          "Construction Litigation & Defect Claims"
+        ],
+        [
+          4,
+          "Insurance Coverage & Defense"
+        ],
+        [
+          3,
+          "Business Transactions"
+        ],
+        [
+          4,
+          "Business Formation & Governance"
+        ],
+        [
+          4,
+          "Commercial Real Estate Transactions"
+        ],
+        [
+          4,
+          "Contract Negotiation & Drafting"
+        ],
+        [
+          3,
+          "Employment Law"
+        ],
+        [
+          4,
+          "Employer Representation & Compliance"
+        ],
+        [
+          4,
+          "Employment Litigation & Disputes"
+        ],
+        [
+          4,
+          "Workplace Safety & EEOC Matters"
+        ],
+        [
+          3,
+          "Estate Planning & Wealth Protection"
+        ],
+        [
+          4,
+          "Estate Planning & Asset Protection"
+        ],
+        [
+          4,
+          "Probate & Guardianship Administration"
+        ],
+        [
+          4,
+          "Trust & Fiduciary Litigation"
+        ],
+        [
+          2,
+          "Experienced Trial Attorneys & Strategic Advisors"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Maureen K. McCutchen"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Fred D. Raschke"
+        ],
+        [
+          3,
+          "Matthew G. Knebel"
+        ],
+        [
+          3,
+          "Jack C. Brock"
+        ],
+        [
+          3,
+          "Rachel L. Delgado"
+        ],
+        [
+          2,
+          "Ready to Protect Your Interests?"
+        ],
+        [
+          3,
+          "Client Services"
+        ],
+        [
+          3,
+          "Consultation Request"
+        ],
+        [
+          4,
+          "Secure & Confidential"
+        ],
+        [
+          4,
+          "Quick Process"
+        ],
+        [
+          4,
+          "Direct Response"
+        ],
+        [
+          3,
+          "Location"
+        ],
+        [
+          4,
+          "Mills Shirley LLP"
+        ],
+        [
+          5,
+          "Getting Here"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 682,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService,LocalBusiness",
+        "PostalAddress",
+        "GeoCoordinates",
+        "OpeningHoursSpecification",
+        "AdministrativeArea",
+        "City",
+        "City",
+        "State",
+        "QuantitativeValue",
+        "Person",
+        "Person",
+        "Person",
+        "Person",
+        "Person",
+        "Person",
+        "Person",
+        "OfferCatalog",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service",
+        "Offer",
+        "Service"
+      ],
+      "imgs": [
+        {
+          "src": "assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert Edward Booth"
+        },
+        {
+          "src": "assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen Kuzik McCutchen"
+        },
+        {
+          "src": "assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        },
+        {
+          "src": "assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew Gus Knebel"
+        },
+        {
+          "src": "assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        },
+        {
+          "src": "assets/img/attorneys/rachel-delgado26.jpg",
+          "alt": "Rachel Delgado"
+        }
+      ],
+      "iframes": [
+        {
+          "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.123!2d-94.7982!3d29.3060!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863f5e6e0c1f1e7d%3A0x2c3c4b5a6d7e8f9a!2s2200+Market+St+%23300%2C+Galveston%2C+TX+77550!5e0!3m2!1sen!2sus!4v1",
+          "title": "Mills Shirley LLP Office Location - 2200 Market St, Galveston, TX",
+          "attrs": {
+            "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.123!2d-94.7982!3d29.3060!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863f5e6e0c1f1e7d%3A0x2c3c4b5a6d7e8f9a!2s2200+Market+St+%23300%2C+Galveston%2C+TX+77550!5e0!3m2!1sen!2sus!4v1",
+            "width": "100%",
+            "height": "200",
+            "style": "border:0;",
+            "allowfullscreen": "",
+            "loading": "lazy",
+            "referrerpolicy": "no-referrer-when-downgrade",
+            "title": "Mills Shirley LLP Office Location - 2200 Market St, Galveston, TX"
+          }
+        }
+      ],
+      "meta_keywords": "Galveston County attorneys, Galveston County law firm, Galveston County lawyers, Texas law firm, commercial litigation, business law, estate planning, construction law, insurance defense, Galveston attorneys, Houston lawyers",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "assets/js/tailwind-config.js?v=2",
+        "assets/js/scripts.js?v=2",
+        "assets/js/performance.js?v=3"
+      ],
+      "external_link_count": 5,
+      "superlatives_flagged": [
+        "Expert ",
+        "Leading Galveston",
+        "Proven history",
+        "Strategic wins",
+        "aggressive representation",
+        "trial-tested"
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/employment/employer-representation-and-compliance.html",
+      "title": "Employer Compliance | Galveston, TX | Mills Shirley LLP",
+      "title_len": 55,
+      "description": "Galveston employer compliance counsel for handbooks, policies, and HR matters. Helping Gulf Coast businesses prevent workplace disputes.",
+      "desc_len": 136,
+      "canonical": "https://millsshirley.com/practice-areas/employment/employer-representation-and-compliance.html",
+      "h1": [
+        "Employer Representation and Compliance"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Employer Representation and Compliance"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Employment Policy Development & Review"
+        ],
+        [
+          3,
+          "Compliance Training & Education"
+        ],
+        [
+          3,
+          "Workplace Investigations"
+        ],
+        [
+          3,
+          "Regulatory Compliance"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "Does Mills Shirley provide employment law counsel to Galveston County employers?"
+        ],
+        [
+          3,
+          "What employment compliance issues should Texas employers address?"
+        ],
+        [
+          3,
+          "Can Mills Shirley draft employee handbooks and policies?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Maureen K. McCutchen"
+        ],
+        [
+          3,
+          "Fred D. Raschke"
+        ],
+        [
+          3,
+          "Other Employment Services"
+        ],
+        [
+          2,
+          "Need employment counsel you can trust?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 328,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "LegalService",
+        "PostalAddress",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        },
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen K. McCutchen"
+        },
+        {
+          "src": "../../assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "employer representation, employment compliance, workplace policies, Texas employment law, HR legal counsel, employment attorney",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2",
+        "../../assets/js/performance.js?v=3"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "Expert "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/employment/employment-litigation-and-disputes.html",
+      "title": "Employment Litigation | Galveston, TX | Mills Shirley LLP",
+      "title_len": 57,
+      "description": "Galveston employment litigation attorneys defending Texas employers in discrimination, wage-and-hour, and retaliation claims.",
+      "desc_len": 125,
+      "canonical": "https://millsshirley.com/practice-areas/employment/employment-litigation-and-disputes.html",
+      "h1": [
+        "Employment Litigation and Disputes"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Employment Litigation and Disputes"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Discrimination & Harassment Claims"
+        ],
+        [
+          3,
+          "Wrongful Termination & Retaliation"
+        ],
+        [
+          3,
+          "Wage & Hour Disputes"
+        ],
+        [
+          3,
+          "Non-Compete & Trade Secret Litigation"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "What types of employment disputes does Mills Shirley handle?"
+        ],
+        [
+          3,
+          "Can Mills Shirley defend my company in an employment lawsuit in Galveston County?"
+        ],
+        [
+          3,
+          "What should an employer do when served with an employment lawsuit?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Fred D. Raschke"
+        ],
+        [
+          3,
+          "Other Employment Services"
+        ],
+        [
+          2,
+          "Need employment counsel you can trust?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 313,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "LegalService",
+        "PostalAddress",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        },
+        {
+          "src": "../../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "../../assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "employment litigation, wrongful termination, discrimination claims, harassment lawsuits, wage disputes, Texas employment attorney, employment defense",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2",
+        "../../assets/js/performance.js?v=3"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "Expert "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/employment/index.html",
+      "title": "Employment Law | Galveston, TX | Mills Shirley LLP",
+      "title_len": 50,
+      "description": "Galveston employment law attorneys for employer compliance, workplace disputes, and EEOC matters advising Gulf Coast businesses.",
+      "desc_len": 128,
+      "canonical": "https://millsshirley.com/practice-areas/employment/",
+      "h1": [
+        "Strategic Counsel for Texas Employers"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Strategic Counsel for Texas Employers"
+        ],
+        [
+          2,
+          "How We Help Employers"
+        ],
+        [
+          3,
+          "Preventive Counseling"
+        ],
+        [
+          3,
+          "Workplace Response"
+        ],
+        [
+          3,
+          "Litigation Defense"
+        ],
+        [
+          2,
+          "Featured Employment Services"
+        ],
+        [
+          3,
+          "Employer Representation & Compliance"
+        ],
+        [
+          3,
+          "Employment Litigation & Disputes"
+        ],
+        [
+          3,
+          "Workplace Safety & EEOC Matters"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 268,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "Organization",
+        "AdministrativeArea",
+        "State"
+      ],
+      "imgs": [],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/employment/workplace-safety-and-eeoc-matters.html",
+      "title": "Workplace Safety & EEOC | Galveston | Mills Shirley LLP",
+      "title_len": 55,
+      "description": "Galveston workplace safety and EEOC counsel for OSHA compliance and charge defense for Gulf Coast employers.",
+      "desc_len": 108,
+      "canonical": "https://millsshirley.com/practice-areas/employment/workplace-safety-and-eeoc-matters.html",
+      "h1": [
+        "Workplace Safety and EEOC Matters"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Workplace Safety and EEOC Matters"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "OSHA Compliance & Workplace Safety"
+        ],
+        [
+          3,
+          "EEOC Investigations & Compliance"
+        ],
+        [
+          3,
+          "Workplace Safety Protocols"
+        ],
+        [
+          3,
+          "Workplace Violence Prevention"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "How does Mills Shirley help employers respond to EEOC charges?"
+        ],
+        [
+          3,
+          "What OSHA compliance services does Mills Shirley provide?"
+        ],
+        [
+          3,
+          "Can an employer be sued for workplace safety violations in Texas?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Maureen K. McCutchen"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Other Employment Services"
+        ],
+        [
+          2,
+          "Need employment counsel you can trust?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 320,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "LegalService",
+        "PostalAddress",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        },
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen K. McCutchen"
+        },
+        {
+          "src": "../../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "workplace safety, OSHA compliance, EEOC investigations, workplace safety protocols, Texas employment law, safety regulations",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2",
+        "../../assets/js/performance.js?v=3"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "Expert "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/index.html",
+      "title": "Practice Areas | Mills Shirley LLP",
+      "title_len": 34,
+      "description": "Explore the full range of practice areas offered by Mills Shirley LLP, including employment, litigation, transactional, and trusts & estates services across Texas.",
+      "desc_len": 163,
+      "canonical": "https://millsshirley.com/practice-areas/",
+      "h1": [
+        "Full-Service Counsel for Businesses, Governments & Families"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Full-Service Counsel for Businesses, Governments & Families"
+        ],
+        [
+          2,
+          "Strategic Counsel for Employers"
+        ],
+        [
+          3,
+          "Employer Representation & Compliance"
+        ],
+        [
+          3,
+          "Employment Litigation & Disputes"
+        ],
+        [
+          3,
+          "Workplace Safety & EEOC Matters"
+        ],
+        [
+          2,
+          "Trial-Tested Advocacy"
+        ],
+        [
+          3,
+          "Commercial Litigation"
+        ],
+        [
+          3,
+          "Construction Litigation"
+        ],
+        [
+          3,
+          "Insurance Coverage & Defense"
+        ],
+        [
+          2,
+          "Business & Real Estate Counsel"
+        ],
+        [
+          3,
+          "Business Formation & Governance"
+        ],
+        [
+          3,
+          "Commercial Real Estate"
+        ],
+        [
+          3,
+          "Contract Negotiation"
+        ],
+        [
+          2,
+          "Protecting Legacy & Stewardship"
+        ],
+        [
+          3,
+          "Estate Planning & Asset Protection"
+        ],
+        [
+          3,
+          "Probate & Guardianship"
+        ],
+        [
+          3,
+          "Trust & Fiduciary Litigation"
+        ],
+        [
+          2,
+          "Ready to discuss your legal needs?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 345,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "Organization",
+        "AdministrativeArea",
+        "State"
+      ],
+      "imgs": [],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../assets/js/tailwind-config.js?v=2",
+        "../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "Trial-Tested"
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/litigation/commercial-litigation-and-business-disputes.html",
+      "title": "Commercial Litigation | Galveston, TX | Mills Shirley LLP",
+      "title_len": 57,
+      "description": "Galveston commercial litigation attorneys for contract disputes, partnership conflicts, and business torts in state and federal court.",
+      "desc_len": 134,
+      "canonical": "https://millsshirley.com/practice-areas/litigation/commercial-litigation-and-business-disputes.html",
+      "h1": [
+        "Commercial Litigation and Business Disputes"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Commercial Litigation and Business Disputes"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Contract & Business Disputes"
+        ],
+        [
+          3,
+          "Dispute Resolution"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "What types of commercial litigation does Mills Shirley handle in Galveston County?"
+        ],
+        [
+          3,
+          "Can Mills Shirley represent my business in federal court?"
+        ],
+        [
+          3,
+          "How do I find a business litigation attorney in Galveston County?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Fred D. Raschke"
+        ],
+        [
+          3,
+          "Other Litigation Services"
+        ],
+        [
+          2,
+          "Facing a business dispute?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 421,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        },
+        {
+          "src": "../../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "../../assets/img/attorneys/fred-raschke.jpg",
+          "alt": "Fred D. Raschke"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "commercial litigation, business disputes, Texas litigation attorneys, contract disputes, business torts, commercial arbitration, Houston litigation lawyers, Galveston business attorneys",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/litigation/construction-litigation-and-defect-claims.html",
+      "title": "Construction Litigation | Galveston, TX | Mills Shirley LLP",
+      "title_len": 59,
+      "description": "Galveston construction litigation attorneys for defect, delay, and design claims. Representing owners, contractors, and insurers.",
+      "desc_len": 129,
+      "canonical": "https://millsshirley.com/practice-areas/litigation/construction-litigation-and-defect-claims.html",
+      "h1": [
+        "Construction Litigation and Defect Claims"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Construction Litigation and Defect Claims"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Defect & Contract Disputes"
+        ],
+        [
+          3,
+          "Lien & Dispute Resolution"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "Who handles construction defect claims in Galveston County?"
+        ],
+        [
+          3,
+          "What should I do if I discover a construction defect on my property in Texas?"
+        ],
+        [
+          3,
+          "Does Mills Shirley handle construction arbitration?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Jack C. Brock"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Other Litigation Services"
+        ],
+        [
+          2,
+          "Dealing with construction disputes?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 336,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "../../assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        },
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "construction litigation attorney, construction defect lawyer, construction dispute attorney, Texas construction law, defect claims lawyer, contractor litigation, architect litigation, construction contract disputes, Texas construction attorney",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/litigation/index.html",
+      "title": "Litigation Practice | Mills Shirley LLP",
+      "title_len": 39,
+      "description": "Discover Mills Shirley LLP's litigation capabilities, including commercial disputes, construction claims, and insurance defense matters across Texas.",
+      "desc_len": 149,
+      "canonical": "https://millsshirley.com/practice-areas/litigation/",
+      "h1": [
+        "Trial Lawyers for High-Stakes Disputes"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Trial Lawyers for High-Stakes Disputes"
+        ],
+        [
+          2,
+          "Resolving Disputes with Precision"
+        ],
+        [
+          3,
+          "Commercial Litigation"
+        ],
+        [
+          3,
+          "Construction & Design Claims"
+        ],
+        [
+          3,
+          "Insurance Defense"
+        ],
+        [
+          2,
+          "Representative Litigation Services"
+        ],
+        [
+          3,
+          "Commercial Litigation & Business Disputes"
+        ],
+        [
+          3,
+          "Construction Litigation & Defect Claims"
+        ],
+        [
+          3,
+          "Insurance Coverage & Defense"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 238,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "Organization",
+        "AdministrativeArea",
+        "State"
+      ],
+      "imgs": [],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "Trial-tested"
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/litigation/insurance-coverage-and-defense.html",
+      "title": "Insurance Coverage & Defense | Galveston | Mills Shirley LLP",
+      "title_len": 60,
+      "description": "Galveston insurance coverage and defense attorneys for bad faith, coverage disputes, and insurer defense across Galveston County.",
+      "desc_len": 129,
+      "canonical": "https://millsshirley.com/practice-areas/litigation/insurance-coverage-and-defense.html",
+      "h1": [
+        "Insurance Coverage and Defense"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Insurance Coverage and Defense"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Coverage Disputes"
+        ],
+        [
+          3,
+          "Liability Defense"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "What types of insurance disputes does Mills Shirley handle?"
+        ],
+        [
+          3,
+          "Can Mills Shirley defend my insurance company in Galveston County?"
+        ],
+        [
+          3,
+          "What is insurance bad faith in Texas?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Andres O. Soto"
+        ],
+        [
+          3,
+          "Jack C. Brock"
+        ],
+        [
+          3,
+          "Other Litigation Services"
+        ],
+        [
+          2,
+          "Need insurance defense counsel?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 351,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        },
+        {
+          "src": "../../assets/img/attorneys/andres-soto.jpg",
+          "alt": "Andres O. Soto"
+        },
+        {
+          "src": "../../assets/img/attorneys/jack-brock.jpg",
+          "alt": "Jack C. Brock"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "insurance coverage attorney, insurance defense lawyer, bad faith claims lawyer, coverage disputes attorney, Texas insurance law, liability defense attorney, insurance litigation, CGL defense, E&O policy defense",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/transactional/business-formation-and-governance.html",
+      "title": "Business Formation Attorneys | Galveston | Mills Shirley LLP",
+      "title_len": 60,
+      "description": "Galveston business formation attorneys for LLCs, corporations, and governance. Helping Gulf Coast entrepreneurs and small businesses start right.",
+      "desc_len": 145,
+      "canonical": "https://millsshirley.com/practice-areas/transactional/business-formation-and-governance.html",
+      "h1": [
+        "Business Formation and Governance"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Business Formation and Governance"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Entity Formation"
+        ],
+        [
+          3,
+          "Corporate Governance"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "How do I form an LLC or corporation in Galveston County?"
+        ],
+        [
+          3,
+          "Do I need a lawyer to start a business in Texas?"
+        ],
+        [
+          3,
+          "What is the best business structure for a small business in Texas?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Matthew \"Gus\" Knebel"
+        ],
+        [
+          3,
+          "Robert E. Booth"
+        ],
+        [
+          3,
+          "Other Transactional Services"
+        ],
+        [
+          2,
+          "Starting or restructuring your business?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 417,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew 'Gus' Knebel"
+        },
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert E. Booth"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "business formation attorney, corporate governance lawyer, entity formation lawyer, LLC formation attorney, corporation formation, business structure attorney, Texas business law, startup attorney, corporate compliance lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "best "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/transactional/commercial-real-estate-transactions.html",
+      "title": "Commercial Real Estate | Galveston, TX | Mills Shirley LLP",
+      "title_len": 58,
+      "description": "Galveston commercial real estate attorneys for acquisitions, sales, leasing, and development. Counsel for owners, developers, and lenders.",
+      "desc_len": 138,
+      "canonical": "https://millsshirley.com/practice-areas/transactional/commercial-real-estate-transactions.html",
+      "h1": [
+        "Commercial Real Estate Transactions"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Commercial Real Estate Transactions"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Property Transactions"
+        ],
+        [
+          3,
+          "Development & Finance"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "Who handles commercial real estate transactions in Galveston County?"
+        ],
+        [
+          3,
+          "Do I need a real estate attorney for a commercial property purchase in Texas?"
+        ],
+        [
+          3,
+          "Does Mills Shirley handle land use and zoning matters?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Matthew \"Gus\" Knebel"
+        ],
+        [
+          3,
+          "Maureen McCutchen"
+        ],
+        [
+          3,
+          "Other Transactional Services"
+        ],
+        [
+          2,
+          "Need commercial real estate counsel?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 413,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew 'Gus' Knebel"
+        },
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen McCutchen"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "commercial real estate attorney, real estate transaction lawyer, property acquisition attorney, real estate development lawyer, commercial lease attorney, Texas real estate law, land use attorney, property lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/transactional/contract-negotiation-and-drafting.html",
+      "title": "Contract Negotiation | Galveston, TX | Mills Shirley LLP",
+      "title_len": 56,
+      "description": "Galveston contract negotiation attorneys for commercial agreements, MSAs, and NDAs. Helping Gulf Coast businesses protect their deals.",
+      "desc_len": 134,
+      "canonical": "https://millsshirley.com/practice-areas/transactional/contract-negotiation-and-drafting.html",
+      "h1": [
+        "Contract Negotiation and Drafting"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Contract Negotiation and Drafting"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Contract Development"
+        ],
+        [
+          3,
+          "Specialized Agreements"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "What types of contracts does Mills Shirley draft?"
+        ],
+        [
+          3,
+          "Why should I hire a lawyer to review a business contract?"
+        ],
+        [
+          3,
+          "Can Mills Shirley help with contract disputes?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Matthew \"Gus\" Knebel"
+        ],
+        [
+          3,
+          "Robert Booth"
+        ],
+        [
+          3,
+          "Other Transactional Services"
+        ],
+        [
+          2,
+          "Need contract assistance?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 394,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/gus-knebel.jpg",
+          "alt": "Matthew 'Gus' Knebel"
+        },
+        {
+          "src": "../../assets/img/attorneys/robert-booth2.jpg",
+          "alt": "Robert Booth"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "contract negotiation attorney, contract drafting lawyer, commercial contract attorney, MSA attorney, NDA lawyer, licensing agreement attorney, Texas contract law, business agreement lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/transactional/index.html",
+      "title": "Transactional Practice | Mills Shirley LLP",
+      "title_len": 42,
+      "description": "Review Mills Shirley LLP's transactional services, including business formation, real estate deals, and contract negotiation for companies across Texas.",
+      "desc_len": 152,
+      "canonical": "https://millsshirley.com/practice-areas/transactional/",
+      "h1": [
+        "Business Counsel for Growth and Governance"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Business Counsel for Growth and Governance"
+        ],
+        [
+          2,
+          "Strategic Counsel for the Business Lifecycle"
+        ],
+        [
+          3,
+          "Entity Strategy"
+        ],
+        [
+          3,
+          "Deal Execution"
+        ],
+        [
+          3,
+          "Operational Support"
+        ],
+        [
+          2,
+          "Transactional Service Highlights"
+        ],
+        [
+          3,
+          "Business Formation & Governance"
+        ],
+        [
+          3,
+          "Commercial Real Estate Transactions"
+        ],
+        [
+          3,
+          "Contract Negotiation & Drafting"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 242,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "Organization",
+        "AdministrativeArea",
+        "State"
+      ],
+      "imgs": [],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html",
+      "title": "Estate Planning Attorneys | Galveston | Mills Shirley LLP",
+      "title_len": 57,
+      "description": "Galveston estate planning attorneys for wills, trusts, and asset protection helping families across Galveston County.",
+      "desc_len": 117,
+      "canonical": "https://millsshirley.com/practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html",
+      "h1": [
+        "Estate Planning and Asset Protection"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Estate Planning and Asset Protection"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Estate Planning"
+        ],
+        [
+          3,
+          "Asset Protection"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "Who is the best estate planning attorney in Galveston County?"
+        ],
+        [
+          3,
+          "What does estate planning include in Texas?"
+        ],
+        [
+          3,
+          "How much does estate planning cost in Galveston County?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Maureen K. McCutchen"
+        ],
+        [
+          3,
+          "Other Trusts & Estates Services"
+        ],
+        [
+          2,
+          "Ready to plan your estate?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 346,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen K. McCutchen"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "estate planning attorney, asset protection lawyer, will attorney, trust lawyer, estate tax attorney, wealth preservation lawyer, Texas estate planning, probate attorney, family trust attorney",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/maureen-mccutchen.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "best "
+      ],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/trusts-and-estates/index.html",
+      "title": "Trusts & Estates Practice | Mills Shirley LLP",
+      "title_len": 45,
+      "description": "Learn about Mills Shirley LLP's trusts and estates services, including estate planning, probate administration, and fiduciary litigation across Texas.",
+      "desc_len": 150,
+      "canonical": "https://millsshirley.com/practice-areas/trusts-and-estates/",
+      "h1": [
+        "Protecting Legacy and Stewarding Fiduciary Duties"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Protecting Legacy and Stewarding Fiduciary Duties"
+        ],
+        [
+          2,
+          "Comprehensive Trusts & Estates Counsel"
+        ],
+        [
+          3,
+          "Estate Planning"
+        ],
+        [
+          3,
+          "Probate & Guardianship"
+        ],
+        [
+          3,
+          "Fiduciary Litigation"
+        ],
+        [
+          2,
+          "Trusts & Estates Services"
+        ],
+        [
+          3,
+          "Estate Planning & Asset Protection"
+        ],
+        [
+          3,
+          "Probate & Guardianship Administration"
+        ],
+        [
+          3,
+          "Trust & Fiduciary Litigation"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 237,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "LegalService",
+        "Organization",
+        "AdministrativeArea",
+        "State"
+      ],
+      "imgs": [],
+      "iframes": [],
+      "meta_keywords": null,
+      "og_image": "https://millsshirley.com/assets/img/attorneys/robert-booth2.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/trusts-and-estates/probate-and-guardianship-administration.html",
+      "title": "Probate & Guardianship | Galveston, TX | Mills Shirley LLP",
+      "title_len": 58,
+      "description": "Galveston probate and guardianship attorneys guiding families through Galveston County Probate Court and estate administration.",
+      "desc_len": 127,
+      "canonical": "https://millsshirley.com/practice-areas/trusts-and-estates/probate-and-guardianship-administration.html",
+      "h1": [
+        "Probate and Guardianship Administration"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Probate and Guardianship Administration"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Estate Administration"
+        ],
+        [
+          3,
+          "Guardianship & Fiduciary"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "How does probate work in Galveston County, Texas?"
+        ],
+        [
+          3,
+          "Do I need a probate attorney in Texas?"
+        ],
+        [
+          3,
+          "How do I apply for guardianship in Galveston County?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Maureen McCutchen"
+        ],
+        [
+          3,
+          "Other Trusts & Estates Services"
+        ],
+        [
+          2,
+          "Need probate or guardianship assistance?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 350,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen McCutchen"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "probate attorney, guardianship lawyer, estate administration attorney, executor attorney, trustee lawyer, fiduciary attorney, Texas probate law, guardianship administration, estate lawyer",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/maureen-mccutchen.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [],
+      "is_redirect_stub": false
+    },
+    {
+      "path": "practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html",
+      "title": "Trust & Fiduciary Litigation | Galveston | Mills Shirley LLP",
+      "title_len": 60,
+      "description": "Galveston trust and fiduciary litigation attorneys for will contests, breach of duty claims, and estate disputes.",
+      "desc_len": 113,
+      "canonical": "https://millsshirley.com/practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html",
+      "h1": [
+        "Trust and Fiduciary Litigation"
+      ],
+      "h1_count": 1,
+      "headings": [
+        [
+          1,
+          "Trust and Fiduciary Litigation"
+        ],
+        [
+          2,
+          "Overview"
+        ],
+        [
+          2,
+          "Representative Services"
+        ],
+        [
+          3,
+          "Fiduciary Claims"
+        ],
+        [
+          3,
+          "Will & Trust Contests"
+        ],
+        [
+          2,
+          "Frequently Asked Questions"
+        ],
+        [
+          3,
+          "What is trust litigation in Texas?"
+        ],
+        [
+          3,
+          "Can I contest a will in Galveston County?"
+        ],
+        [
+          3,
+          "What is breach of fiduciary duty in estate matters?"
+        ],
+        [
+          2,
+          "Related Attorneys"
+        ],
+        [
+          3,
+          "Maureen McCutchen"
+        ],
+        [
+          3,
+          "Other Trusts & Estates Services"
+        ],
+        [
+          2,
+          "Facing trust or fiduciary disputes?"
+        ],
+        [
+          3,
+          "Mills Shirley LLP"
+        ],
+        [
+          3,
+          "Quick Links"
+        ],
+        [
+          3,
+          "Contact"
+        ]
+      ],
+      "word_count": 362,
+      "lang": "en",
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "header": true,
+        "footer": true,
+        "skip": true
+      },
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "imgs": [
+        {
+          "src": "../../assets/img/attorneys/maureen-mccutchen.jpg",
+          "alt": "Maureen McCutchen"
+        }
+      ],
+      "iframes": [],
+      "meta_keywords": "trust litigation attorney, fiduciary litigation lawyer, will contest attorney, trust dispute lawyer, breach of fiduciary duty attorney, estate litigation, trust removal attorney, Texas probate litigation",
+      "og_image": "https://millsshirley.com/assets/img/attorneys/maureen-mccutchen.jpg",
+      "scripts": [
+        "https://cdn.tailwindcss.com",
+        "../../assets/js/tailwind-config.js?v=2",
+        "../../assets/js/scripts.js?v=2"
+      ],
+      "external_link_count": 3,
+      "superlatives_flagged": [
+        "best "
+      ],
+      "is_redirect_stub": false
+    }
+  ],
+  "inbound_counts": {
+    "about.html": 29,
+    "assets/pdf/andy-soto-resume.pdf": 1,
+    "assets/pdf/fred-raschke-resume.pdf": 1,
+    "assets/pdf/gus-knebel-resume.pdf": 1,
+    "assets/pdf/jack-brock-resume.pdf": 1,
+    "assets/pdf/maureen-mccutchen-resume.pdf": 1,
+    "assets/pdf/rachel-delgado-resume.pdf": 1,
+    "assets/pdf/w-9-2026.pdf": 1,
+    "assets/vcf/andy-soto.vcf": 1,
+    "assets/vcf/fred-raschke.vcf": 1,
+    "assets/vcf/gus-knebel.vcf": 1,
+    "assets/vcf/jack-brock.vcf": 1,
+    "assets/vcf/maureen-mccutchen.vcf": 1,
+    "assets/vcf/rachel-delgado.vcf": 1,
+    "assets/vcf/robert-booth.vcf": 1,
+    "attorneys/andy-soto.html": 10,
+    "attorneys/fred-raschke.html": 8,
+    "attorneys/gus-knebel.html": 7,
+    "attorneys/index.html": 28,
+    "attorneys/jack-brock.html": 7,
+    "attorneys/maureen-mccutchen.html": 12,
+    "attorneys/rachel-delgado.html": 4,
+    "attorneys/robert-booth.html": 13,
+    "data/attorneys/Robert E. Booth_Resume (2026).pdf": 1,
+    "estate-trusts-and-guardianship/estate-planning/index.html": 1,
+    "index.html": 29,
+    "practice-areas/employment/employer-representation-and-compliance.html": 6,
+    "practice-areas/employment/employment-litigation-and-disputes.html": 6,
+    "practice-areas/employment/index.html": 5,
+    "practice-areas/employment/workplace-safety-and-eeoc-matters.html": 6,
+    "practice-areas/index.html": 29,
+    "practice-areas/litigation/commercial-litigation-and-business-disputes.html": 7,
+    "practice-areas/litigation/construction-litigation-and-defect-claims.html": 7,
+    "practice-areas/litigation/index.html": 5,
+    "practice-areas/litigation/insurance-coverage-and-defense.html": 6,
+    "practice-areas/transactional/business-formation-and-governance.html": 7,
+    "practice-areas/transactional/commercial-real-estate-transactions.html": 6,
+    "practice-areas/transactional/contract-negotiation-and-drafting.html": 6,
+    "practice-areas/transactional/index.html": 5,
+    "practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html": 7,
+    "practice-areas/trusts-and-estates/index.html": 5,
+    "practice-areas/trusts-and-estates/probate-and-guardianship-administration.html": 6,
+    "practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html": 6
+  },
+  "broken_links": [],
+  "phones": {
+    "1409763234": [
+      "404.html",
+      "about.html",
+      "attorneys/andy-soto.html",
+      "attorneys/fred-raschke.html",
+      "attorneys/gus-knebel.html",
+      "attorneys/index.html",
+      "attorneys/jack-brock.html",
+      "attorneys/maureen-mccutchen.html",
+      "attorneys/rachel-delgado.html",
+      "attorneys/robert-booth.html",
+      "estate-trusts-and-guardianship/estate-planning/index.html",
+      "index.html",
+      "practice-areas/employment/employer-representation-and-compliance.html",
+      "practice-areas/employment/employment-litigation-and-disputes.html",
+      "practice-areas/employment/index.html",
+      "practice-areas/employment/workplace-safety-and-eeoc-matters.html",
+      "practice-areas/index.html",
+      "practice-areas/litigation/commercial-litigation-and-business-disputes.html",
+      "practice-areas/litigation/construction-litigation-and-defect-claims.html",
+      "practice-areas/litigation/index.html",
+      "practice-areas/litigation/insurance-coverage-and-defense.html",
+      "practice-areas/transactional/business-formation-and-governance.html",
+      "practice-areas/transactional/commercial-real-estate-transactions.html",
+      "practice-areas/transactional/contract-negotiation-and-drafting.html",
+      "practice-areas/transactional/index.html",
+      "practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html",
+      "practice-areas/trusts-and-estates/index.html",
+      "practice-areas/trusts-and-estates/probate-and-guardianship-administration.html",
+      "practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html"
+    ],
+    "4097632341": [
+      "404.html",
+      "about.html",
+      "attorney/andres-o-soto/index.html",
+      "attorney/robert-e-booth/index.html",
+      "attorneys/andy-soto.html",
+      "attorneys/fred-raschke.html",
+      "attorneys/gus-knebel.html",
+      "attorneys/index.html",
+      "attorneys/jack-brock.html",
+      "attorneys/maureen-mccutchen.html",
+      "attorneys/rachel-delgado.html",
+      "attorneys/robert-booth.html",
+      "estate-trusts-and-guardianship/estate-planning/index.html",
+      "index.html",
+      "practice-areas/employment/employer-representation-and-compliance.html",
+      "practice-areas/employment/employment-litigation-and-disputes.html",
+      "practice-areas/employment/index.html",
+      "practice-areas/employment/workplace-safety-and-eeoc-matters.html",
+      "practice-areas/index.html",
+      "practice-areas/litigation/commercial-litigation-and-business-disputes.html",
+      "practice-areas/litigation/construction-litigation-and-defect-claims.html",
+      "practice-areas/litigation/index.html",
+      "practice-areas/litigation/insurance-coverage-and-defense.html",
+      "practice-areas/transactional/business-formation-and-governance.html",
+      "practice-areas/transactional/commercial-real-estate-transactions.html",
+      "practice-areas/transactional/contract-negotiation-and-drafting.html",
+      "practice-areas/transactional/index.html",
+      "practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html",
+      "practice-areas/trusts-and-estates/index.html",
+      "practice-areas/trusts-and-estates/probate-and-guardianship-administration.html",
+      "practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html"
+    ],
+    "4097614028": [
+      "attorney/fred-d-raschke/index.html",
+      "attorneys/fred-raschke.html"
+    ],
+    "7132421880": [
+      "attorney/jack-c-brock/index.html",
+      "attorneys/jack-brock.html"
+    ],
+    "4097614025": [
+      "attorney/maureen-k-mccutchen/index.html",
+      "attorneys/maureen-mccutchen.html"
+    ],
+    "1409761403": [
+      "attorneys/andy-soto.html",
+      "attorneys/rachel-delgado.html",
+      "index.html"
+    ],
+    "1204661539": [
+      "attorneys/andy-soto.html",
+      "attorneys/fred-raschke.html",
+      "attorneys/gus-knebel.html",
+      "attorneys/jack-brock.html",
+      "attorneys/maureen-mccutchen.html",
+      "attorneys/rachel-delgado.html",
+      "attorneys/robert-booth.html",
+      "practice-areas/litigation/commercial-litigation-and-business-disputes.html",
+      "practice-areas/litigation/construction-litigation-and-defect-claims.html",
+      "practice-areas/litigation/insurance-coverage-and-defense.html",
+      "practice-areas/transactional/business-formation-and-governance.html",
+      "practice-areas/transactional/commercial-real-estate-transactions.html",
+      "practice-areas/transactional/contract-negotiation-and-drafting.html",
+      "practice-areas/trusts-and-estates/estate-planning-and-asset-protection.html",
+      "practice-areas/trusts-and-estates/probate-and-guardianship-administration.html",
+      "practice-areas/trusts-and-estates/trust-and-fiduciary-litigation.html"
+    ],
+    "4097614035": [
+      "attorneys/andy-soto.html"
+    ],
+    "1409761402": [
+      "attorneys/fred-raschke.html",
+      "attorneys/maureen-mccutchen.html",
+      "index.html"
+    ],
+    "1409761405": [
+      "attorneys/gus-knebel.html",
+      "index.html"
+    ],
+    "4097614056": [
+      "attorneys/gus-knebel.html"
+    ],
+    "1409761234": [
+      "attorneys/jack-brock.html"
+    ],
+    "1713242188": [
+      "attorneys/jack-brock.html",
+      "index.html"
+    ],
+    "4097614038": [
+      "attorneys/rachel-delgado.html"
+    ],
+    "1409761400": [
+      "attorneys/robert-booth.html",
+      "index.html"
+    ],
+    "4097614001": [
+      "attorneys/robert-booth.html"
+    ]
+  },
+  "fragment_nav_suspects": [],
+  "orphans_approx": [],
+  "assets_summary": {
+    "count": 54,
+    "by_ext": {
+      ".ttf": 13,
+      ".webp": 9,
+      ".jpg": 9,
+      ".pdf": 7,
+      ".vcf": 7,
+      ".js": 3,
+      ".png": 3,
+      "": 2,
+      ".css": 1
+    },
+    "largest": [
+      {
+        "path": "assets/pdf/rachel-delgado-resume.pdf",
+        "bytes": 3825108,
+        "ext": ".pdf"
+      },
+      {
+        "path": "assets/pdf/jack-brock-resume.pdf",
+        "bytes": 3280649,
+        "ext": ".pdf"
+      },
+      {
+        "path": "assets/img/attorneys/rachel-delgado26.jpg",
+        "bytes": 3057903,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/pdf/fred-raschke-resume.pdf",
+        "bytes": 3023392,
+        "ext": ".pdf"
+      },
+      {
+        "path": "assets/pdf/gus-knebel-resume.pdf",
+        "bytes": 2844102,
+        "ext": ".pdf"
+      },
+      {
+        "path": "assets/img/attorneys/rachel-delgado.jpg",
+        "bytes": 2633929,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/img/attorneys/jack-brock.jpg",
+        "bytes": 2620668,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/img/attorneys/robert-booth.jpg",
+        "bytes": 2602984,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/img/attorneys/fred-raschke.jpg",
+        "bytes": 2413768,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/pdf/andy-soto-resume.pdf",
+        "bytes": 2393557,
+        "ext": ".pdf"
+      },
+      {
+        "path": "assets/img/attorneys/gus-knebel.jpg",
+        "bytes": 2272596,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/img/attorneys/robert-booth2.jpg",
+        "bytes": 2222139,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/pdf/maureen-mccutchen-resume.pdf",
+        "bytes": 1943845,
+        "ext": ".pdf"
+      },
+      {
+        "path": "assets/img/attorneys/andres-soto.jpg",
+        "bytes": 1911048,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/img/attorneys/maureen-mccutchen.jpg",
+        "bytes": 1458570,
+        "ext": ".jpg"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Text B Italic.ttf",
+        "bytes": 190064,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Text B Bold Italic.ttf",
+        "bytes": 189452,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Text A Bold Italic.ttf",
+        "bytes": 189368,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Text A Italic.ttf",
+        "bytes": 189000,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Caps A Regular.ttf",
+        "bytes": 182252,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Caps A Bold.ttf",
+        "bytes": 181636,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Caps B Bold.ttf",
+        "bytes": 181056,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Caps B Regular.ttf",
+        "bytes": 180772,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Text B Bold.ttf",
+        "bytes": 176212,
+        "ext": ".ttf"
+      },
+      {
+        "path": "assets/fonts/equity/Equity Text A Bold.ttf",
+        "bytes": 175684,
+        "ext": ".ttf"
+      }
+    ],
+    "jpg_total_mb": 21.19,
+    "webp_total_mb": 0.32,
+    "ttf_total_mb": 2.26
+  },
+  "external_destinations": [
+    "https://app.clio.com/link/7TZ7wnArCtYn",
+    "https://app.clio.com/link/9ckmAXGeVnvD",
+    "https://maps.google.com/?q=2200+Market+St+Suite+300+Galveston+TX+77550",
+    "https://millsshirley.cliogrow.com/intake/9807e0dc5ae026cd61db6af513f03b27",
+    "https://www.linkedin.com/company/mills-shirley-llp/"
+  ]
+}

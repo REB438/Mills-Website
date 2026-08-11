@@ -1,0 +1,12 @@
+# curl -sI https://millsshirley.com/  (2026-08-10)
+HTTP/2 200
+server: GitHub.com
+via: 1.1 varnish (Fastly)
+cache-control: max-age=600
+access-control-allow-origin: *
+# MISSING: content-security-policy, strict-transport-security, x-content-type-options,
+#          referrer-policy, permissions-policy, x-frame-options
+
+# www -> apex: 301 https://millsshirley.com/
+# http -> https: 301 https://millsshirley.com/
+# /practice-areas/ and /practice-areas/index.html both return 200 (duplicate URLs)

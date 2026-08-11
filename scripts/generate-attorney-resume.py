@@ -34,7 +34,7 @@ ATTORNEY_CONFIG = {
     "gus-knebel": ("gus-knebel.jpg", "(409) 761-4056", "gknebel@millsshirley.com", None, None),
     "maureen-mccutchen": ("maureen-mccutchen.jpg", "(409) 761-4025", "", None, "board-certified-estate-planning.png"),
     "fred-raschke": ("fred-raschke.jpg", "(409) 761-4028", "fraschke@millsshirley.com", None, None),
-    "jack-brock": ("jack-brock.jpg", "(713) 242-1880", "jbrock@millsshirley.com", None, None),
+    "jack-brock": ("jack-brock.jpg", "(409) 763-2341", "jbrock@millsshirley.com", None, None),
     "rachel-delgado": ("rachel-delgado26.jpg", "(409) 761-4038", "rdelgado@millsshirley.com",
         ["Appeals", "Real Estate", "Construction", "Contracts", "Business Torts", "Fraud Claims", "Employment Contracts"], None),
 }

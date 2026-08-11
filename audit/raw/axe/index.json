@@ -1,0 +1,56 @@
+{
+  "url": "http://localhost:8899/index.html",
+  "tool": "axe-core 4.10.3 via browser injection",
+  "violationCount": 1,
+  "violations": [
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "wcag": "2.5.8 Target Size (Minimum)",
+      "nodes": 1,
+      "example": "a.content-link Trust & Fiduciary Litigation \u2014 213.6\u00d721px"
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 6,
+      "note": "mostly hero text overlapped; manual contrast measured separately"
+    },
+    {
+      "id": "frame-tested",
+      "impact": "critical",
+      "nodes": 1,
+      "note": "Google Maps iframe not axe-tested"
+    }
+  ],
+  "passes": 45,
+  "manual_contrast": [
+    {
+      "el": "hero h1 white on navy-950",
+      "ratio": 20.17,
+      "need": 3.0,
+      "pass": true
+    },
+    {
+      "el": "nav-link slate-500 on white",
+      "ratio": 4.76,
+      "need": 4.5,
+      "pass": true
+    },
+    {
+      "el": "body text-gray-600 on white",
+      "ratio": 4.83,
+      "need": 4.5,
+      "pass": true
+    },
+    {
+      "el": "footer link white/85 on navy-900",
+      "ratio": 17.85,
+      "need": 4.5,
+      "pass": true
+    }
+  ]
+}

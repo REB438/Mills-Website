@@ -1,6 +1,7 @@
 Name: Fred D. Raschke  
 Title: Senior Partner  
-Office: Galveston and Houston  
+Office: Galveston  
+
 Email: [Insert if known]  
 Phone: (409) 761-4028  
 Headshot: /assets/img/attorneys/fred-raschke.jpg  
