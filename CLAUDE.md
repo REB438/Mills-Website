@@ -5,7 +5,7 @@ Static website for Mills Shirley LLP, Texas's oldest continuously operating law 
 
 ## Key Technologies
 - **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
-- **Typography**: Custom Equity Text and Equity Caps fonts
+- **Typography**: Inter (Google Fonts); Equity retired and removed
 - **Content**: Generated from structured .txt data files
 - **Responsive**: Mobile-first design with sticky navigation
 
@@ -35,9 +35,8 @@ Static website for Mills Shirley LLP, Texas's oldest continuously operating law 
 │   ├── js/tailwind-config.js           # Shared Tailwind config for every page
 │   ├── js/performance.js               # Perf helpers (loaded on 4 pages only)
 │   ├── favicon/favicon.png             # Site favicon
-│   ├── img/attorneys/                  # Attorney portraits (.webp + .jpg)
-│   ├── pdf/, vcf/                      # Resumes and contact cards
-│   └── fonts/equity/                   # UNUSED: Equity TTFs, retired in favour of Inter
+│   ├── img/attorneys/                  # Attorney portraits (.webp + JPG fallback)
+│   └── pdf/, vcf/                      # Resumes and contact cards
 ├── attorneys/                          # Attorney profile pages + index.html
 ├── practice-areas/                     # index.html + one folder per category
 │   ├── litigation/                     # index.html + 3 detail pages
@@ -100,9 +99,9 @@ Each category also has a landing page at `/practice-areas/[category]/index.html`
 ### Font Implementation
 - **All text**: Inter, loaded from Google Fonts via `@import` at the top of `styles.css`
 - **Fallbacks**: `-apple-system`, `BlinkMacSystemFont`, `Segoe UI`, Roboto, Helvetica Neue, Arial, sans-serif
-- **Equity is retired.** The site was migrated from Equity Text/Caps to Inter. The
- `@font-face` blocks, `<link rel="preload">` tags, and service worker precache entries
- have been removed. The TTF files still sit in `/assets/fonts/equity/` but are unreferenced.
+- **Equity is retired and removed.** The site runs on Inter. Former Equity `@font-face`
+ blocks, preloads, service worker precache entries, and `/assets/fonts/equity/` TTFs
+ have all been deleted.
 
 ### CSS Implementation
 ```css
@@ -186,7 +185,7 @@ Related Keywords: [SEO keywords]
 - **Animation Performance**: Eliminated laggy animations by optimizing CSS transitions and using specific property animations instead of `transition: all`
 - **Typography Hierarchy**: Standardized `font-caps` for headings, `font-serif` for body text
 - **Color System**: Unified navy-900 usage, refined palette with 50-950 variations
-- **Font Loading**: Fixed critical @font-face paths for proper Equity font display
+- **Font Loading**: Migrated to Inter; Equity `@font-face` paths removed
 - **Component Consistency**: Standardized buttons, cards, navigation across all 20+ pages
 - **Tailwind Configuration**: Unified advanced config across all HTML files
 - **8px Spacing System**: Mathematical spacing for Apple-style precision
@@ -199,10 +198,9 @@ Related Keywords: [SEO keywords]
 - **URL Changes**: All practice area URLs follow the nested `[category]/[practice]` pattern
 
 ### Font Implementation
-- Added Equity Text and Equity Caps @font-face declarations
-- Updated all HTML files with custom Tailwind font configurations
-- Overrode default fonts with Equity fonts throughout site
-- Maintained accessibility with proper fallback stacks
+- Site typography is Inter via Google Fonts (Equity faces retired and deleted)
+- Tailwind `font-serif` / `font-caps` aliases resolve to the Inter stack for legacy markup
+- System fallback stack kept for accessibility
 
 ### Attorney Profile Generation
 - Generated 8 individual attorney pages from data files
@@ -259,5 +257,4 @@ Related Keywords: [SEO keywords]
 - Consider adding more practice areas to existing categories
 - Potential for adding blog/news section
 - Integration with contact form backend
-- Delete the unused `/assets/fonts/equity/` TTFs now that the site runs on Inter
 - Trim the remaining legacy `font-caps`/`font-serif` classes from markup

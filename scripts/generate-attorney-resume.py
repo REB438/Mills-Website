@@ -13,9 +13,15 @@ from reportlab.platypus import (
     HRFlowable, KeepTogether
 )
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
+from PIL import Image as PILImage
+from io import BytesIO
 import os
 import re
 import sys
+
+# Resume header photos print ~1.15" wide; keep embeds small to avoid PDF bloat.
+PHOTO_MAX_PX = 600
+PHOTO_JPEG_QUALITY = 80
 
 NAVY = HexColor('#1A2A40')
 NAVY_LIGHT = HexColor('#2a3a56')
@@ -39,6 +45,18 @@ ATTORNEY_CONFIG = {
         ["Appeals", "Real Estate", "Construction", "Contracts", "Business Torts", "Fraud Claims", "Employment Contracts"], None),
 }
 # Config tuple: (photo_file, phone, email, practice_areas_override, certification_logo)
+
+
+def _compressed_photo(path, width, height):
+    """Return a reportlab Image from a resized/compressed portrait under assets/img/attorneys/."""
+    with PILImage.open(path) as im:
+        im = im.convert("RGB")
+        im.thumbnail((PHOTO_MAX_PX, PHOTO_MAX_PX), PILImage.Resampling.LANCZOS)
+        buf = BytesIO()
+        im.save(buf, format="JPEG", quality=PHOTO_JPEG_QUALITY, optimize=True)
+        buf.seek(0)
+    buf.name = "portrait.jpg"  # reportlab uses extension to pick JPEG path
+    return Image(buf, width=width, height=height)
 
 
 def _clean_text(s):
@@ -250,7 +268,7 @@ def create_resume(slug):
             cert_img_obj.hAlign = "RIGHT"
 
     if has_photo:
-        img = Image(photo_path, width=1.15 * inch, height=1.45 * inch)
+        img = _compressed_photo(photo_path, width=1.15 * inch, height=1.45 * inch)
         img.hAlign = "LEFT"
 
         # Text rows: name, title, contact — and cert logo aligned right if present

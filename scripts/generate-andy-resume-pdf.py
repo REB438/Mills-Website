@@ -9,12 +9,30 @@ from reportlab.lib.units import inch
 from reportlab.lib.colors import HexColor
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
+from PIL import Image as PILImage
+from io import BytesIO
 import os
 
 # Brand colors (Mills Shirley)
 NAVY = HexColor('#1A2A40')
 NAVY_LIGHT = HexColor('#334155')
 GRAY = HexColor('#6b7280')
+
+# Resume header photos print ~1.25" wide; keep embeds small to avoid PDF bloat.
+PHOTO_MAX_PX = 600
+PHOTO_JPEG_QUALITY = 80
+
+
+def _compressed_photo(path, width, height):
+    """Return a reportlab Image from a resized/compressed portrait under assets/img/attorneys/."""
+    with PILImage.open(path) as im:
+        im = im.convert("RGB")
+        im.thumbnail((PHOTO_MAX_PX, PHOTO_MAX_PX), PILImage.Resampling.LANCZOS)
+        buf = BytesIO()
+        im.save(buf, format="JPEG", quality=PHOTO_JPEG_QUALITY, optimize=True)
+        buf.seek(0)
+    buf.name = "portrait.jpg"  # reportlab uses extension to pick JPEG path
+    return Image(buf, width=width, height=height)
 
 def create_resume():
     output_path = os.path.join(os.path.dirname(__file__), '..', 'assets', 'pdf', 'andy-soto-resume.pdf')
@@ -95,7 +113,7 @@ def create_resume():
     photo_path = os.path.join(project_root, 'assets', 'img', 'attorneys', 'andres-soto.jpg')
 
     if os.path.exists(photo_path):
-        img = Image(photo_path, width=1.25*inch, height=1.6*inch)
+        img = _compressed_photo(photo_path, width=1.25*inch, height=1.6*inch)
         img.hAlign = 'CENTER'
         story.append(img)
         story.append(Spacer(1, 8))

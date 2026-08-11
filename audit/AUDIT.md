@@ -26,7 +26,7 @@ The site is a **static multi-page HTML website** hosted on **GitHub Pages** (CNA
 1. **Attorney-advertising / privilege language (firm must decide).** The homepage tells prospects that intake information “is protected by attorney-client privilege.” That is a legal-ethics issue for you to review, not a coding preference. Several marketing phrases (“aggressive representation,” “Proven history. Modern edge. Strategic wins.,” “Leading Galveston County law firm,” “Expert …”) also need Part VII review. Representative trial write-ups on attorney pages include dollar amounts and “winning jury verdict” language — also for your review under advertising rules.
 2. ~~**No privacy policy / terms / accessibility statement**~~ **Addressed (2026-08-10):** `privacy.html`, `terms.html`, and `accessibility.html` now exist with Clio disclosures where relevant; footer links wired sitewide and URLs added to `sitemap.xml`. Counsel should still finalize Privacy/Terms copy as needed (**L-05** / **L-06**).
 3. **Security response headers are essentially absent** on GitHub Pages (no CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`). Mitigate what you can via `static.json`/headers if you add a host that supports them, or accept GitHub Pages limits and harden links/embeds.
-4. **Performance debt in images and PDFs.** JPG attorney photos are **1.5–3 MB each** even though WebP versions (~25–85 KB) already exist and are used in `<picture>`. Resume PDFs are **2–4 MB** each. Unused Equity font TTFs (~2.3 MB) still sit in the repo.
+4. ~~**Performance debt in images and PDFs.**~~ **Addressed (2026-08-10):** JPG fallbacks recompressed (~20 MB → ~1.9 MB total); resume PDFs recompressed in place (~16.5 MB → ~0.24 MB) via embedded-image rewrite; unused Equity TTFs (~2.2 MB) deleted. WebP + JPG `<picture>` pattern unchanged. Residual: optional `width`/`height` on imgs (**P-01**), Maps/Fonts third-party (**P-03** / **X-03**).
 5. **Google Maps embed looks hand-fabricated** (`!4v1`, implausible place-id hex). It has a proper `title` and `loading="lazy"`, and address text exists beside it — but you should regenerate a real embed or replace with a static map + directions link (faster and more private).
 6. **Houston office inconsistency.** `llms.txt` and homepage schema description mention Houston; the visible footer/NAP show only Galveston. Directories may disagree. Do not “fix” this in code until the firm decides the public NAP.
 
@@ -51,7 +51,7 @@ Website HTML alone will not put you into ChatGPT’s “best small business lawy
 | Markup | Static `.html` (34 files: 27 real pages + 7 legacy redirect stubs) |
 | CSS | Tailwind CDN + `/assets/css/styles.css` + `/assets/js/tailwind-config.js` |
 | JS | `/assets/js/scripts.js` (nav + SW registration), `/assets/js/performance.js` (4 pages), `/sw.js` |
-| Fonts | Inter via Google Fonts in CSS; Equity TTFs present but **unused** |
+| Fonts | Inter via Google Fonts in CSS; Equity TTFs **deleted** |
 | Hosting | GitHub Pages (`CNAME` → millsshirley.com), Fastly edge cache |
 | Build | None (no `package.json`, no bundler) |
 | Forms / payments | Clio Grow intake + Clio payment links (external) |
@@ -122,10 +122,10 @@ Effort: **S** (&lt;2h) · **M** (half–1 day) · **L** (multi-day / firm proces
 | S-04 | SEO | Low | `README.md` | Root | README describes obsolete structure (old `/practice/` paths, Georgia typography). Misleads future editors. | Rewrite README to match reality. | S | No |
 | S-05 | SEO | Low | Blog | Absent | No insights/publications section. SEO cost is real but capacity cost may be higher. | Outline only in Open Questions — do not build unless firm will feed it. | L | **Yes** |
 | S-06 | SEO | Low | Schema | Already strong | Prompt asked to “add schema”; most recommended types **already exist**. Gaps: Houston as second `PostalAddress` (only if real), richer `sameAs`, review schema **only** if real reviews (do not fake). | Validate blocks in Rich Results Test in Phase 2; extend carefully. | S | Partial |
-| P-01 | Perf | High | `/assets/img/attorneys/*.jpg` | 1.5–3.1 MB each | WebP already used in `<picture>`, but full-res JPGs remain as fallbacks and in repo (~21 MB JPG total). Slow on poor mobile networks if WebP fails. | Re-encode JPG fallbacks to ~100–200 KB; keep WebP; set width/height on imgs to limit CLS. | M | No |
-| P-02 | Perf | High | `/assets/pdf/*-resume.pdf` | 1.9–3.8 MB | Heavy downloads. | Linearize/compress PDFs; ensure tagged where feasible. | M | No |
+| P-01 | Perf | High | `/assets/img/attorneys/*.jpg` | ~~1.5–3.1 MB each~~ **Done:** ~175–273 KB fallbacks (~1.9 MB JPG total); WebP primary unchanged | WebP already used in `<picture>`. Optional follow-up: set width/height on imgs to limit CLS. | Re-encode JPG fallbacks; keep WebP; set width/height on imgs. | M | No |
+| P-02 | Perf | High | `/assets/pdf/*-resume.pdf` | ~~1.9–3.8 MB~~ **Done:** ~26–57 KB each (~0.24 MB total); text verified; `w-9` untouched | Was heavy downloads from full-res embedded portraits. | Compress PDFs; ensure tagged where feasible (tagging still open). | M | No |
 | P-03 | Perf | Medium | Maps | Homepage | Live Maps embed is expensive (privacy + bytes) even with `loading="lazy"`. | Facade-on-click or static map. | S | Prefer |
-| P-04 | Perf | Medium | Fonts | Google Fonts Inter + unused Equity TTFs (~2.3 MB in repo) | Third-party font CSS; unused assets ship in git. | Self-host Inter optional; **delete or gitignore unused Equity** after confirm. | S | Confirm delete |
+| P-04 | Perf | Medium | Fonts | Google Fonts Inter; ~~unused Equity TTFs~~ **deleted** | Third-party Inter CSS remains; Equity no longer ships. | Self-host Inter optional. | S | Done (Equity) |
 | P-05 | Perf | Medium | Tailwind CDN | All pages | Runtime Tailwind compilation on client — convenient but not ideal for CWV. | Stay CDN for now (no new build without approval); revisit only if Lighthouse LCP/TBT demands it. | L | Ask before build |
 | P-06 | Perf | Low | Hosting | GitHub Pages | `cache-control: max-age=600` on HTML; no Brotli control; SW helps return visitors. | Acceptable; document. Precache/query-string mismatch for `?v=` assets noted previously — separate SW cleanup. | M | No |
 | B-01 | Bug | High | Maps `pb=` | `index.html` ~829 | Embed parameters look fabricated (`!4v1`, synthetic place id). May show wrong/blank map. | Regenerate embed from Google Maps for 2200 Market St #300, or replace with static image + directions link (link already exists). | S | Prefer |
@@ -134,7 +134,7 @@ Effort: **S** (&lt;2h) · **M** (half–1 day) · **L** (multi-day / firm proces
 | B-04 | Bug | Low | W-9 | `assets/pdf/w-9-2026.pdf` | Public W-9 linked from homepage. Confirm intentional and current. | Firm confirms; do not remove without approval. | S | **Yes** |
 | B-05 | Bug | Low | Copyright | Footer | Hardcoded `© 2026`. | Tiny JS year or annual checklist. | S | No |
 | X-01 | Security | High | Response headers | Production | Missing CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. | If staying on GitHub Pages, options are limited; document residual risk. If moving host / CloudFlare, add headers. External `target="_blank"` links generally have `noopener noreferrer` (good). | M–L | Hosting decision |
-| X-02 | Security | Medium | Repo hygiene | `.DS_Store` in tree; huge binary JPGs; unused fonts | Noise and bloat in git. | `.gitignore` DS_Store; remove unused binaries from deploy path. | S | No |
+| X-02 | Security | Medium | Repo hygiene | `.DS_Store` in tree; ~~huge JPGs / unused fonts~~ JPGs slimmed, Equity deleted | Remaining: `.DS_Store` noise. | `.gitignore` DS_Store. | S | No |
 | X-03 | Privacy | Medium | Maps + Google Fonts | Homepage / CSS | Google may see visitor IPs via Maps/Fonts. | Static map + self-hosted Inter reduces third parties — aligns with legal-client confidentiality expectations. | M | Prefer |
 | D-01 | Design/UX | Medium | Footer “Our Attorneys” | Many pages | Points to homepage `#attorneys` preview, not `/attorneys/` index. | Point to team page. | S | No |
 | D-02 | Design/UX | Medium | Conversion | Mobile | Phone is tappable in footer; not a persistent sticky call bar. Clio CTAs in header help. | Optional sticky “Call” on mobile — design decision. | M | Prefer |
@@ -224,8 +224,8 @@ Already present (do not rip out):
 
 Full Lighthouse numbers were **not** captured this pass (tooling limits). Evidence-based issues:
 
-1. **JPG fallbacks 1.5–3 MB** while WebP is ~25–85 KB — highest confidence CWV/LCP risk on attorney-heavy pages.  
-2. **Resume PDFs 2–4 MB.**  
+1. ~~**JPG fallbacks 1.5–3 MB**~~ **Done (2026-08-10):** fallbacks now ~175–273 KB; WebP still primary.  
+2. ~~**Resume PDFs 2–4 MB.**~~ **Done:** resumes now ~26–57 KB (embedded photos rewritten; content text unchanged).  
 3. **Maps + Google Fonts** third-party cost.  
 4. **Tailwind CDN** runtime cost — accept for now per “no new build” rule.  
 5. HTML cache `max-age=600` at edge; SW network-first for navigations (good for deploys).
@@ -308,9 +308,9 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 
 ### Phase 2C — Performance
 
-9. Recompress attorney JPG fallbacks; verify `width`/`height` (**P-01**).  
-10. Compress resume PDFs (**P-02**).  
-11. Remove or stop shipping unused Equity fonts (**P-04**).  
+9. ~~Recompress attorney JPG fallbacks~~ **Done**; optional follow-up: verify `width`/`height` (**P-01**).  
+10. ~~Compress resume PDFs~~ **Done** (**P-02**); PDF tagging still open if desired.  
+11. ~~Remove unused Equity fonts~~ **Done** (**P-04**).  
 12. Optional: Maps/Fonts third-party reduction (**X-03**).
 
 ### Phase 2D — SEO hygiene
@@ -342,7 +342,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 6. Approve a **branded 1200×630** share image? Who supplies art?
 7. Do you want a **blog/insights** section you can sustain (e.g., 4 posts/year), or explicitly defer?
 8. Maps: **regenerated live embed** vs **static map + Get Directions** (recommended for privacy/speed)?
-9. May we **delete unused Equity font files** from the repo?
+9. ~~May we **delete unused Equity font files** from the repo?~~ **Done (2026-08-10)** — Equity TTFs removed.
 10. Any appetite to move off GitHub Pages for **security headers**, or accept the limitation?
 11. Privacy Policy / Terms: who drafts — firm counsel or outside privacy counsel?
 12. Who is the **lawyer responsible for website content**, and what is the **principal office** designation text?
