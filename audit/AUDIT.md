@@ -26,8 +26,8 @@ The site is a **static multi-page HTML website** hosted on **GitHub Pages** (CNA
 1. **Attorney-advertising / privilege language (firm must decide).** The homepage tells prospects that intake information “is protected by attorney-client privilege.” That is a legal-ethics issue for you to review, not a coding preference. Several marketing phrases (“aggressive representation,” “Proven history. Modern edge. Strategic wins.,” “Leading Galveston County law firm,” “Expert …”) also need Part VII review. Representative trial write-ups on attorney pages include dollar amounts and “winning jury verdict” language — also for your review under advertising rules.
 2. ~~**No privacy policy / terms / accessibility statement**~~ **Addressed (2026-08-10):** `privacy.html`, `terms.html`, and `accessibility.html` now exist with Clio disclosures where relevant; footer links wired sitewide and URLs added to `sitemap.xml`. Counsel should still finalize Privacy/Terms copy as needed (**L-05** / **L-06**).
 3. **Security response headers are essentially absent** on GitHub Pages (no CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`). Mitigate what you can via `static.json`/headers if you add a host that supports them, or accept GitHub Pages limits and harden links/embeds.
-4. ~~**Performance debt in images and PDFs.**~~ **Addressed (2026-08-10):** JPG fallbacks recompressed (~20 MB → ~1.9 MB total); resume PDFs recompressed in place (~16.5 MB → ~0.24 MB) via embedded-image rewrite; unused Equity TTFs (~2.2 MB) deleted. WebP + JPG `<picture>` pattern unchanged. Residual: optional `width`/`height` on imgs (**P-01**), Maps/Fonts third-party (**P-03** / **X-03**).
-5. **Google Maps embed looks hand-fabricated** (`!4v1`, implausible place-id hex). It has a proper `title` and `loading="lazy"`, and address text exists beside it — but you should regenerate a real embed or replace with a static map + directions link (faster and more private).
+4. ~~**Performance debt in images and PDFs.**~~ **Addressed (2026-08-10):** JPG fallbacks recompressed (~20 MB → ~1.9 MB total); resume PDFs recompressed in place (~16.5 MB → ~0.24 MB) via embedded-image rewrite; unused Equity TTFs (~2.2 MB) deleted. WebP + JPG `<picture>` pattern unchanged. Residual: optional `width`/`height` on imgs (**P-01**); Google Fonts still third-party (**X-03** partial — Maps embed removed).
+5. ~~**Google Maps embed looks hand-fabricated**~~ **Addressed (2026-08-10):** Fabricated Maps iframe removed from homepage contact. Replaced with a navy directions CTA + real Google Maps search URL (no embed, no place_id). Address text and “Get Directions” button retained (**B-01** / **A-03** / **P-03**).
 6. **Houston office inconsistency.** `llms.txt` and homepage schema description mention Houston; the visible footer/NAP show only Galveston. Directories may disagree. Do not “fix” this in code until the firm decides the public NAP.
 
 **What the sales email about ChatGPT got wrong**
@@ -38,7 +38,7 @@ Website HTML alone will not put you into ChatGPT’s “best small business lawy
 
 | Band | Examples | Rough effort |
 |---|---|---|
-| Critical / High (ethics + a11y + trust) | Privilege/disclaimer language (with your copy), privacy page stub, touch-target fixes, regenerate map, duplicate URL canonicals | 1–3 days engineering + your review time |
+| Critical / High (ethics + a11y + trust) | Privilege/disclaimer language (with your copy), privacy page stub, touch-target fixes, duplicate URL canonicals | 1–3 days engineering + your review time |
 | Medium (performance / SEO hygiene) | Compress/remove JPG masters from deploy, slim PDFs, remove `meta keywords`, branded OG image, security headers where host allows | 1–2 days |
 | Lower (polish) | Landmark labels, print CSS, dynamic copyright year, blog decision | optional |
 
@@ -112,7 +112,7 @@ Effort: **S** (&lt;2h) · **M** (half–1 day) · **L** (multi-day / firm proces
 | L-07 | Legal | Low | Board cert claims | Booth, McCutchen pages | Board certification **does** name Texas Board of Legal Specialization in body/schema — good. Spot-check any short cards that say “Board Certified …” without TBLS in the same breath (e.g. attorneys index blurbs). | Ensure every certification claim names TBLS nearby (Rule 7.02/7.01 certification identification). | S | Review |
 | A-01 | A11y | High | Homepage practice links | axe `target-size` | Touch target ~21px tall on some `content-link` practice links (WCAG **2.5.8**). | Increase line-height/padding or tap area on `.content-link` lists. | S | No |
 | A-02 | A11y | Medium | `attorneys/robert-booth.html` | axe `landmark-unique` | Duplicate landmark role without unique accessible name. | Add `aria-label` to one of the duplicate `nav`/`aside` landmarks. | S | No |
-| A-03 | A11y | Medium | Maps iframe | `index.html` | Cross-origin iframe not axe-testable; keyboard focus can enter Google’s UI. Address **is** available as text (good). | Prefer static map + “Get Directions” (already present) and demote/remove live embed; or keep embed but ensure it is last in tab order / skippable. | S–M | Prefer option |
+| A-03 | A11y | Medium | Maps iframe | `index.html` | **Addressed (2026-08-10):** Live Maps iframe removed. Replaced with accessible directions link (meaningful text: “Open in Google Maps” / “Get directions”); address remains as text. | Keep CTA + address; no live embed. | S–M | Done |
 | A-04 | A11y | Medium | Manual | Focus | `*:focus { outline }` rules exist in CSS; CDP showed `outline: none` on a focused nav link in one check — verify `:focus-visible` actually paints in Safari/Chrome. | Manual keyboard pass; strengthen focus ring if flaky. | S | No |
 | A-05 | A11y | Low | Inventory | All real pages | `lang="en"` present; skip links present; single H1; no missing `img alt` found in inventory. | Keep; no churn. | — | No |
 | A-06 | A11y | Low | Motion | `styles.css` | `prefers-reduced-motion` media query exists. | Keep. | — | No |
@@ -124,18 +124,18 @@ Effort: **S** (&lt;2h) · **M** (half–1 day) · **L** (multi-day / firm proces
 | S-06 | SEO | Low | Schema | Already strong | Prompt asked to “add schema”; most recommended types **already exist**. Gaps: Houston as second `PostalAddress` (only if real), richer `sameAs`, review schema **only** if real reviews (do not fake). | Validate blocks in Rich Results Test in Phase 2; extend carefully. | S | Partial |
 | P-01 | Perf | High | `/assets/img/attorneys/*.jpg` | ~~1.5–3.1 MB each~~ **Done:** ~175–273 KB fallbacks (~1.9 MB JPG total); WebP primary unchanged | WebP already used in `<picture>`. Optional follow-up: set width/height on imgs to limit CLS. | Re-encode JPG fallbacks; keep WebP; set width/height on imgs. | M | No |
 | P-02 | Perf | High | `/assets/pdf/*-resume.pdf` | ~~1.9–3.8 MB~~ **Done:** ~26–57 KB each (~0.24 MB total); text verified; `w-9` untouched | Was heavy downloads from full-res embedded portraits. | Compress PDFs; ensure tagged where feasible (tagging still open). | M | No |
-| P-03 | Perf | Medium | Maps | Homepage | Live Maps embed is expensive (privacy + bytes) even with `loading="lazy"`. | Facade-on-click or static map. | S | Prefer |
+| P-03 | Perf | Medium | Maps | Homepage | **Addressed (2026-08-10):** No Maps iframe; directions open Google Maps only on user click via search URL. | Keep static CTA approach. | S | Done |
 | P-04 | Perf | Medium | Fonts | Google Fonts Inter; ~~unused Equity TTFs~~ **deleted** | Third-party Inter CSS remains; Equity no longer ships. | Self-host Inter optional. | S | Done (Equity) |
 | P-05 | Perf | Medium | Tailwind CDN | All pages | Runtime Tailwind compilation on client — convenient but not ideal for CWV. | Stay CDN for now (no new build without approval); revisit only if Lighthouse LCP/TBT demands it. | L | Ask before build |
 | P-06 | Perf | Low | Hosting | GitHub Pages | `cache-control: max-age=600` on HTML; no Brotli control; SW helps return visitors. | Acceptable; document. Precache/query-string mismatch for `?v=` assets noted previously — separate SW cleanup. | M | No |
-| B-01 | Bug | High | Maps `pb=` | `index.html` ~829 | Embed parameters look fabricated (`!4v1`, synthetic place id). May show wrong/blank map. | Regenerate embed from Google Maps for 2200 Market St #300, or replace with static image + directions link (link already exists). | S | Prefer |
+| B-01 | Bug | High | Maps `pb=` | `index.html` | **Addressed (2026-08-10):** Fabricated embed removed. Homepage uses Google Maps search/directions URL for 2200 Market St Suite 300, Galveston TX 77550 (no invented place_id). | Keep real search URL; do not reintroduce fabricated `pb=` embeds. | S | Done |
 | B-02 | Bug | Medium | NAP / phones | Site vs directories | Site main line **(409) 763-2341**. Direct lines use **409-761-40xx**. Prompt’s **(409) 761-1498** **not found in repo**. Houston phone **(713) 242-1880** appears on Jack Brock profile / some cards, not as a firm Houston office block. | Firm confirms official public numbers and Houston presence; engineering aligns NAP. | S | **Yes** |
 | B-03 | Bug | Medium | Houston | `llms.txt`, schema blurb | Claims Galveston **and Houston** offices; UI footer shows Galveston only. | Decide public story; then align site + directories. | M | **Yes** |
 | B-04 | Bug | Low | W-9 | `assets/pdf/w-9-2026.pdf` | Public W-9 linked from homepage. Confirm intentional and current. | Firm confirms; do not remove without approval. | S | **Yes** |
 | B-05 | Bug | Low | Copyright | Footer | Hardcoded `© 2026`. | Tiny JS year or annual checklist. | S | No |
 | X-01 | Security | High | Response headers | Production | Missing CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. | If staying on GitHub Pages, options are limited; document residual risk. If moving host / CloudFlare, add headers. External `target="_blank"` links generally have `noopener noreferrer` (good). | M–L | Hosting decision |
 | X-02 | Security | Medium | Repo hygiene | `.DS_Store` in tree; ~~huge JPGs / unused fonts~~ JPGs slimmed, Equity deleted | Remaining: `.DS_Store` noise. | `.gitignore` DS_Store. | S | No |
-| X-03 | Privacy | Medium | Maps + Google Fonts | Homepage / CSS | Google may see visitor IPs via Maps/Fonts. | Static map + self-hosted Inter reduces third parties — aligns with legal-client confidentiality expectations. | M | Prefer |
+| X-03 | Privacy | Medium | Maps + Google Fonts | Homepage / CSS | **Partial (2026-08-10):** Maps embed gone (no Google contact until user clicks directions). Google Fonts Inter still loads from Google. | Optional: self-host Inter. | M | Partial |
 | D-01 | Design/UX | Medium | Footer “Our Attorneys” | Many pages | Points to homepage `#attorneys` preview, not `/attorneys/` index. | Point to team page. | S | No |
 | D-02 | Design/UX | Medium | Conversion | Mobile | Phone is tappable in footer; not a persistent sticky call bar. Clio CTAs in header help. | Optional sticky “Call” on mobile — design decision. | M | Prefer |
 | D-03 | Design/UX | Low | Visual brand | Global | Clean Inter/navy system reads modern-professional more than “1846 parchment.” That may be intentional. | Do not restyle without a brand decision. | L | **Yes** if changing |
@@ -167,7 +167,7 @@ CLI/`pa11y`/Lighthouse full-matrix: **not completed** in this environment (see `
 ### Manual checks tools often miss
 
 - **Skip links** present and labeled.
-- **Maps iframe** has `title` (good). Cannot inspect inside iframe with our tools.
+- ~~**Maps iframe** has `title`~~ **Addressed:** iframe removed; directions CTA link only.
 - **Keyboard mobile menu:** scripts support toggle; full trap testing should be repeated manually in Phase 2.
 - **320px / 400% zoom:** prior session found no horizontal overflow on 28 pages at 375px; re-verify 320px in Phase 2.
 - **Link text:** practice specialty titles are unique; homepage card links include long accessible names (verbose but not “click here”).
@@ -210,7 +210,7 @@ Already present (do not rip out):
 
 - Visible NAP: Galveston only.  
 - Schema/`llms.txt`: Houston mentioned — **inconsistency for firm to resolve**.  
-- Map + directions content present.  
+- Directions CTA + address present (no live Maps embed).  
 - Directory citation audit (Martindale, Avvo, etc.) **not scraped live** — listed as firm homework.
 
 ### Social
@@ -226,7 +226,7 @@ Full Lighthouse numbers were **not** captured this pass (tooling limits). Eviden
 
 1. ~~**JPG fallbacks 1.5–3 MB**~~ **Done (2026-08-10):** fallbacks now ~175–273 KB; WebP still primary.  
 2. ~~**Resume PDFs 2–4 MB.**~~ **Done:** resumes now ~26–57 KB (embedded photos rewritten; content text unchanged).  
-3. **Maps + Google Fonts** third-party cost.  
+3. ~~**Maps**~~ embed removed; **Google Fonts** still third-party.  
 4. **Tailwind CDN** runtime cost — accept for now per “no new build” rule.  
 5. HTML cache `max-age=600` at edge; SW network-first for navigations (good for deploys).
 
@@ -248,7 +248,7 @@ Phase 2 should attach mobile/desktop Lighthouse JSON under `audit/raw/lighthouse
 
 | # | Suspected issue | Status |
 |---|---|---|
-| 1 | Malformed Maps `pb=` | **Likely real.** Regenerate or replace. Title attribute OK; address as text OK; `loading="lazy"` OK. |
+| 1 | Malformed Maps `pb=` | **Addressed (2026-08-10).** Replaced with directions CTA + real search URL. |
 | 2 | `#about`/`#attorneys`/`#contact` break on interior | **Mostly mitigated.** Interior nav uses paths + `index.html#contact`. Prefer `/attorneys/` in footers. |
 | 3 | `.html` 404s; `/practice-areas/` vs index | **No broken internals found.** Both practice-areas URLs **200** (duplicate). |
 | 4 | Phone 761-1498 vs 763-2341 | **761-1498 not in repo.** Public main line is **763-2341**; directs are **761-40xx**; Houston **713-242-1880** on some attorney cards. |
@@ -283,7 +283,7 @@ You must review; engineering will not choose language:
 | `rel="noopener noreferrer"` on external blanks | Generally yes |
 | HTTPS / mixed content | HTTPS OK |
 | Email harvest | Attorney emails on profile pages (normal; expect scraping) |
-| Third parties | Google Fonts, Google Maps, Clio, LinkedIn, Tailwind CDN, Cloudflare CDN for axe during audit only |
+| Third parties | Google Fonts, Clio, LinkedIn, Tailwind CDN; Google Maps only if user clicks directions (no embed). Cloudflare CDN for axe during audit only |
 | Secrets in repo | None found; `.DS_Store` present; large binaries committed |
 
 ---
@@ -296,7 +296,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 
 1. **Firm copy decisions** for L-01, L-02, L-04 (privilege, marketing phrases, website disclaimer). Engineering applies approved text only.  
 2. **A-01** touch targets; **A-02** landmark labels.  
-3. **B-01 / P-03 / A-03** map: regenerate embed **or** static facade (propose two options if you want a design choice).  
+3. ~~**B-01 / P-03 / A-03** map~~ **Done:** static directions CTA + real Google Maps search URL (no iframe).  
 4. **S-02** canonicalize practice-area URLs.  
 5. Footer attorneys link → `/attorneys/` (**D-01**).
 
@@ -311,7 +311,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 9. ~~Recompress attorney JPG fallbacks~~ **Done**; optional follow-up: verify `width`/`height` (**P-01**).  
 10. ~~Compress resume PDFs~~ **Done** (**P-02**); PDF tagging still open if desired.  
 11. ~~Remove unused Equity fonts~~ **Done** (**P-04**).  
-12. Optional: Maps/Fonts third-party reduction (**X-03**).
+12. Optional: self-host Inter (**X-03** residual; Maps embed already removed).
 
 ### Phase 2D — SEO hygiene
 
@@ -341,7 +341,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 5. Is the public **W-9** intentional and current?
 6. Approve a **branded 1200×630** share image? Who supplies art?
 7. Do you want a **blog/insights** section you can sustain (e.g., 4 posts/year), or explicitly defer?
-8. Maps: **regenerated live embed** vs **static map + Get Directions** (recommended for privacy/speed)?
+8. ~~Maps: regenerated live embed vs static map + Get Directions?~~ **Decided:** static directions CTA (no embed).
 9. ~~May we **delete unused Equity font files** from the repo?~~ **Done (2026-08-10)** — Equity TTFs removed.
 10. Any appetite to move off GitHub Pages for **security headers**, or accept the limitation?
 11. Privacy Policy / Terms: who drafts — firm counsel or outside privacy counsel?
