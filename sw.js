@@ -3,7 +3,7 @@
 
 // Bump CACHE_NAME whenever the precached list below changes. Static assets are
 // versioned with ?v=N, so they no longer depend on this alone.
-const CACHE_NAME = 'mills-shirley-v1.4.0';
+const CACHE_NAME = 'mills-shirley-v1.5.0';
 const urlsToCache = [
     '/',
     '/index.html',

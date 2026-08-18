@@ -23,7 +23,7 @@ The site is a **static multi-page HTML website** hosted on **GitHub Pages** (CNA
 
 **What is broken or risky (highest priority)**
 
-1. **Attorney-advertising / privilege language (firm must decide).** The homepage tells prospects that intake information “is protected by attorney-client privilege.” That is a legal-ethics issue for you to review, not a coding preference. Several marketing phrases (“aggressive representation,” “Proven history. Modern edge. Strategic wins.,” “Leading Galveston County law firm,” “Expert …”) also need Part VII review. Representative trial write-ups on attorney pages include dollar amounts and “winning jury verdict” language — also for your review under advertising rules.
+1. ~~**Attorney-advertising / privilege language**~~ **Privilege (L-01) addressed — Option A chosen:** homepage intake no longer claims attorney-client privilege. Remaining Part VII items: marketing phrases (“aggressive representation,” “Proven history. Modern edge. Strategic wins.,” “Leading Galveston County law firm,” “Expert …”) and trial write-ups with dollar amounts / “winning jury verdict” language still need firm review.
 2. ~~**No privacy policy / terms / accessibility statement**~~ **Addressed (2026-08-10):** `privacy.html`, `terms.html`, and `accessibility.html` now exist with Clio disclosures where relevant; footer links wired sitewide and URLs added to `sitemap.xml`. Counsel should still finalize Privacy/Terms copy as needed (**L-05** / **L-06**).
 3. **Security response headers are essentially absent** on GitHub Pages (no CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`). Mitigate what you can via `static.json`/headers if you add a host that supports them, or accept GitHub Pages limits and harden links/embeds.
 4. ~~**Performance debt in images and PDFs.**~~ **Addressed (2026-08-10):** JPG fallbacks recompressed (~20 MB → ~1.9 MB total); resume PDFs recompressed in place (~16.5 MB → ~0.24 MB) via embedded-image rewrite; unused Equity TTFs (~2.2 MB) deleted. WebP + JPG `<picture>` pattern unchanged. Residual: optional `width`/`height` on imgs (**P-01**); Google Fonts still third-party (**X-03** partial — Maps embed removed).
@@ -103,14 +103,14 @@ Effort: **S** (&lt;2h) · **M** (half–1 day) · **L** (multi-day / firm proces
 
 | ID | Cat | Sev | Page(s) | Location | Description | Recommended fix | Eff | Firm? |
 |---|---|---|---|---|---|---|---|---|
-| L-01 | Legal | Critical | `index.html` | Consultation block (~lines 740, 768) | States intake is “protected by attorney-client privilege.” Unsolicited prospective-client communications may **not** create privilege; also implicates prospective-client duties. | Replace with firm-approved language (options in Open Questions). Do **not** invent the wording in Phase 2 without approval. | S | **Yes** |
-| L-02 | Legal | Critical | Sitewide marketing | e.g. `index.html` hero & litigation blurb; schema `description` | Phrases for Part VII review: “Proven history. Modern edge. Strategic wins.”; “aggressive representation”; “trial-tested”; “Leading Galveston County law firm”; “Expert …” in several meta/OG strings. | Attorney reviews each claim; keep, edit, or remove. Engineering applies approved copy only. | S–M | **Yes** |
+| L-01 | Legal | Critical | `index.html` | Consultation block | **Addressed (Option A):** Intake no longer claims attorney-client privilege. Copy treats submissions as confidential to the extent required by law/professional responsibilities and states submitting the form does not by itself create an attorney-client relationship. | Applied Option A from Open Questions on homepage feature line + Confidentiality Notice. | S | **Done** |
+| L-02 | Legal | Critical | Sitewide marketing | e.g. `index.html` hero & litigation blurb; schema `description` | Phrases for Part VII review: “Proven history. Modern edge. Strategic wins.”; “aggressive representation”; “trial-tested”; “Leading Galveston County law firm”; “Expert …” in several meta/OG strings. **Partial:** employment practice schema descriptions no longer use “Expert …” (factual counsel naming on the three employment detail pages). | Attorney reviews each claim; keep, edit, or remove. Engineering applies approved copy only. | S–M | **Yes** (partial) |
 | L-03 | Legal | High | Attorney profiles (esp. Booth) | **Partial (Booth):** past-results / advertising disclaimer added above Representative Trials on `attorneys/robert-booth.html` (mirrored in `data/attorneys/robert-booth.txt`). Trial narratives retained pending firm review. | Dollar recoveries / “winning jury verdict” narratives may be advertising that requires substantiation and/or disclaimers under Texas rules. | Counsel confirm disclaimer wording (`TODO(firm)`); decide which results stay; extend notice to other profiles if needed. | M | **Yes** (finalize) |
-| L-04 | Legal | High | Sitewide | Absent | No “this website does not create an attorney-client relationship” notice; no principal-office / responsible-attorney designation found; no advertising disclaimer page. | Add a short footer/site notice with firm-approved text. | S | **Yes** |
+| L-04 | Legal | High | Sitewide | **Partial (footer notice)** | Short sitewide footer notice added on all real content pages (and legacy estate-planning page with a footer): “This website may constitute attorney advertising. Use of this website does not create an attorney-client relationship.” Aligns with `terms.html` §§2 / 8. Prior-results disclaimer already on Booth / Terms — not duplicated in footer. | Counsel confirm final notice wording (`TODO(firm)` on `index.html` footer). **Still open:** lawyer responsible for Site content (and principal-office designation text if more than Galveston already stated in Terms §8). | S | **Yes** (finalize) |
 | L-05 | Legal | High | Sitewide | **Addressed (pages + footer + sitemap)** | Privacy Policy and Terms of Use pages exist (`/privacy.html`, `/terms.html`) with Clio-related disclosures; footer links sitewide. Note TDPSA applicability for your counsel — copy may still need counsel finalization. | Counsel review/finalize; keep footer links. | M | **Yes** (finalize) |
 | L-06 | Legal | Medium | Sitewide | **Addressed (page + footer + sitemap)** | Accessibility statement at `/accessibility.html` with accommodation contact; footer links sitewide. | Keep page current; confirm contact path. | S | Review |
 | L-07 | Legal | Low | Board cert claims | Booth, McCutchen pages | Board certification **does** name Texas Board of Legal Specialization in body/schema — good. Spot-check any short cards that say “Board Certified …” without TBLS in the same breath (e.g. attorneys index blurbs). | Ensure every certification claim names TBLS nearby (Rule 7.02/7.01 certification identification). | S | Review |
-| A-01 | A11y | High | Homepage practice links | axe `target-size` | Touch target ~21px tall on some `content-link` practice links (WCAG **2.5.8**). | Increase line-height/padding or tap area on `.content-link` lists. | S | No |
+| A-01 | A11y | High | Homepage practice links | axe `target-size` | **Addressed:** `.practice-specialty-title .content-link` now `inline-flex` with `min-height: 44px` + padding-block (scoped; global `.content-link` left alone for prose). | Keep ≥24px (target 44px) on specialty title links. | S | Done |
 | A-02 | A11y | Medium | `attorneys/robert-booth.html` | axe `landmark-unique` | Duplicate landmark role without unique accessible name. | Add `aria-label` to one of the duplicate `nav`/`aside` landmarks. | S | No |
 | A-03 | A11y | Medium | Maps iframe | `index.html` | **Addressed (2026-08-10):** Live Maps iframe removed. Replaced with accessible directions link (meaningful text: “Open in Google Maps” / “Get directions”); address remains as text. | Keep CTA + address; no live embed. | S–M | Done |
 | A-04 | A11y | Medium | Manual | Focus | `*:focus { outline }` rules exist in CSS; CDP showed `outline: none` on a focused nav link in one check — verify `:focus-visible` actually paints in Safari/Chrome. | Manual keyboard pass; strengthen focus ring if flaky. | S | No |
@@ -265,8 +265,8 @@ You must review; engineering will not choose language:
    - Certification identification (TBLS) — mostly OK where present; verify short blurbs.  
    - Flagged copy: “aggressive representation,” “Strategic wins,” “Leading …,” “Expert …,” “trial-tested,” hero tagline.  
    - Trial results with dollars on attorney pages.
-2. **Site notices:** advertising notice; “results depend on facts”; no A/C relationship created by website; principal office; lawyer responsible for content.
-3. **Privilege statement on intake** — Critical. Propose alternatives (Open Questions).
+2. **Site notices:** ~~advertising notice; no A/C relationship created by website~~ **Partial — footer one-liner live sitewide (**L-04**)**; “results depend on facts” / prior results elsewhere; principal office (Galveston) in Terms §8; lawyer responsible for content still open.
+3. ~~**Privilege statement on intake**~~ **Done — Option A** on homepage.
 4. **Privacy / Terms** — pages + footer links exist; counsel should finalize copy; Clio Grow data flow documented on Privacy.
 5. **Accessibility statement** — `/accessibility.html` exists with footer link.
 6. **Copyright year** maintenance.
@@ -294,8 +294,8 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 
 ### Phase 2A — Risk reduction (do first)
 
-1. **Firm copy decisions** for L-01, L-02, L-04 (privilege, marketing phrases, website disclaimer). Engineering applies approved text only.  
-2. **A-01** touch targets; **A-02** landmark labels.  
+1. **Firm copy decisions** for ~~L-01~~ (**Done — Option A**), L-02, ~~L-04 advertising/no-A-C footer~~ (**Partial** — notice live; counsel confirm + responsible-attorney still open). Engineering applies approved text only.  
+2. ~~**A-01** touch targets~~ **Done** (44px specialty links); **A-02** landmark labels.  
 3. ~~**B-01 / P-03 / A-03** map~~ **Done:** static directions CTA + real Google Maps search URL (no iframe).  
 4. **S-02** canonicalize practice-area URLs.  
 5. Footer attorneys link → `/attorneys/` (**D-01**).
@@ -304,7 +304,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 
 6. ~~Privacy + Terms stubs~~ **Done:** pages live; counsel finalize remaining `TODO(firm):` copy if any (**L-05**).  
 7. ~~Accessibility statement~~ **Done** (**L-06**).  
-8. Advertising / no-A-C-relationship footer notice (**L-04**).
+8. ~~Advertising / no-A-C-relationship footer notice~~ **Partial (**L-04**):** sitewide footer notice shipped; counsel confirm wording; responsible-attorney designation still open.
 
 ### Phase 2C — Performance
 
@@ -331,10 +331,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 
 ## Open questions for the firm
 
-1. **Privilege language:** Which replacement do you want for the intake notice?  
-   - **Option A:** “Information you submit will be treated as confidential to the extent required by law and our professional responsibilities. Submitting this form does not by itself create an attorney-client relationship.”  
-   - **Option B:** Shorter: “Submitting this form does not create an attorney-client relationship. Please do not send sensitive information until we confirm we can represent you.”  
-   - **Option C:** Your own counsel-drafted text.
+1. ~~**Privilege language:**~~ **Decided — Option A** applied on `index.html` (feature line + Confidentiality Notice).
 2. **Houston office:** Public office, appointment-only, or remove from `llms.txt`/schema?
 3. **Official public phone list:** Confirm main **(409) 763-2341**, which directs to publish, whether **(409) 761-1498** appears anywhere you care about, and Houston **(713) 242-1880** usage.
 4. Keep, edit, or remove each flagged marketing phrase and trial-result block?
@@ -345,7 +342,7 @@ Work on branch `website-audit-remediation`. One finding group per commit. Re-tes
 9. ~~May we **delete unused Equity font files** from the repo?~~ **Done (2026-08-10)** — Equity TTFs removed.
 10. Any appetite to move off GitHub Pages for **security headers**, or accept the limitation?
 11. Privacy Policy / Terms: who drafts — firm counsel or outside privacy counsel?
-12. Who is the **lawyer responsible for website content**, and what is the **principal office** designation text?
+12. Who is the **lawyer responsible for website content**, and what is the **principal office** designation text? (**L-04 residual** — advertising / no-A-C footer notice is live; do not invent responsible-attorney names until firm decides.)
 
 ---
 
@@ -370,7 +367,7 @@ Phase 1 is complete. **No implementation has started.**
 Please reply with:
 
 1. Approval (or edits) to the prioritized Phase 2 plan,  
-2. Answers to any Open Questions you can decide now (especially **L-01 privilege language** and **Houston NAP**),  
+2. Answers to any Open Questions you can decide now (~~**L-01 privilege language**~~ **done — Option A**; especially **Houston NAP**),  
 3. Whether to create branch `website-audit-remediation` and begin **2A** only.
 
 I will not change public site files until you say so.

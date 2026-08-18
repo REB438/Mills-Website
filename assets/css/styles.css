@@ -936,6 +936,16 @@ p, span, div, li, td, th, button, input, textarea, select, nav a {
     text-align: left;
 }
 
+/* WCAG 2.5.8: specialty title links were ~21px tall. Scoped — .content-link
+   is also used inline in prose (privacy/terms/etc.) where padding would look wrong. */
+.practice-specialty-title .content-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem; /* 44px */
+    padding-block: 0.5rem;
+    box-sizing: border-box;
+}
+
 .practice-specialty-desc {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #9ca3af; /* Gray-400 for smaller text */
