@@ -4,6 +4,7 @@ Office: Galveston
 Email: rbooth@millsshirley.com  
 Phone: 409.761.4001
 Headshot: /assets/img/attorneys/robert-booth2.jpg    
+Resume: /assets/pdf/robert-booth-resume.pdf
 LinkedIn: [Insert link if available]  
 
 Bio Summary:
