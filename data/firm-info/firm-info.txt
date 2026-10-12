@@ -14,4 +14,4 @@ Pay Retainer: https://app.clio.com/link/7TZ7wnArCtYn
 W-9 Form: /assets/pdf/w-9-2026.pdf
 
 Directions (Google Maps search — no iframe embed):
-https://www.google.com/maps/search/?api=1&query=2200+Market+St+Suite+300+Galveston+TX+77550
+https://www.google.com/maps/place/Mills+Shirley+LLP/@29.3060035,-94.7934623,17z/data=!3m1!4b1!4m6!3m5!1s0x863f9e6b74aafff5:0xad7759fa2762e9b4!8m2!3d29.3060035!4d-94.7934623!16s%2Fg%2F1tdc5ltb

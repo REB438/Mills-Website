@@ -3,14 +3,15 @@
 
 // Bump CACHE_NAME whenever the precached list below changes. Static assets are
 // versioned with ?v=N, so they no longer depend on this alone.
-const CACHE_NAME = 'mills-shirley-v1.5.0';
+const CACHE_NAME = 'mills-shirley-v1.6.0';
 const urlsToCache = [
     '/',
     '/index.html',
     '/assets/css/styles.css',
+    '/assets/css/tailwind.css',
+    '/assets/fonts/inter/inter-latin.woff2',
     '/assets/js/scripts.js',
     '/assets/js/performance.js',
-    '/assets/js/tailwind-config.js',
     '/assets/favicon/favicon.png'
 ];
 

@@ -1,5 +1,6 @@
+// Reference copy of the Tailwind theme. Pages no longer load this file.
+// The build reads /tailwind.config.js and writes /assets/css/tailwind.css.
 // Centralized Tailwind Configuration
-// Used across all HTML files to eliminate duplication
 window.tailwindConfig = {
     theme: {
         extend: {

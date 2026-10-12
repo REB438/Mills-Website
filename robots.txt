@@ -4,35 +4,30 @@ Allow: /
 # Duplicate attorney URLs - canonical versions are at /attorneys/name.html
 Disallow: /attorney/
 
+# Source files and internal notes are not pages
+Disallow: /data/
+Disallow: /audit/
+Disallow: /scripts/
+
 # Allow all search engines to crawl the site
 Allow: /assets/
 Allow: /attorneys/
 Allow: /practice-areas/
 
-# AI Crawlers - explicitly allowed
+# AI crawlers are allowed to read the public pages. The same non-page folders stay closed.
 User-agent: GPTBot
-Allow: /
-
 User-agent: ChatGPT-User
-Allow: /
-
 User-agent: Google-Extended
-Allow: /
-
 User-agent: PerplexityBot
-Allow: /
-
 User-agent: Amazonbot
-Allow: /
-
 User-agent: ClaudeBot
-Allow: /
-
 User-agent: anthropic-ai
-Allow: /
-
 User-agent: cohere-ai
 Allow: /
+Disallow: /attorney/
+Disallow: /data/
+Disallow: /audit/
+Disallow: /scripts/
 
 # LLM-readable site summary
 # See https://millsshirley.com/llms.txt
